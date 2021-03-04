@@ -1,4 +1,6 @@
-# INF99X: Sample Course
+# Microsoft Azure Data Fundamentals
+
+This repository contains the hands-on lab exercises for Microsoft course [DP-900 *Microsoft Azure Data Fundamentals*](https://docs.microsoft.com/en-us/learn/certifications/courses/dp-900t00) and the [self-paced modules on Microsoft Learn](https://docs.microsoft.com/en-us/learn/certifications/azure-data-fundamentals/). The labs are designed to accompany the learning materials and enable you to practice using the technologies they describe. 
 
 - **[Download Latest Student Handbook and AllFiles Content](../../releases/latest)**
 - **Are you a MCT?** - Have a look at our [GitHub User Guide for MCTs](https://microsoftlearning.github.io/MCT-User-Guide/)
