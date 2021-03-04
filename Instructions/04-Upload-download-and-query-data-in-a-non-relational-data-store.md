@@ -12,4 +12,4 @@ In this exercise, you'll upload data to these data stores. You'll run queries ag
 
 You'll perform this exercise using the Azure portal and the command line.
 
-1.	Go to the Microsoft Learn exercise at +++https://docs.microsoft.com/en-us/learn/modules/explore-non-relational-data-stores-azure/6-exercise+++ and complete the unit in the browser: 
+1.	Go to the Microsoft Learn exercise at https://docs.microsoft.com/learn/modules/explore-non-relational-data-stores-azure/6-exercise and complete the unit in the browser: 
