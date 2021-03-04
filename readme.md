@@ -3,7 +3,7 @@
 This repository contains the hands-on lab exercises for Microsoft course [DP-900 *Microsoft Azure Data Fundamentals*](https://docs.microsoft.com/en-us/learn/certifications/courses/dp-900t00) and the [self-paced modules on Microsoft Learn](https://docs.microsoft.com/en-us/users/23110622/collections/0kjyh8rn5gdrjj/). The labs are designed to accompany the learning materials and enable you to practice using the technologies they describe. 
 
 - **[Download Latest Student Handbook and AllFiles Content](../../releases/latest)**
-- **Are you a MCT?** - Have a look at our [GitHub User Guide for MCTs](https://microsoftlearning.github.io/MCT-User-Guide/)
+- **Are you an MCT?** - Have a look at our [GitHub User Guide for MCTs](https://microsoftlearning.github.io/MCT-User-Guide/)
 - **Need to manually build the lab instructions?** - Instructions are available in the [MicrosoftLearning/Docker-Build](https://github.com/MicrosoftLearning/Docker-Build) repository
 
 ## What are we doing?
