@@ -1,7 +1,7 @@
 ---
 lab:
     title: 'Lab 01: Provision Azure relational database services'
-    module: 'Module 02: Explore elational data in Azure'
+    module: 'Module 02: Explore relational data in Azure'
 ---
 
 ## Instructions
