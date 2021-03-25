@@ -1,5 +1,7 @@
-Lab:
-    title: 'Upload, download, and query data in a non-relational data store'
+---
+lab:
+    title: 'Lab 02: Upload, download, and query data in a non-relational data store'
+    module: 'Module 03: Explore non-relational data in Azure'
 ---
 
 ## Instructions
@@ -12,4 +14,4 @@ In this exercise, you'll upload data to these data stores. You'll run queries ag
 
 You'll perform this exercise using the Azure portal and the command line.
 
-1.	Go to the Microsoft Learn exercise at https://docs.microsoft.com/learn/modules/explore-non-relational-data-stores-azure/6-exercise and complete the unit in the browser: 
+1.	Go to the Microsoft Learn exercise at https://aka.ms/dp900lab04 and complete the unit in the browser: 
