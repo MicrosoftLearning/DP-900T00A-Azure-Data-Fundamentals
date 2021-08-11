@@ -55,6 +55,7 @@ az storage blob upload-batch \
     --account-key $STORAGE_KEY \
     --source images \
     --pattern *.gif \
+    --destination images
 
 # Display resource names
 echo "Cosmos DB account name: " $COSMOSDB_ACCOUNT
