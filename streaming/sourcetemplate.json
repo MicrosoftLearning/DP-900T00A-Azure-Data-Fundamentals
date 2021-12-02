@@ -1,0 +1,10 @@
+{
+    "type": "Microsoft.Devices/IotHubs",
+    "properties": {
+        "iotHubNamespace": "IOTHUBNAME",
+        "sharedAccessPolicyName": "iothubowner",
+        "sharedAccessPolicyKey": "IOTSAPKEY",
+        "consumerGroupName": "$Default",
+        "endpoint": "messages/events"
+    }
+}

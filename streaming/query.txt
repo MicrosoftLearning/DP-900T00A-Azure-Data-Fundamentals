@@ -1,0 +1,10 @@
+SELECT DateAdd(second,-10,System.TimeStamp) AS starttime,
+       System.TimeStamp AS endtime,
+       IotHub.ConnectionDeviceId AS device,
+       COUNT(*) AS messages
+INTO
+    [bloboutput]
+FROM
+    [iotinput] TIMESTAMP BY EventProcessedUtcTime
+GROUP BY IotHub.ConnectionDeviceId, SlidingWindow(second, 10)
+HAVING COUNT(*) > 1

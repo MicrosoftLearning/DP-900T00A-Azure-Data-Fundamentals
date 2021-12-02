@@ -1,0 +1,15 @@
+{
+    "type": "Microsoft.Storage/Blob",
+    "properties": {
+        "storageAccounts": [
+            {
+                "accountName": "STORAGEACCOUNTNAME",
+                "accountKey": "STORAGEACCOUNTKEY"
+            }
+        ],
+        "container": "data",
+        "pathPattern": "{date}/{time}",
+        "dateFormat": "yyyy/MM/dd",
+        "timeFormat": "HH"
+    }
+}
