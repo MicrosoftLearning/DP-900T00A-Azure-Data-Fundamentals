@@ -2,13 +2,13 @@ echo Installing required Azure CLI extensions...
 az extension add --name azure-iot
 az extension add --name stream-analytics
 
-guid=$(cat /proc/sys/kernel/random/uuid)
-suffix=${guid//[-]/}
-suffix=${suffix:0:18}
+rgguid=$(cat /proc/sys/kernel/random/uuid)
+rgsuffix=${guid//[-]/}
+rgsuffix=${suffix:0:18}
 
 rg=$(az group list --query "[].name" -o tsv);
 if [[ "$rg" != learn* ]]; then
-    rg=learn${suffix}
+    rg=learn${rgsuffix}
     az group create --name $rg --location westus --output none
 fi
 
