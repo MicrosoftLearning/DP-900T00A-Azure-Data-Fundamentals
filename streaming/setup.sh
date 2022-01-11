@@ -49,7 +49,7 @@ output=${outputtemaplate/STORAGEACCOUNTNAME/$storename}
 output=${output/STORAGEACCOUNTKEY/$storekey}
 echo $output > output.json
 outputname=bloboutput
-az stream-analytics output create --resource-group $rg --job-name $streamanalyticsname --name $outputname --datasource output.json --serialization serialization.json --output none
+az stream-analytics output create --resource-group $rg --job-name $streamanalyticsname --name $outputname --datasource output.json --serialization "{\"type\":\"Json\",\"properties\":{\"encoding\":\"UTF8\"}}" --output none
 queryname=streamquery
 query=`cat query.txt`
 az stream-analytics transformation create --resource-group $rg --job-name $streamanalyticsname --name $queryname --saql "$query" --output none
