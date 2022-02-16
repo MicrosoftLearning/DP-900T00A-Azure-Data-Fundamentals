@@ -1,0 +1,16 @@
+{
+    "id": "1",
+    "productname": "Bearing Ball",
+    "productnumber": "BA-8327",
+    "color": "",
+    "listprice": 0,
+    "size": " ",
+    "weight": " ",
+    "quantityinstock": 1109,
+    "model": "",
+    "description": "",
+    "productcategory": {
+        "subcategory": "Parts",
+        "category": "Components"
+    }
+}
