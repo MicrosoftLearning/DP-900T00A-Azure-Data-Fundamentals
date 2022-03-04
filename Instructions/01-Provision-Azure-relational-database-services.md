@@ -5,6 +5,7 @@ lab:
 ---
 
 ## Instructions
+
 As part of your role at Contoso as a data engineer, you've been asked to create and configure SQL Server, PostgreSQL, and MySQL servers for Azure.
 
 In this lab you'll create and configure one of the following servers for Azure: SQL Server, PostgreSQL, or MySQL.
