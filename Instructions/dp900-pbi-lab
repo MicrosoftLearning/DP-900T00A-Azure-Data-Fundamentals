@@ -1,0 +1,11 @@
+---
+lab:
+    title: 'Visualize data with Power BI'
+    module: 'Explore data analytics in Azure'
+---
+
+## Instructions
+
+In this lab, you will use Power BI Desktop to create a data model and a report.
+
+1.	Go to the Microsoft Learn exercise at https://docs.microsoft.com/learn/modules/explore-fundamentals-data-visualization/5-exercise-power-bi# and follow the instructions in the browser.
