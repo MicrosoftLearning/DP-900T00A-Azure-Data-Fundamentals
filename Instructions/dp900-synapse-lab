@@ -3,9 +3,10 @@ lab:
     title: 'Explore Azure Synapse Analytics'
     module: 'Explore Data Analytics in Azure'
 ---
->[!hint] Use the Azure credentials provided in the hosted VM to complete this lab, not the Learn sandbox. 
 
-## Instructions
+## Lab: Explore Azure Synapse Analytics
+
+>[!hint] Use the Azure credentials provided in the hosted VM to complete this lab, not the Learn sandbox. 
 
 In this lab, you will provision an Azure Synapse Analytics workspace, and use it to ingest and process data.
 
