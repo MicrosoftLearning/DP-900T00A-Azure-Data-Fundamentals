@@ -3,9 +3,9 @@ lab:
     title: 'Using Azure Cosmos DB'
     module: 'Explore non-relational data in Azure'
 ---
->[!hint] Use the Azure credentials provided in the hosted VM to complete this lab, not the Learn sandbox. 
+## Lab: Using Azure Cosmos DB
 
-## Instructions
+>[!hint] Use the Azure credentials provided in the hosted VM to complete this lab, not the Learn sandbox. 
 
 In this lab, you will provision and use Azure Cosmos DB.
 
