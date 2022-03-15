@@ -3,9 +3,10 @@ lab:
     title: 'Explore Azure Storage'
     module: 'Explore non-relational data in Azure'
 ---
->[!hint] Use the Azure credentials provided in the hosted VM to complete this lab, not the Learn sandbox. 
 
-## Instructions
+## Lab: Explore Azure Storage
+
+>[!hint] Use the Azure credentials provided in the hosted VM to complete this lab, not the Learn sandbox. 
 
 Now it's your opportunity to explore Azure Storage.
 
