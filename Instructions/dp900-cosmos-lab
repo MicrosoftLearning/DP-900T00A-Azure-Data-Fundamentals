@@ -7,8 +7,6 @@ lab:
 
 ## Instructions
 
-Now it's your opportunity to explore Azure Storage.
-
 In this lab, you will provision and use Azure Cosmos DB.
 
 1.	Go to the Microsoft Learn exercise at https://docs.microsoft.com/learn/modules/explore-non-relational-data-stores-azure/4-exercise-explore-cosmos-db#create-a-cosmos-db-account and follow the instructions in the browser.
