@@ -3,9 +3,10 @@ lab:
     title: 'Explore Azure Stream Analytics'
     module: 'Explore data analytics in Azure'
 ---
->[!hint] Use the Azure credentials provided in the hosted VM to complete this lab, not the Learn sandbox. 
 
-## Instructions
+## Lab: Explore Azure Stream Analytics
+
+>[!hint] Use the Azure credentials provided in the hosted VM to complete this lab, not the Learn sandbox. 
 
 In this lab, you will use Azure Stream Analytics to process a real-time data stream.
 
