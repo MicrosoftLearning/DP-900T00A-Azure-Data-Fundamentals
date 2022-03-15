@@ -1,7 +1,7 @@
 ---
 lab:
-    title: 'Lab 01: Provision Azure relational database services'
-    module: 'Module 02: Explore relational data in Azure'
+    title: 'Provision Azure relational database services'
+    module: 'Explore relational data in Azure'
 ---
 >[!hint] Use the Azure credentials provided in the hosted VM to complete this lab, not the Learn sandbox. 
 
