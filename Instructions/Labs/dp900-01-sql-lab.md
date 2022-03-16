@@ -12,6 +12,6 @@ In this exercise you'll provision an Azure SQL Database resource in your Azure s
 
 Use the link below to open the exercise on Microsoft Learn.
 
-**[Go to Microsoft Learn](https://docs.microsoft.com/learn/modules/explore-fundamentals-data-visualization/5-exercise-power-bi)**
+**[Go to Microsoft Learn](https://docs.microsoft.com/learn/modules/explore-provision-deploy-relational-database-offerings-azure/4-exercise-provision-relational-azure-data-services?pivots=azuresql#provision-an-azure-sql-database-resource)**
 
 > **Further learning**: If you have time later, you can return to this exercise on Microsoft Learn and try the alternative options to provision Azure Database for PostgreSQL or MySQL.

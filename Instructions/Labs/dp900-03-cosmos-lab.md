@@ -11,4 +11,4 @@ In this exercise you'll provision an Azure Cosmos DB database in your Azure subs
 
 Use the link below to open the exercise on Microsoft Learn.
 
-**[Go to Microsoft Learn](https://docs.microsoft.com/learn/modules/explore-fundamentals-data-visualization/5-exercise-power-bi)**
+**[Go to Microsoft Learn](https://docs.microsoft.com/learn/modules/explore-non-relational-data-stores-azure/4-exercise-explore-cosmos-db#create-a-cosmos-db-account)**

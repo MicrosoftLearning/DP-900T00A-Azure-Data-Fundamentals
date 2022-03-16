@@ -23,6 +23,6 @@ Before starting the exercise on Microsoft Learn, you'll need to prepare a cloud 
 
     Use the link below to open the exercise on Microsoft Learn.
 
-    **[Go to Microsoft Learn](https://docs.microsoft.com/learn/modules/explore-fundamentals-data-visualization/5-exercise-power-bi)**
+    **[Go to Microsoft Learn](https://docs.microsoft.com/learn/modules/explore-fundamentals-stream-processing/5-exercise-stream-analytics#create-azure-resources)**
 
 > **Further learning**: If you have time later, you consider returning to this Microsoft Learn module and trying the other exercises it contains, which include exploring Spark Streaming and Azure Synapse Data Explorer.
