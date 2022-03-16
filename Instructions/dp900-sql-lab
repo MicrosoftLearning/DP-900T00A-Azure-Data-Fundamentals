@@ -12,4 +12,4 @@ As part of your role at Contoso as a data engineer, you've been asked to create 
 
 In this lab you'll create and configure a server for Azure SQL Server. If you have time later, you can use this lab to create and configure servers for Azure PostgreSQL and MySQL.
 
-1.	Go to the Microsoft Learn exercise at https://docs.microsoft.com/learn/modules/explore-provision-deploy-relational-database-offerings-azure/4-exercise-provision-relational-azure-data-services?pivots=azuresql#provision-an-azure-sql-database-resource and follow the instructions in the browser.
+1.	Go to the Microsoft Learn exercise at **https://docs.microsoft.com/learn/modules/explore-provision-deploy-relational-database-offerings-azure/4-exercise-provision-relational-azure-data-services?pivots=azuresql#provision-an-azure-sql-database-resource** and follow the instructions in the browser.
