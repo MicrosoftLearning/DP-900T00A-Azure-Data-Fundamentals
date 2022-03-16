@@ -12,6 +12,6 @@ In this exercise you'll provision an Azure SQL Database resource in your Azure s
 
 Use the button below to open the exercise on Microsoft Learn.
 
-[![View exercise on Microsoft Learn](./images/learn-button.png)](https://docs.microsoft.com/learn/modules/explore-provision-deploy-relational-database-offerings-azure/4-exercise-provision-relational-azure-data-services?pivots=azuresql#provision-an-azure-sql-database-resource)
+<a href="https://docs.microsoft.com/learn/modules/examine-components-of-modern-data-warehouse/5-exercise-azure-synapse#provision-an-azure-synapse-analytics-workspace" target="_blank"><img src="./images/learn-button.png" alt="View exercise on Microsoft Learn"/></a>
 
 > **Further learning**: If you have time later, you can return to this exercise on Microsoft Learn and try the alternative options to provision Azure Database for PostgreSQL or MySQL.

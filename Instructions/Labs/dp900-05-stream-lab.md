@@ -23,4 +23,4 @@ Before starting the exercise on Microsoft Learn, you'll need to prepare a cloud 
 
     Use the button below to open the exercise on Microsoft Learn.
 
-    [![View exercise on Microsoft Learn](./images/learn-button.png)](https://docs.microsoft.com/learn/modules/explore-fundamentals-stream-processing/5-exercise-stream-analytics#create-azure-resources)
+    <a href="https://docs.microsoft.com/learn/modules/examine-components-of-modern-data-warehouse/5-exercise-azure-synapse#provision-an-azure-synapse-analytics-workspace" target="_blank"><img src="./images/learn-button.png" alt="View exercise on Microsoft Learn"/></a>

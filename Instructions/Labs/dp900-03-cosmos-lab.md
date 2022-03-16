@@ -11,4 +11,4 @@ In this exercise you'll provision an Azure Cosmos DB database in your Azure subs
 
 Use the button below to open the exercise on Microsoft Learn.
 
-[![View exercise on Microsoft Learn](./images/learn-button.png)](https://docs.microsoft.com/learn/modules/explore-non-relational-data-stores-azure/4-exercise-explore-cosmos-db#create-a-cosmos-db-account)
+<a href="https://docs.microsoft.com/learn/modules/examine-components-of-modern-data-warehouse/5-exercise-azure-synapse#provision-an-azure-synapse-analytics-workspace" target="_blank"><img src="./images/learn-button.png" alt="View exercise on Microsoft Learn"/></a>
