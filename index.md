@@ -4,11 +4,11 @@ permalink: index.html
 layout: home
 ---
 
-# Content Directory
+# Azure Data Fundamentals Exercises
 
-Hyperlinks to each of the lab exercises are listed below.
+Use the links below to complete the hands-on lab exercises for Microsoft course [DP-900 *Microsoft Azure Data Fundamentals*](https://docs.microsoft.com/learn/certifications/courses/dp-900t00).
 
-## Labs
+To complete these exercises, you'll need a Microsoft Azure subscription. If your instructor has not provided you with one, you can sign up for a free trial at [https://azure.microsoft.com](https://azure.microsoft.com).
 
 {% assign labs = site.pages | where_exp:"page", "page.url contains '/Instructions/Labs'" %}
 | Module | Lab |
