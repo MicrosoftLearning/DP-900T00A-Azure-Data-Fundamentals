@@ -10,6 +10,6 @@ In this exercise you'll use Microsoft Power BI to create a data model and a repo
 
 > **Note**: The exercise is part of a module on Microsoft Learn, and requires a Windows PC with Power BI Desktop installed. If you are attending an instructor-led course, a virtual machine with Power BI Desktop installed should be provided.
 
-Use the button below to open the exercise on Microsoft Learn.
+Use the link below to open the exercise on Microsoft Learn.
 
-<a href="https://docs.microsoft.com/learn/modules/examine-components-of-modern-data-warehouse/5-exercise-azure-synapse#provision-an-azure-synapse-analytics-workspace" target="_blank"><div><img src="./images/learn-button.png" alt="View exercise on Microsoft Learn"/></div></a>
+[Go to Microsoft Learn](https://docs.microsoft.com/learn/modules/explore-fundamentals-data-visualization/5-exercise-power-bi)

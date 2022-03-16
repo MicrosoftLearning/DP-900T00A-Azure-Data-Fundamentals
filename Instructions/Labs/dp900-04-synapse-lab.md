@@ -10,7 +10,7 @@ In this exercise you'll provision an Azure Synapse Analytics workspace in your A
 
 > **Note**: The exercise is part of a module on Microsoft Learn, and requires an Azure subscription. You should use the Azure subscription provided as part of the class.
 
-Use the button below to open the exercise on Microsoft Learn.
+Use the link below to open the exercise on Microsoft Learn.
 
-<a href="https://docs.microsoft.com/learn/modules/examine-components-of-modern-data-warehouse/5-exercise-azure-synapse#provision-an-azure-synapse-analytics-workspace" target="_blank"><img src="./images/learn-button.png" alt="View exercise on Microsoft Learn"/></a>
+[Go to Microsoft Learn](https://docs.microsoft.com/learn/modules/explore-fundamentals-data-visualization/5-exercise-power-bi)
 

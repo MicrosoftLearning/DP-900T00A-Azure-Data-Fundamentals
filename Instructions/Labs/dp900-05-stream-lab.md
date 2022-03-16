@@ -21,6 +21,8 @@ Before starting the exercise on Microsoft Learn, you'll need to prepare a cloud 
 
 4. Now you're ready to complete the exercise on Microsoft Learn - just be use to use the cloud shell in your Azure portal instead of the (blank) one in the Learn module (which is provided for self-paced learners using a sandbox subscription).
 
-    Use the button below to open the exercise on Microsoft Learn.
+    Use the link below to open the exercise on Microsoft Learn.
 
-    <a href="https://docs.microsoft.com/learn/modules/examine-components-of-modern-data-warehouse/5-exercise-azure-synapse#provision-an-azure-synapse-analytics-workspace" target="_blank"><img src="./images/learn-button.png" alt="View exercise on Microsoft Learn"/></a>
+    [Go to Microsoft Learn](https://docs.microsoft.com/learn/modules/explore-fundamentals-data-visualization/5-exercise-power-bi)
+
+> **Further learning**: If you have time later, you consider returning to this Microsoft Learn module and trying the other exercises it contains, which include exploring Spark Streaming and Azure Synapse Data Explorer.

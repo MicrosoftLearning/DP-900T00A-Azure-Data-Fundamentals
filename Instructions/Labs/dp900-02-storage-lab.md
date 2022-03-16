@@ -10,6 +10,6 @@ In this exercise you'll provision an Azure Storage account in your Azure subscri
 
 > **Note**: The exercise is part of a module on Microsoft Learn, and includes an option to use a *sandbox* Azure subscription. However, if you are completing this exercise as part of an instructor-led class, you should use the Azure subscription provided as part of the class instead of the sandbox.
 
-Use the button below to open the exercise on Microsoft Learn.
+Use the link below to open the exercise on Microsoft Learn.
 
-<a href="https://docs.microsoft.com/learn/modules/examine-components-of-modern-data-warehouse/5-exercise-azure-synapse#provision-an-azure-synapse-analytics-workspace" target="_blank"><img src="./images/learn-button.png" alt="View exercise on Microsoft Learn"/></a>
+[Go to Microsoft Learn](https://docs.microsoft.com/learn/modules/explore-fundamentals-data-visualization/5-exercise-power-bi)
