@@ -1,8 +1,6 @@
-echo Installing required Azure CLI extensions...
+echo Installing required Azure CLI extensions - this may take a few minutes...
 az extension add --name azure-iot
 az extension add --name stream-analytics
-
-echo Enabling resource providers (may take a minute or so)...
 az provider register --namespace 'Microsoft.Devices' --wait
 az provider register --namespace 'Microsoft.StreamAnalytics' --wait
 
