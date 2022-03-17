@@ -2,6 +2,9 @@ echo Installing required Azure CLI extensions...
 az extension add --name azure-iot
 az extension add --name stream-analytics
 
+az provider register --namespace 'Microsoft.Devices' --wait
+az provider register --namespace 'Microsoft.StreamAnalytics' --wait
+
 rg=$(az group list --query "[].name" -o tsv);
 if [[ "$rg" != learn* ]]; then
     rgguid=$(cat /proc/sys/kernel/random/uuid)

@@ -12,8 +12,8 @@ In this exercise you'll provision an Azure Cosmos DB database in your Azure subs
 
 Before starting the exercise on Microsoft Learn, you'll need to prepare a cloud shell environment for your Azure subscription.
 
-1. Sign into your Azure subscription in the [Azure portal](https://portal.azure.com), using your Azure subscription credentials.
-2. Use the **[\>_]** button to the right of the search bar at the top of the page to create a new Cloud Shell in the Azure portal, creating storage if prompted and selecting a ***Bash*** environment. The cloud shell provides a command line interface in a pane at the bottom of the Azure portal, as shown here:
+1. Sign into your Azure subscription in the [Azure portal](https://portal.azure.com) at `https://portal.azure.com`, using your Azure subscription credentials.
+2. Use the **[\>_]** button to the right of the search bar at the top of the page to create a new Cloud Shell in the Azure portal, selecting a ***Bash*** environment and creating storage if prompted. The cloud shell provides a command line interface in a pane at the bottom of the Azure portal, as shown here:
 
     ![Azure portal with a cloud shell pane](./images/cloud-shell.png)
 

@@ -13,4 +13,3 @@ In this exercise you'll provision an Azure Storage account in your Azure subscri
 Use the link below to open the exercise on Microsoft Learn.
 
 **[Go to Microsoft Learn](https://docs.microsoft.com/learn/modules/explore-provision-deploy-non-relational-data-services-azure/6-exercise-azure-storage#provision-an-azure-storage-account)**
-
