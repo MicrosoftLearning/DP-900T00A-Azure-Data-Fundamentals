@@ -6,7 +6,7 @@ lab:
 
 ## Explore Azure Stream Analytics
 
-In this exercise you'll provision an Azure Cosmos DB database in your Azure subscription, and explore the various ways you can use it to store non-relational data.
+In this exercise you'll provision an Azure Stream Analytics job in your Azure subscription, and use it to process a stream of realtime data.
 
 > **Note**: The exercise is part of a module on Microsoft Learn, and includes an option to use a *sandbox* Azure subscription. However, if you are completing this exercise as part of an instructor-led class, you should use the Azure subscription provided as part of the class instead of the sandbox.
 
