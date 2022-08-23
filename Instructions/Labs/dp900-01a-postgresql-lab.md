@@ -49,4 +49,4 @@ In this exercise, you'll provision an Azure Database for PostgreSQL resource.
 
 1. Review the options for managing your Azure Database for PostreSQL resource.
 
-> **Tip**: If you used your own Azure subscription, and you have finished exploring Azure Database for PostreSQL, you can delete the resource group that you created in this exercise.
+> **Tip**: If you've finished exploring Azure Database for PostreSQL, you can delete the resource group that you created in this exercise.

@@ -82,4 +82,4 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free) in which y
 
 1. Close the query editor pane, discarding your edits.
 
-> **Tip**: If you used your own Azure subscription, and you have finished exploring Azure SQL Database, you can delete the resource group that you created in this exercise.
+> **Tip**: If you've finished exploring Azure SQL Database, you can delete the resource group that you created in this exercise.
