@@ -235,7 +235,7 @@ While SQL is a common language for querying structured datasets, many data analy
     display(df.limit(10))
     ```
 
-7.  Use the **&#9655;** icon to the left of the code cell to run it, and wait for the results. The first time you run a cell in a notebook, the Spark pool is started - so it may take a minute or so to return any results.
+7.  Select **&#9655; Run** to the left of the code cell to run it, and wait for the results. The first time you run a cell in a notebook, the Spark pool is started - so it may take a minute or so to return any results.
 
     > **Note**: If an error occurs because the Python Kernel isn't available yet, run the cell again.
 
@@ -277,7 +277,7 @@ While SQL is a common language for querying structured datasets, many data analy
     display(df_counts)
     ```
 
-13. Run the new code cell by clicking its **&#9655;** icon, and review the results, which should look similar to this:
+13. Select **&#9655; Run** to the left to run the new code cell, and review the results, which should look similar to this:
 
     | Category | count |
     | -- | -- |
