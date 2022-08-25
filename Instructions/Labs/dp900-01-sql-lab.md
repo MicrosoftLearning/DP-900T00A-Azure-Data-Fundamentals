@@ -16,4 +16,8 @@ Use the link below to open the exercise on Microsoft Learn.
 
 > **Further learning**: If you have time later, you can return to this exercise on Microsoft Learn and try the alternative options to provision Azure Database for PostgreSQL or MySQL.
 
-To preview this lab in interactive guide format, **[click here](https://mslearn.cloudguides.com/en-us/guides/DP-900%20Exam%20Guide%20-%20Azure%20Data%20Fundamentals%20Exercise%201)**.
+To preview this lab in interactive guide format, click the links below:
+
+**[Provision Azure relational database services](https://mslearn.cloudguides.com/en-us/guides/DP-900%20Exam%20Guide%20-%20Azure%20Data%20Fundamentals%20Exercise%201)**
+
+**[Use SQL to query Azure SQL Database](https://mslearn.cloudguides.com/en-us/guides/DP-900%20Exam%20Guide%20-%20Azure%20Data%20Fundamentals%20Exercise%202)**
