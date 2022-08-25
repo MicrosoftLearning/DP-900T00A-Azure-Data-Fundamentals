@@ -13,3 +13,9 @@ In this exercise you'll provision an Azure Storage account in your Azure subscri
 Use the link below to open the exercise on Microsoft Learn.
 
 **[Go to Microsoft Learn](https://docs.microsoft.com/learn/modules/explore-provision-deploy-non-relational-data-services-azure/6-exercise-azure-storage#provision-an-azure-storage-account)**
+
+To preview this lab in interactive guide format, click the links below:
+
+**[Manage Azure Blob Storage](https://mslearn.cloudguides.com/en-us/guides/DP-900%20Exam%20Guide%20-%20Azure%20Data%20Fundamentals%20Exercise%206)**
+
+**[Manage Azure File Storage](https://mslearn.cloudguides.com/en-us/guides/DP-900%20Exam%20Guide%20-%20Azure%20Data%20Fundamentals%20Exercise%207)**
