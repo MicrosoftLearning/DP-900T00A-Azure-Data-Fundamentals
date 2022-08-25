@@ -15,3 +15,5 @@ Use the link below to open the exercise on Microsoft Learn.
 **[Go to Microsoft Learn](https://docs.microsoft.com/learn/modules/explore-provision-deploy-relational-database-offerings-azure/4-exercise-provision-relational-azure-data-services?pivots=azuresql#provision-an-azure-sql-database-resource)**
 
 > **Further learning**: If you have time later, you can return to this exercise on Microsoft Learn and try the alternative options to provision Azure Database for PostgreSQL or MySQL.
+
+To preview this lab in interactive guide format, **[click here](https://mslearn.cloudguides.com/en-us/guides/DP-900%20Exam%20Guide%20-%20Azure%20Data%20Fundamentals%20Exercise%201)**.
