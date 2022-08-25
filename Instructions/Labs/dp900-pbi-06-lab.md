@@ -39,11 +39,13 @@ If Microsoft Power BI Desktop is not already installed on your Windows computer,
     https://github.com/MicrosoftLearning/DP-900T00A-Azure-Data-Fundamentals/raw/master/power-bi/customers.csv
     ```
 
+1. In the Access Web content dialog, select **Connect**.
+
 1. Verify that the URL opens a dataset containing customer data, as shown below. Then select **Load** to load the data into the data model for your report.
 
     ![Screenshot showing a dataset of customer data displayed in Power BI.](images/customers.png)
 
-1. In the main Power BI Desktop window, in the **Get data** menu, select **Web**:
+1. In the main Power BI Desktop window, in the Data menu, select **Get data**, then select **Web**:
 
     ![Screenshot showing the Get data menu in Power BI.](images/get-data.png)
 
@@ -53,7 +55,8 @@ If Microsoft Power BI Desktop is not already installed on your Windows computer,
     https://github.com/MicrosoftLearning/DP-900T00A-Azure-Data-Fundamentals/raw/master/power-bi/products.csv
     ```
 
-1. Load the product data in this file into the data model.
+1. In the dialog, select **Load** to load the product data in this file into the data model.
+
 1. Repeat the previous three steps to import a third dataset containing order data from the following URL:
 
     ```
