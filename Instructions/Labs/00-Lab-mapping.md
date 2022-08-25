@@ -4,6 +4,8 @@ This course, DP-900: Microsoft Azure Data Fundamentals, has a set of labs design
 
 > Note: Instructors may choose ask students to complete one or more labs on their own time by using the exercises in the associated Learn learning paths (https://docs.microsoft.com/users/23110622/collections/0kjyh8rn5gdrjj). 
 
+To preview this course in interactive guide format, click here:  **[DP-900 Exam Guide - Microsoft Azure Data Fundamentals](https://mslearn.cloudguides.com/en-us/guides/DP-900%20Exam%20Guide%20-%20Azure%20Data%20Fundamentals)**
+
 ## DP-900 module mapping to labs
 
 | Module | Lab | Markdown file |
