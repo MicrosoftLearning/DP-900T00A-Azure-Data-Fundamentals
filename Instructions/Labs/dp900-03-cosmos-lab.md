@@ -1,9 +1,9 @@
 ---
 lab:
-    title: 'Explore non-relational data in Azure with Azure Cosmos DB'
+    title: 'Explore Azure Cosmos DB'
     module: 'Explore fundamentals of Azure Cosmos DB'
 ---
-# Explore non-relational data in Azure with Azure Cosmos DB
+# Explore Azure Cosmos DB
 
 In this exercise you'll provision an Azure Cosmos DB database in your Azure subscription, and explore the various ways you can use it to store non-relational data.
 
