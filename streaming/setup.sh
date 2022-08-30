@@ -21,7 +21,7 @@ suffix=${suffix:0:18}
 echo Creating IoT hub...
 iothubname=iothub${suffix}
 iotdevicename=iotdevice
-az iot hub create --name $iothubname --resource-group $rg --sku F1 --partition-count 2 --output none
+az iot hub create --name $iothubname --resource-group $rg --sku S1 --partition-count 2 --output none
 iothubconn=$(az iot hub connection-string show --hub-name $iothubname --output tsv)
 iothubkey=${iothubconn#*"SharedAccessKey="}
 az iot hub device-identity create --hub-name $iothubname --device-id $iotdevicename --output none
