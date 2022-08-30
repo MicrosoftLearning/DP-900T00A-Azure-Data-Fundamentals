@@ -4,7 +4,7 @@ lab:
     module: 'Explore relational data in Azure'
 ---
 
-# Provision Azure relational database services with Azure Database for PostgreSQL
+# Explore Azure Database for PostgreSQL
 
 In this exercise you'll provision an Azure Database for PostgreSQL resource in your Azure subscription.
 

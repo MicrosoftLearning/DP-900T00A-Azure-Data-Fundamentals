@@ -4,7 +4,7 @@ lab:
     module: 'Explore relational data in Azure'
 ---
 
-# Provision Azure relational database services with Azure Database for MySQL
+# Explore Azure Database for MySQL
 
 In this exercise you'll provision an Azure Database for MySQL resource in your Azure subscription.
 

@@ -1,7 +1,7 @@
 ---
 lab:
-    title: 'Explore Azure Synapse Analytics'
-    module: 'Explore data analytics in Azure'
+    title: 'Explore data analytics in Azure with Azure Synapse Analytics'
+    module: 'Explore fundamentals of large-scale data warehousing'
 ---
 
 # Explore data analytics in Azure with Azure Synapse Analytics

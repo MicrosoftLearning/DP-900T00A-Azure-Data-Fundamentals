@@ -1,7 +1,7 @@
 ---
 lab:
-    title: 'Explore Azure Storage'
-    module: 'Explore non-relational data in Azure'
+    title: 'Explore non-relational data in Azure with Azure Storage'
+    module: 'Explore Azure Storage for non-relational data'
 ---
 
 # Explore non-relational data in Azure with Azure Storage

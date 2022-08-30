@@ -1,7 +1,7 @@
 ---
 lab:
-    title: 'Explore Azure Synapse Data Explorer'
-    module: 'Explore data analytics in Azure'
+    title: 'Explore data analytics in Azure with Azure Synapse Data Explorer'
+    module: 'Explore fundamentals of real-time analytics'
 ---
 
 # Explore data analytics in Azure with Azure Synapse Data Explorer

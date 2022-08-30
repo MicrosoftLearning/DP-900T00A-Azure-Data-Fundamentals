@@ -1,10 +1,10 @@
 ---
 lab:
-    title: 'Explore streaming data using Spark'
-    module: 'Explore data analytics in Azure'
+    title: 'Explore streaming data analytics using Spark'
+    module: 'Explore fundamentals of real-time analytics'
 ---
 
-# Explore data analytics in Azure with Spark
+# Explore streaming data analytics using Spark
 
 In this exercise, you'll use *Spark Structured Streaming* and *delta tables* in Azure Synapse Analytics to process streaming data.
 
