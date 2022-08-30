@@ -1,7 +1,7 @@
 ---
 lab:
-    title: 'Explore Azure Cosmos DB'
-    module: 'Explore non-relational data in Azure'
+    title: 'Explore non-relational data in Azure with Azure Cosmos DB'
+    module: 'Explore fundamentals of Azure Cosmos DB'
 ---
 # Explore non-relational data in Azure with Azure Cosmos DB
 

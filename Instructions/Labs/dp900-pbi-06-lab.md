@@ -1,6 +1,6 @@
 ---
 lab:
-    title: 'Visualize data with Power BI'
+    title: 'Explore fundamentals of data visualization with Power BI'
     module: 'Explore fundamentals of data visualization'
 ---
 

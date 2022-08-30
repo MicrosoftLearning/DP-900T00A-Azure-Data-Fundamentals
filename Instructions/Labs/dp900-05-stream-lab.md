@@ -1,7 +1,7 @@
 ---
 lab:
-    title: 'Explore Azure Stream Analytics'
-    module: 'Explore data analytics in Azure'
+    title: 'Explore data analytics in Azure with Azure Stream Analytics'
+    module: 'Explore fundamentals of real-time analytics'
 ---
 
 # Explore data analytics in Azure with Azure Stream Analytics

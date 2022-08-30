@@ -4,7 +4,7 @@ lab:
     module: 'Explore relational data in Azure'
 ---
 
-# Provision Azure relational database services with Azure SQL Database
+# Explore Azure SQL Database
 
 In this exercise you'll provision an Azure SQL Database resource in your Azure subscription, and then use SQL to query the tables in a relational database.
 
