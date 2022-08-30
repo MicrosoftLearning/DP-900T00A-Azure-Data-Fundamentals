@@ -16,7 +16,7 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free) in which y
 
 ## Provision a Synapse Analytics workspace
 
-> **Tip**: If you still have the Azure Synapse Workspace from the previous exercise, skip this section and go straight to **[Create a Data Explorer pool](#create-a-data-explorer-pool)**.
+> **Tip**: If you already have an Azure Synapse Workspace from a previous exercise, skip this section and go straight to **[Create a Data Explorer pool](#create-a-data-explorer-pool)**.
 
 1. Open the Azure portal at [https://portal.azure/com](https://portal.azure.com?azure-portal=true), and sign in using the credentials associated with your Azure subscription.
 
