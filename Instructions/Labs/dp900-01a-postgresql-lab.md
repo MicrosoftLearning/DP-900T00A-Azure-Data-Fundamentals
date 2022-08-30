@@ -1,7 +1,7 @@
 ---
 lab:
-    title: 'Explore Azure SQL Database'
-    module: 'Explore relational data in Azure Database for PostgreSQL'
+    title: 'Explore Azure Database for PostgreSQL'
+    module: 'Explore relational data in Azure'
 ---
 
 # Provision Azure relational database services with Azure Database for PostgreSQL
