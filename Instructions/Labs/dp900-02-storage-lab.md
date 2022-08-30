@@ -1,10 +1,10 @@
 ---
 lab:
-    title: 'Explore non-relational data in Azure with Azure Storage'
+    title: 'Explore Azure Storage'
     module: 'Explore Azure Storage for non-relational data'
 ---
 
-# Explore non-relational data in Azure with Azure Storage
+# Explore Azure Storage
 
 In this exercise you'll provision an Azure Storage account in your Azure subscription, and explore the various ways you can use it to store data.
 
