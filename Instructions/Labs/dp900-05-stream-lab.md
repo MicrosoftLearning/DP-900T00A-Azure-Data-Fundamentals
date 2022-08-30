@@ -1,10 +1,10 @@
 ---
 lab:
-    title: 'Explore data analytics in Azure with Azure Stream Analytics'
+    title: 'Explore Azure Stream Analytics'
     module: 'Explore fundamentals of real-time analytics'
 ---
 
-# Explore data analytics in Azure with Azure Stream Analytics
+# Explore Azure Stream Analytics
 
 In this exercise you'll provision an Azure Stream Analytics job in your Azure subscription, and use it to process a stream of realtime data.
 
