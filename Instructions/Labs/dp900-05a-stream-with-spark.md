@@ -65,4 +65,4 @@ To explore stream processing with Spark, you'll use a notebook that contains Pyt
 3. On the **&#65291;** menu, select **&#8612; Import**, and select the **Structured Streaming and Delta Tables.ipynb** file on your local computer.
 4. Follow the instructions in the notebook to attach it to your Spark pool and run the code cells it contains to explore various ways to use Spark for stream processing.
 
-> **Note**: This module includes another exercise that requires an Azure Synapse Analytics workspace. If you intend to proceed to the next exercise, retain your workspace. Otherwise, you should delete the resource group for your Synapse Analytics workspace to avoid unnecessary Azure costs.
+> **Note**: If you have finished exploring Azure Synapse Analytics, you should delete the resource group for your Synapse Analytics workspace to avoid unnecessary Azure costs.
