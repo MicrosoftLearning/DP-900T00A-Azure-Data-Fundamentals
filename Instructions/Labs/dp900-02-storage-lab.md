@@ -48,7 +48,7 @@ Now that you have an Azure Storage account, you can create a container for blob 
 1. In the storage browser page, select **Blob containers** and verify that your **data** container is listed.
 1. Select the **data** container, and note that it's empty.
 1. Select **&#65291; Add Directory** and read the information about folders before creating a new directory named **products**.
-1. In storage explorer, verify that the current view shows the contents of the **products** folder you just created - observe that the "breadcrumbs" at the top of the page reflect the path **Blob containers > data > products**.
+1. In storage browser, verify that the current view shows the contents of the **products** folder you just created - observe that the "breadcrumbs" at the top of the page reflect the path **Blob containers > data > products**.
 1. In the breadcrumbs, select **data** to switch to the **data** container, and note that it does <u>not</u> contain a folder named **products**.
 
     Folders in blob storage are virtual, and only exist as part of the path of a blob. Since the **products** folder contained no blobs, it isn't really there!
