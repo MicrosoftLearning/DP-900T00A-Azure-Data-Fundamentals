@@ -21,8 +21,8 @@ The first step in using Azure Storage is to provision an Azure Storage account i
 1. If you haven't already done so, sign into the [Azure portal](https://portal.azure.com?azure-portal=true).
 1. On the Azure portal home page, select **&#65291; Create a resource** from the upper left-hand corner and search for *Storage account*. Then in the resulting **Storage account** page, select **Create**.
 1. Enter the following values on the **Create a storage account** page:
-    - **Subscription**: If you're using a sandbox, select *Concierge Subscription*. Otherwise, select your Azure subscription.
-    - **Resource group**:  If you're using a sandbox, select the existing resource group (which will have a name like *learn-xxxx...*). Otherwise, create a new resource group with a name of your choice.
+    - **Subscription**: Select your Azure subscription.
+    - **Resource group**:  Create a new resource group with a name of your choice.
     - **Storage account name**: Enter a unique name for your storage account using lower-case letters and numbers.
     - **Region**:  Select any available location.
     - **Performance**: *Standard*
