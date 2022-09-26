@@ -57,11 +57,11 @@ To use Azure Synapse Analytics, you must provision an Azure Synapse Analytics Wo
 
 One of the key tasks you can perform with Azure Synapse Analytics is to define *pipelines* that transfer (and if necessary, transform) data from a wide range of sources into your workspace for analysis.
 
-1. In Synapse Studio, on the **Home** page, select **Ingest** and then choose **Built-in copy task** to open the **Copy Data tool** tool.
+1. In Synapse Studio, on the **Home** page, select **Ingest** to open the **Copy Data tool** tool.
 2. In the Copy Data tool, on the **Properties** step, ensure that **Built-in copy task** and **Run once now** are selected, and click **Next >**.
 3. On the **Source** step, in the **Dataset** substep, select the following settings:
     - **Source type**: All
-    - **Connection**: *Create a new connection, and in the **Linked service** pane that appears, on the **File** tab, select **HTTP**. Then continue and create a connection to a data file using the following settings:*
+    - **Connection**: *Create a new connection, and in the **New connection** pane that appears, on the **File** tab, select **HTTP**. Then continue and create a connection to a data file using the following settings:*
         - **Name**: AdventureWorks Products
         - **Description**: Product list via HTTP
         - **Connect via integration runtime**: AutoResolveIntegrationRuntime
