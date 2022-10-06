@@ -82,16 +82,16 @@ One of the key tasks you can perform with Azure Synapse Analytics is to define *
     - **Row delimiter**: Line feed (\n)
     - **First row as header**: Selected
     - **Compression type**: None
-7. On the **Target** step, in the **Dataset** substep, select the following settings:
-    - **Target type**: Azure Data Lake Storage Gen 2
+7. On the **Destination** step, in the **Dataset** substep, select the following settings:
+    - **Destination type**: Azure Data Lake Storage Gen 2
     - **Connection**: *Select the existing connection to your data lake store (this was created for you when you created the workspace).*
-8. After selecting the connection, on the **Target/Dataset** step, ensure the following settings are selected, and then select **Next >**:
+8. After selecting the connection, on the **Destination/Dataset** step, ensure the following settings are selected, and then select **Next >**:
     - **Folder path**: *Browse to your file system folder*
     - **File name**: products.csv
     - **Copy behavior**: None
     - **Max concurrent connections**: *Leave blank*
     - **Block size (MB)**: *Leave blank*
-9. On the **Target** step, in the **Configuration** substep, ensure that the following properties are selected. Then select **Next >**:
+9. On the **Destination** step, in the **Configuration** substep, ensure that the following properties are selected. Then select **Next >**:
     - **File format**: DelimitedText
     - **Column delimiter**: Comma (,)
     - **Row delimiter**: Line feed (\n)
@@ -106,7 +106,7 @@ One of the key tasks you can perform with Azure Synapse Analytics is to define *
     - **Enable logging**: <u>Un</u>selected
     - **Enable staging**: <u>Un</u>selected
 11. On the **Review and finish** step, on the **Review** substep, read the summary and then click **Next >**.
-12. On the **Deployment** step, wait for the pipeline to be deployed and then click **Finish**.
+12. On the **Deployment** substep, wait for the pipeline to be deployed and then click **Finish**.
 13. In Synapse Studio, select the **Monitor** page, and in the **Pipeline runs** tab, wait for the **Copy products** pipeline to complete with a status of **Succeeded** (you can use the **&#8635; Refresh** button on the Pipeline runs page to refresh the status).
 14. On the **Data** page, select the **Linked** tab and expand the **Azure Data Lake Storage Gen 2** hierarchy until you see the file storage for your Synapse workspace. Then select the file storage to verify that a file named **products.csv** has been copied to this location, as shown here:
 
