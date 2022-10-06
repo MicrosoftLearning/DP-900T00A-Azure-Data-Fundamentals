@@ -22,7 +22,7 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free) in which y
 
     ![Screenshot of the Azure portal showing the Azure SQL page.](images//azure-sql-portal.png)
 
-1. Enter the following values on the **Create SQL Database** page:
+1. Enter the following values on the **Create SQL Database** page, and leave all other properties with their default setting:
     - **Subscription**: Select your Azure subscription.
     - **Resource group**: Create a new resource group with a name of your choice.
     - **Database name**: *AdventureWorks*
