@@ -15,10 +15,10 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free) in which y
 
 ## Create a Cosmos DB account
 
-To use Cosmos DB, you must provision a Cosmos DB account in your Azure subscription. In this exercise, you'll provision a Cosmos DB account that uses the core (SQL) API.
+To use Cosmos DB, you must provision a Cosmos DB account in your Azure subscription. In this exercise, you'll provision a Cosmos DB account that uses Azure Cosmos DB for NoSQL.
 
 1. In the Azure portal, select **+ Create a resource** at the top left, and search for *Azure Cosmos DB*.  In the results, select **Azure Cosmos DB** and select  **Create**.
-1. In the **Core (SQL) - Recommended** tile, select **Create**.
+1. In the **Azure Cosmos DB for NoSQL** tile, select **Create**.
 1. Enter the following details, and then select **Review + Create**:
     - **Subscription**: If you're using a sandbox, select *Concierge Subscription*. Otherwise, select your Azure subscription.
     - **Resource group**:  If you're using a sandbox, select the existing resource group (which will have a name like *learn-xxxx...*). Otherwise, create a new resource group with a name of your choice.
@@ -71,6 +71,6 @@ To use Cosmos DB, you must provision a Cosmos DB account in your Azure subscript
 1. Use the **Execute Query** button to run the revised query and review the results, which includes JSON entities for any items with an **address** field containing the text "Any St.".
 1. Close the SQL Query editor, discarding your changes.
 
-    You've seen how to create and query JSON entities in a Cosmos DB database by using the data explorer interface in the Azure portal. In a real scenario, an application developer would use one of the many programming language specific software development kits (SDKs) to call the core (SQL) API and work with data in the database.
+    You've seen how to create and query JSON entities in a Cosmos DB database by using the data explorer interface in the Azure portal. In a real scenario, an application developer would use one of the many programming language specific software development kits (SDKs) to call the NoSQL API and work with data in the database.
 
 > **Tip**: If you've finished exploring Azure Cosmos DB, you can delete the resource group that you created in this exercise.
