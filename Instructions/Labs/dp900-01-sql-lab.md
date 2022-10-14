@@ -28,6 +28,7 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free) in which y
     - **Database name**: *AdventureWorks*
     - **Server**:  Select **Create new** and create a new server with a unique name in any available location. Use **SQL authentication** and specify your name as the server admin login and a suitably complex password (remember the password - you'll need it later!)
     - **Want to use SQL elastic pool?**: *No*
+    - **Workload environment**: Development
     - **Compute + storage**: Leave unchanged
     - **Backup storage redundancy**: *Locally-redundant backup storage*
 
