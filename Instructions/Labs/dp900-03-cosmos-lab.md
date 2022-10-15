@@ -20,8 +20,8 @@ To use Cosmos DB, you must provision a Cosmos DB account in your Azure subscript
 1. In the Azure portal, select **+ Create a resource** at the top left, and search for *Azure Cosmos DB*.  In the results, select **Azure Cosmos DB** and select  **Create**.
 1. In the **Azure Cosmos DB for NoSQL** tile, select **Create**.
 1. Enter the following details, and then select **Review + Create**:
-    - **Subscription**: If you're using a sandbox, select *Concierge Subscription*. Otherwise, select your Azure subscription.
-    - **Resource group**:  If you're using a sandbox, select the existing resource group (which will have a name like *learn-xxxx...*). Otherwise, create a new resource group with a name of your choice.
+    - **Subscription**: Select your Azure subscription.
+    - **Resource group**:  Create a new resource group with a name of your choice.
     - **Account Name**: Enter a unique name
     - **Location**: Choose any recommended location
     - **Capacity mode**: Provisioned throughput
