@@ -17,6 +17,10 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free) in which y
 
 To use Cosmos DB, you must provision a Cosmos DB account in your Azure subscription. In this exercise, you'll provision a Cosmos DB account that uses Azure Cosmos DB for NoSQL.
 
+> **You don't have an Azure subscription or an Azure Trial?**
+> You can create a Free, 30 Days, Cosmos DB Account with  [Try Cosmos](http://aka.ms/trycosmos). No Azure account or credit card required. 
+> Once your account is created, you can simply follow the next steps.
+
 1. In the Azure portal, select **+ Create a resource** at the top left, and search for *Azure Cosmos DB*.  In the results, select **Azure Cosmos DB** and select  **Create**.
 1. In the **Azure Cosmos DB for NoSQL** tile, select **Create**.
 1. Enter the following details, and then select **Review + Create**:
