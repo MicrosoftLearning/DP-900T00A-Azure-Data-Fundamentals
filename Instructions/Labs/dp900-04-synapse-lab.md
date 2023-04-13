@@ -44,17 +44,9 @@ To use Azure Synapse Analytics, you must provision an Azure Synapse Analytics Wo
         - **File system name**: *Create a new file system with a unique name, for example "fs<your_name>"*.
 
     > **Note**: A Synapse Analytics workspace requires two resource groups in your Azure subscription; one for resources you explicitly create, and another for managed resources used by the service. It also requires a Data Lake storage account in which to store data, scripts, and other artifacts.
-4. Now select **Security** and under **Authentication method** enter an SQL admin username and password of your choice. Remember these for later use.
 
-5. When you've entered these details, select **Review + create**, and then select **Create** to create the workspace.
-
-    > **Note**: Some subscriptions need to have the Synapse service provider registered separetely. If you need to do so, please use the following CLI commandand then wait a couple of minutes for the resource to be registered: 
-   
-    ```azurecli
-    az provider register --namespace Microsoft.Synapse
-     ```
+4. When you've entered these details, select **Review + create**, and then select **Create** to create the workspace.
 5. Wait for the workspace to be created - this may take five minutes or so.
-
 6. When deployment is complete, go to the resource group that was created and notice that it contains your Synapse Analytics workspace and a Data Lake storage account.
 7. Select your Synapse workspace, and in its **Overview** page, in **Open Synapse Studio** card, select **Open** to open Synapse Studio in a new browser tab. Synapse Studio is a web-based interface that you can use to work with your Synapse Analytics workspace.
 8. On the left side of Synapse Studio, use the **&rsaquo;&rsaquo;** icon to expand the menu - this reveals the different pages within Synapse Studio that you'll use to manage resources and perform data analytics tasks, as shown here:
