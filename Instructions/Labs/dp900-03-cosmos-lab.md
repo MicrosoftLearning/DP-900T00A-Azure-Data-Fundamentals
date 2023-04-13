@@ -41,15 +41,19 @@ To use Cosmos DB, you must provision a Cosmos DB account in your Azure subscript
 
 ## View and create items
 
-1. In the Data Explorer page, expand the **SampleDB** database and the **SampleContainer** container, and select **Items** to see a list of items in the container. The items represent addresses, each with a unique id and other properties.
+1. In the Data Explorer page, expand the **SampleDB** database and the **SampleContainer** container, and select **Items** to see a list of items in the container. The items represent product data, each with a unique id and other properties.
 1. Select any of the items in the list to see a JSON representation of the item data.
 1. At the top of the page, select **New Item** to create a new blank item.
 1. Modify the JSON for the new item as follows, and then select **Save**.
 
     ```json
     {
-        "address": "1 Any St.",
-        "id": "123456789"
+        "name": "Road Helmet,45",
+        "id": "123456789",
+        "categoryID": "123456789",
+        "SKU": "AB-1234-56",
+        "description": "The product called \"Road Helmet,45\" ",
+        "price": 48.74
     }
     ```
 
@@ -63,12 +67,12 @@ To use Cosmos DB, you must provision a Cosmos DB account in your Azure subscript
 1. Modify the query as follows:
 
     ```sql
-    SELECT c.id, c.address
+    SELECT *
     FROM c
-    WHERE CONTAINS(c.address, "Any St.")
+    WHERE CONTAINS(c.name,"Helmet")
     ```
 
-1. Use the **Execute Query** button to run the revised query and review the results, which includes JSON entities for any items with an **address** field containing the text "Any St.".
+1. Use the **Execute Query** button to run the revised query and review the results, which includes JSON entities for any items with a **name** field containing the text "Helmet".
 1. Close the SQL Query editor, discarding your changes.
 
     You've seen how to create and query JSON entities in a Cosmos DB database by using the data explorer interface in the Azure portal. In a real scenario, an application developer would use one of the many programming language specific software development kits (SDKs) to call the NoSQL API and work with data in the database.
