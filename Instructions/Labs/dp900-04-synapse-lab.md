@@ -61,7 +61,7 @@ One of the key tasks you can perform with Azure Synapse Analytics is to define *
 2. In the Copy Data tool, on the **Properties** step, ensure that **Built-in copy task** and **Run once now** are selected, and click **Next >**.
 3. On the **Source** step, in the **Dataset** substep, select the following settings:
     - **Source type**: All
-    - **Connection**: *Create a new connection, and in the **New connection** pane that appears, on the **File** tab, select **HTTP**. Then continue and create a connection to a data file using the following settings:*
+    - **Connection**: *Create a new connection, and in the **New connection** pane that appears, on the **Generic protocol** tab, select **HTTP**. Then continue and create a connection to a data file using the following settings:*
         - **Name**: AdventureWorks Products
         - **Description**: Product list via HTTP
         - **Connect via integration runtime**: AutoResolveIntegrationRuntime
