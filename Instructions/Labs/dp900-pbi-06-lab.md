@@ -86,7 +86,7 @@ The three tables of data you've imported have been loaded into a data model, whi
 
     ![Screenshot showing how to rename the hierarchy in Power BI.](images/rename-hierarchy.png)
 
-1. On the left-side edge, select the **Data** tab, and then in the **Fields** pane, select the **customers** table.
+1. On the left-side edge, select the **Data view** tab, and then in the **Data** pane, select the **customers** table.
 1. Select the **City** column header, and then set its **Data Category** property to **City**:
 
     ![Screenshot showing how to set a data category in Power BI.](images/data-category.png)
@@ -103,7 +103,7 @@ Now you're almost ready to create a report. First you need to check some setting
 
     This setting ensures that you can include map visualizations in reports.
 
-1. On the left-side edge, select the **Report** tab and view the report design interface.
+1. On the left-side edge, select the **Report view** tab and view the report design interface.
 
     ![Screenshot showing the report tab in Power BI.](images/report-tab.png)
 
@@ -111,11 +111,11 @@ Now you're almost ready to create a report. First you need to check some setting
 
     ![Screenshot showing how to add a text box in Power BI.](images/text-box.png)
 
-1. Select any empty area on the report to de-select the text box. Then in the **Fields** pane, expand **Products** and select the **Categorized Products** field. This step adds a table to the report.
+1. Select any empty area on the report to de-select the text box. Then in the **Data** pane, expand **Products** and select the **Categorized Products** field. This step adds a table to the report.
 
     ![Screenshot showing how to add a table of categorized products to a report in Power BI.](images/categorized-products-table.png)
 
-1. With the table still selected, in the **Fields** pane, expand **Orders** and select **Revenue**. A Revenue column is added to the table. You may need to expand the size of the table to see it.
+1. With the table still selected, in the **Data** pane, expand **Orders** and select **Revenue**. A Revenue column is added to the table. You may need to expand the size of the table to see it.
 
     The revenue is formatted as currency, as you specified in the model. However, you didn't specify the number of decimal places, so the values include fractional amounts. It won't matter for the visualizations you're going to create, but you could go back to the **Model** or **Data** tab and change the decimal places if you wish.
 
@@ -125,17 +125,17 @@ Now you're almost ready to create a report. First you need to check some setting
 
     ![Screenshot showing a stacked column chart of categorized products with revenue in a report.](images/stacked-column-chart.png)
 
-1. Above the selected column chart, select the **&#8595;** icon to turn on drill-down. Then in the chart, select the second column (*Road Bikes*) to drill down and see the revenue for the individual products in this category. This capability is possible because you defined a hierarchy of categories and products.
+1. Above the selected column chart, select the **&#8595;** icon to turn on drill-down. Then in the chart, select the second column to drill down and see the revenue for the individual products in this category. This capability is possible because you defined a hierarchy of categories and products.
 
     ![Screenshot showing a column chart drilled down to see products within a category.](images/drill-down.png)
 
 1. Use the **&#x2191;** icon to drill back up to the category level. Then select the **(**&#8595;**)** icon to turn off the drill-down feature.
-1. Select a blank area of the report, and then in the **Fields** pane, select the **Quantity** field in the **orders** table and the **Category** field in the **products** table. This step results in another column chart showing sales quantity by product category.
+1. Select a blank area of the report, and then in the **Data** pane, select the **Quantity** field in the **orders** table and the **Category** field in the **products** table. This step results in another column chart showing sales quantity by product category.
 1. With the new column chart selected, in the **Visualizations** pane, select **Pie chart** and then resize the chart and position it next to the revenue by category column chart.
 
     ![Screenshot showing a pie chart that shows sales quantity by category.](images/category-pie-chart.png)
 
-1. Select a blank area of the report, and then in the **Fields** pane, select the **City** field in the **customers** table and then select the **Revenue** field in the **orders** table. This results in a map showing sales revenue by city. Rearrange and resize the visualizations as needed:
+1. Select a blank area of the report, and then in the **Data** pane, select the **City** field in the **customers** table and then select the **Revenue** field in the **orders** table. This results in a map showing sales revenue by city. Rearrange and resize the visualizations as needed:
 
     ![Screenshot showing a map that shows revenue by city.](images/revenue-map.png)
 
