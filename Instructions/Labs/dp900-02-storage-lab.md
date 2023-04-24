@@ -30,7 +30,7 @@ The first step in using Azure Storage is to provision an Azure Storage account i
 
 1. Select **Next: Advanced >** and view the advanced configuration options. In particular, note that this is where you can enable hierarchical namespace to support Azure Data Lake Storage Gen2. Leave this option **<u>unselected</u>** (you'll enable it later), and then select **Next: Networking >** to view the networking options for your storage account.
 1. Select **Next: Data protection >** and then in the **Recovery** section, <u>de</u>select all of the **Enable soft delete...** options. These options retain deleted files for subsequent recovery, but can cause issues later when you enable hierarchical namespace.
-1. Continue through the remaining **Next >** pages without changing any of the default settings, and then on the  **Review + Create** page, wait for your selections to be validated and select **Create** to create your Azure Storage account.
+1. Continue through the remaining **Next >** pages without changing any of the default settings, and then on the  **Review** page, wait for your selections to be validated and select **Create** to create your Azure Storage account.
 1. Wait for deployment to complete. Then go to the resource that was deployed.
 
 ## Explore blob storage
@@ -76,7 +76,7 @@ Azure Data Lake Store Gen2 support enables you to use hierarchical folders to or
 1. Close the **Upload blob** panel if it's still open, and verify that a **product_data** folder now contains the **product2.json** file.
 1. On the left side, in the **Data storage** section, select **Containers**.
 1. Open the **data** container, and verify that the **product_data** folder you created is listed.
-1. Select the **&#x2027;&#x2027;&#x2027;** icon at the right-end of the folder, and note that with hierarchical namespace enabled, you can perform configuration tasks at the folder-level; including renaming folders and setting permissions.
+1. Select the **&#x2027;&#x2027;&#x2027;** icon at the right-end of the folder, and note that with hierarchical namespace enabled, you can perform configuration tasks at the folder-level.
 1. Use the **X** icon at the top right in the **data** page to close the page and return to the **Containers** page.
 
 ## Explore Azure Files
