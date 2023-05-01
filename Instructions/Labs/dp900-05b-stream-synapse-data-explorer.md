@@ -6,6 +6,8 @@ lab:
 
 # Explore Azure Synapse Data Explorer
 
+> **Note**: Due to product changes, there are some known issues with the **Create a database and ingest data** section of this lab. We are working to address these issues.
+
 In this exercise, you'll use Azure Synapse Data Explorer to analyze time-series data.
 
 This lab will take approximately **25** minutes to complete.
