@@ -76,7 +76,7 @@ Azure Data Lake Store Gen2 support enables you to use hierarchical folders to or
 1. Close the **Upload blob** panel if it's still open, and verify that a **product_data** folder now contains the **product2.json** file.
 1. On the left side, in the **Data storage** section, select **Containers**.
 1. Open the **data** container, and verify that the **product_data** folder you created is listed.
-1. Select the **&#x2027;&#x2027;&#x2027;** icon at the right-end of the folder, and note that with hierarchical namespace enabled, you can perform configuration tasks at the folder-level.
+1. Select the **&#x2027;&#x2027;&#x2027;** icon at the right-end of the folder, and note that with hierarchical namespace enabled, you can perform configuration tasks at the folder-level; including renaming folders and setting permissions.
 1. Use the **X** icon at the top right in the **data** page to close the page and return to the **Containers** page.
 
 ## Explore Azure Files
