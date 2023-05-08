@@ -6,7 +6,8 @@ server=contoso-server-$(openssl rand -hex 5)
 database="Inventory"
 
 login="sampleLogin"
-password="samplePassword123!"
+passwordlength=12
+password=$(LC_ALL=C tr -dc 'A-Za-z0-9!@#$%^&*()-_=+<>?' </dev/urandom | head -c ${passwordlength})
 
 startIP=0.0.0.0
 endIP=0.0.0.0
