@@ -30,7 +30,7 @@ The first step in using Azure Storage is to provision an Azure Storage account i
 
 1. Select **Next: Advanced >** and view the advanced configuration options. In particular, note that this is where you can enable hierarchical namespace to support Azure Data Lake Storage Gen2. Leave this option **<u>unselected</u>** (you'll enable it later), and then select **Next: Networking >** to view the networking options for your storage account.
 1. Select **Next: Data protection >** and then in the **Recovery** section, <u>de</u>select all of the **Enable soft delete...** options. These options retain deleted files for subsequent recovery, but can cause issues later when you enable hierarchical namespace.
-1. Continue through the remaining **Next >** pages without changing any of the default settings, and then on the  **Review + Create** page, wait for your selections to be validated and select **Create** to create your Azure Storage account.
+1. Continue through the remaining **Next >** pages without changing any of the default settings, and then on the  **Review** page, wait for your selections to be validated and select **Create** to create your Azure Storage account.
 1. Wait for deployment to complete. Then go to the resource that was deployed.
 
 ## Explore blob storage
