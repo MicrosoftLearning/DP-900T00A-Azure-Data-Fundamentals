@@ -4,7 +4,7 @@ az extension add --name stream-analytics
 az provider register --namespace 'Microsoft.Devices' --wait 2>nul
 az provider register --namespace 'Microsoft.StreamAnalytics' --wait 2>nul
 
-rg=$(az group list --query "[].name" -o tsv);
+rg=$(az group list --query "[].name" -o tsv | head -n 1);
 if [[ "$rg" != learn* ]]; then
     rgguid=$(cat /proc/sys/kernel/random/uuid)
     rgsuffix=${rgguid//[-]/}
