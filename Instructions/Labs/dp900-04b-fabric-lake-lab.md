@@ -110,7 +110,7 @@ Microsoft Fabric lakehouses organize all tables in a data model, which you can u
 
 1. In the toolbar, select **New report** to open a new browser tab containing the Power BI report designer.
 1. In the report designer:
-    1. In the **Data** pane, expand the **DimProduct** table and select the **Brand** and **StockItemKey** fields.
+    1. In the **Data** pane, expand the **dimProduct** table and select the **Brand** and **StockItemKey** fields.
     1. In the **Visualizations** pane, select the **Stacked bar chart** visualization (it's the first one listed). Then ensure that the **Y-axis** contains the **Brand** field and change the aggregation in the **X-axis** to **Count** so that it contains the **Count of StockItemKey** field.
     
         ![Screenshot of a Power BI report.](./images/fabric-report.png)
