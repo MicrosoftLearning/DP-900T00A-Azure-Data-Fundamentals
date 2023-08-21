@@ -21,7 +21,7 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 3. Create a new workspace with a name of your choice, selecting a licensing mode in the **Advanced** section that includes Fabric capacity (*Trial*, *Premium*, or *Fabric*).
 4. When your new workspace opens, it should be empty.
 
-    ![Screenshot of an empty workspace in Power BI.](./Images/new-workspace.png)
+    ![Screenshot of an empty workspace in Power BI.](./images/new-workspace.png)
 
 ## Create a lakehouse
 
@@ -37,7 +37,7 @@ Now that you have a workspace, it's time to switch to the *Data engineering* exp
 
     After a minute or so, a new lakehouse will be created:
 
-    ![Screenshot of a new lakehouse.](./Images/new-lakehouse.png)
+    ![Screenshot of a new lakehouse.](./images/new-lakehouse.png)
 
 3. View the new lakehouse, and note that the **Lakehouse explorer** pane on the left enables you to browse tables and files in the lakehouse:
     - The **Tables** folder contains tables that you can query using SQL. Tables in a Microsoft Fabric lakehouse are based on the open source *Delta Lake* file format, commonly used in Apache Spark.
@@ -52,7 +52,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 1. On the **Home** page for your lakehouse, in the **Get data** menu, select **New data pipeline**, and create a new data pipeline named **Ingest Sales Data**.
 1. In the **Copy Data** wizard, on the **Choose a data source** page, select the **Retail Data Model from Wide World Importers** sample dataset.
 
-    ![Screenshot of the Choose data source page.](./Images/choose-data-source.png)
+    ![Screenshot of the Choose data source page.](./images/choose-data-source.png)
 
 1. Select **Next** and view the tables in the data source on the **Connect to data source** page.
 1. Select the **dimension_stock_item** table, which contains records of products. Then select **Next** to progress to the **Choose data destination** page.
@@ -60,25 +60,25 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 1. Set the following data destination options, and then select **Next**:
     - **Root folder**: Tables
     - **Load settings**: Load to new table
-    - **Destination table name**: dimProduct
+    - **Destination table name**: dimension_stock_item
     - **Column mappings**: *Leave the default mappings as-is*
     - **Enable partition**: *Unselected*
 1. On the **Review + save** page, ensure that the **Start data transfer immediately** option is selected, and then select **Save + Run**.
 
     A new pipeline containing a **Copy Data** activity is created, as shown here:
 
-    ![Screenshot of a pipeline with a Copy Data activity.](./Images/copy-data-pipeline.png)
+    ![Screenshot of a pipeline with a Copy Data activity.](./images/copy-data-pipeline.png)
 
     When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the **&#8635;** (*Refresh*) icon to refresh the status, and wait until it has succeeeded.
 
 1. In the hub menu bar on the left, select your lakehouse.
-1. On the **Home** page, in the **Lakehouse explorer** pane, expand **Tables** and verify that the **dimProduct** table has been created.
+1. On the **Home** page, in the **Lakehouse explorer** pane, expand **Tables** and verify that the **dimension_stock_item** table has been created.
 
     > **Note**: If the new table is listed as *unidentified*, use the **Refresh** button in the lakehouse toolbar to refresh the view.
 
-1. Select the **dimProduct** table to view its contents.
+1. Select the **dimension_stock_item** table to view its contents.
 
-    ![Screenshot of the dimProduct table.](./images/dimProduct.png)
+    ![Screenshot of the dimension_stock_item table.](./images/dimProduct.png)
 
 ## Query data in a lakehouse
 
@@ -92,7 +92,7 @@ Now that you have ingested data into a table in the lakehouse, you can use SQL t
 
     ```sql
     SELECT Brand, COUNT(StockItemKey) AS Products
-    FROM dimProduct
+    FROM dimension_stock_item
     GROUP BY Brand
     ```
 
@@ -110,8 +110,8 @@ Microsoft Fabric lakehouses organize all tables in a data model, which you can u
 
 1. In the toolbar, select **New report** to open a new browser tab containing the Power BI report designer.
 1. In the report designer:
-    1. In the **Data** pane, expand the **dimProduct** table and select the **Brand** and **StockItemKey** fields.
-    1. In the **Visualizations** pane, select the **Stacked bar chart** visualization (it's the first one listed). Then ensure that the **Y-axis** contains the **Brand** field and change the aggregation in the **X-axis** to **Count** so that it contains the **Count of StockItemKey** field.
+    1. In the **Data** pane, expand the **dimension_stock_item** table and select the **Brand** and **StockItemKey** fields.
+    1. In the **Visualizations** pane, select the **Stacked bar chart** visualization (it's the first one listed). Then ensure that the **Y-axis** contains the **Brand** field and change the aggregation in the **X-axis** to **Count** so that it contains the **Count of StockItemKey** field. Finally, resize the visualization in the report canvas to fill the available space.
 
         ![Screenshot of a Power BI report.](./images/fabric-report.png)
 

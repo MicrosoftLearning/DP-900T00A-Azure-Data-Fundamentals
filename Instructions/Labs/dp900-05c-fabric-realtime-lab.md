@@ -21,7 +21,7 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 3. Create a new workspace with a name of your choice, selecting a licensing mode in the **Advanced** section that includes Fabric capacity (*Trial*, *Premium*, or *Fabric*).
 4. When your new workspace opens, it should be empty.
 
-    ![Screenshot of an empty workspace in Power BI.](./Images/new-workspace.png)
+    ![Screenshot of an empty workspace in Power BI.](./images/new-workspace.png)
 
 ## Create a KQL database
 
@@ -37,7 +37,7 @@ Now that you have a workspace, you can create a KQL database to store real-time 
 
     After a minute or so, a new KQL database will be created:
 
-    ![Screenshot of a new KQL database.](./Images/kql-database.png)
+    ![Screenshot of a new KQL database.](./images/kql-database.png)
 
     Currently, there are no tables in the database.
 
@@ -50,14 +50,14 @@ Eventstreams provide a scalable and flexible way to ingest real-time data from a
 
     After a short time, the visual designer for your eventstream is displayed.
 
-    ![Screenshot of the Eventstream designer.](./Images/eventstream-designer.png)
+    ![Screenshot of the Eventstream designer.](./images/eventstream-designer.png)
 
     The visual designer canvas shows a source that connects to your eventstream, which in turn is connected to a destination.
 
 1. On the designer canvas, in the **New source** list for your source, select **Sample data**. Then in the **Sample data** pane, specify the name **taxis** and select the **Yellow Taxi** sample data (which represents data collected from taxi journeys). Then select **Add**.
 1. Beneath the designer canvas, select the **Data preview** tab to preview the data being streamed from the source:
 
-    ![Screenshot of the Eventstream data preview.](./Images/eventstream-preview.png)
+    ![Screenshot of the Eventstream data preview.](./images/eventstream-preview.png)
 
 1. On the designer canvas, in the **New destination** list for your destination, select **KQL database**. Then in the **KQL database** pane, specify the destination name **taxi-data** and select your workspace and KQL database. Then select **Create and configure**.
 1. In the **Ingest data** wizard, on the **Destination** page, select **New table** and enter the table name **taxi-data**. Then select **Next: Source**.
@@ -66,7 +66,7 @@ Eventstreams provide a scalable and flexible way to ingest real-time data from a
 1. On the **Summary** page, wait for continuous ingestion to be established, and then select **Close**.
 1. Verify that your completed eventstream looks like this:
 
-    ![Screenshot of a completed Eventstream.](./Images/complete-eventstream.png)
+    ![Screenshot of a completed Eventstream.](./images/complete-eventstream.png)
 
 ## Query real-time data in a KQL database
 
@@ -75,7 +75,7 @@ Your eventstream continuously populates a table in your KQL database, enabling y
 1. In the menu hub on the left, select your KQL database (or select your workspace and find your KQL database there).
 1. In the **...** menu for the **taxi-data** table (which has been created by your eventstream), select **Query table > Records ingested in the last 24 hours**.
 
-    ![Screenshot of the Query table menu in a KQL database.](./Images/kql-query.png)
+    ![Screenshot of the Query table menu in a KQL database.](./images/kql-query.png)
 
 1. View the results of the query, which should be a KQL query like this:
 
@@ -95,7 +95,7 @@ Your eventstream continuously populates a table in your KQL database, enabling y
     ```
 
 1. Use the **&#9655; Run** button to run the query and review the results, which show the number of taxi pickups for each hour.
- 
+
 ## Clean up resources
 
 If you've finished exploring real-time analytics in Microsoft Fabric, you can delete the workspace you created for this exercise.
