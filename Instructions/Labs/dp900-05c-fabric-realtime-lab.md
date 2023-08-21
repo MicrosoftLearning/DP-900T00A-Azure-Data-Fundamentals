@@ -27,7 +27,7 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
 Now that you have a workspace, you can create a KQL database to store real-time data.
 
-1. At the bottom left of the portal, switch to the **Real Time Analytics** experience.
+1. At the bottom left of the portal, switch to the **Real-Time Analytics** experience.
 
     ![Screenshot of the experience switcher menu.](./images/fabric-real-time.png)
 
@@ -45,7 +45,7 @@ Now that you have a workspace, you can create a KQL database to store real-time 
 
 Eventstreams provide a scalable and flexible way to ingest real-time data from a streaming source.
 
-1. In the menu bar on the left, select the **Home** page for the real-time analytics experience.
+1. In the menu bar on the left, select the **Real-time analytics** experience.
 1. On the home page, select the tile to create a new **Eventstream** with a name of your choice.
 
     After a short time, the visual designer for your eventstream is displayed.
@@ -84,7 +84,7 @@ Your eventstream continuously populates a table in your KQL database, enabling y
     | where ingestion_time() between (now(-1d) .. now())
     ```
 
-    The results show all taxi records ingested from the streaming source in the last 24 hours.
+    Use the **&#9655; Run** button to run the query and review the results, which show all taxi records ingested from the streaming source in the last 24 hours.
 
 1. Replace all of the KQL query code in the top half of the query editor with the following code:
 
@@ -95,7 +95,7 @@ Your eventstream continuously populates a table in your KQL database, enabling y
     ```
 
 1. Use the **&#9655; Run** button to run the query and review the results, which show the number of taxi pickups for each hour.
- 
+
 ## Clean up resources
 
 If you've finished exploring real-time analytics in Microsoft Fabric, you can delete the workspace you created for this exercise.
