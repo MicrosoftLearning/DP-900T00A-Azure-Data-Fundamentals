@@ -63,7 +63,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
     - **Destination table name**: dimProduct
     - **Column mappings**: *Leave the default mappings as-is*
     - **Enable partition**: *Unselected*
-1. On the **Review _ save** page, ensure that the **Start data transfer immediately** option is selected, and then select **Save + Run**.
+1. On the **Review + save** page, ensure that the **Start data transfer immediately** option is selected, and then select **Save + Run**.
 
     A new pipeline containing a **Copy Data** activity is created, as shown here:
 
@@ -104,7 +104,7 @@ Now that you have ingested data into a table in the lakehouse, you can use SQL t
 
 Microsoft Fabric lakehouses organize all tables in a data model, which you can use to create visualizations and reports.
 
-1. At the bottom left of the page, under the **Explore** pane, select the **Model** tab to see the data model for the tables in the lakehouse (in this case there is only one table).
+1. At the bottom left of the page, under the **Explorer** pane, select the **Model** tab to see the data model for the tables in the lakehouse (in this case there is only one table).
 
     ![Screenshot of the model page in a Fabric lakehouse.](./images/fabric-model.png)
 
@@ -112,14 +112,14 @@ Microsoft Fabric lakehouses organize all tables in a data model, which you can u
 1. In the report designer:
     1. In the **Data** pane, expand the **dimProduct** table and select the **Brand** and **StockItemKey** fields.
     1. In the **Visualizations** pane, select the **Stacked bar chart** visualization (it's the first one listed). Then ensure that the **Y-axis** contains the **Brand** field and change the aggregation in the **X-axis** to **Count** so that it contains the **Count of StockItemKey** field.
-    
+
         ![Screenshot of a Power BI report.](./images/fabric-report.png)
 
     > **Tip**: You can use the **>>** icons to hide the report designer panes in order to see the report more clearly.
 
 1. On the **File** menu, select **Save** to save the report as **Brand Quantity Report** in your Fabric workspace.
 
-    You can ow close the browser tab conta8ning the report to return to your lakehouse. You can find the report in the page for your workspace in the Microsoft Fabric portal.
+    You can now close the browser tab contaning the report to return to your lakehouse. You can find the report in the page for your workspace in the Microsoft Fabric portal.
 
 ## Clean up resources
 
