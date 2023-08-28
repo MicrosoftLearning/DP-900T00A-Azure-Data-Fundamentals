@@ -4,13 +4,20 @@ az extension add --name stream-analytics
 az provider register --namespace 'Microsoft.Devices' --wait 2>nul
 az provider register --namespace 'Microsoft.StreamAnalytics' --wait 2>nul
 
-rg=$(az group list --query "[].name" -o tsv | head -n 1);
+# List of Azure regions
+regions=("eastus" "westus" "centralus" "northeurope" "westeurope" "southeastasia" "australiaeast" "japaneast")
+
+rg=$(az group list --query "[].name" -o tsv | head -n 1)
 if [[ "$rg" != learn* ]]; then
     rgguid=$(cat /proc/sys/kernel/random/uuid)
     rgsuffix=${rgguid//[-]/}
     rgsuffix=${rgsuffix:0:18}
     rg=learn${rgsuffix}
-    az group create --name $rg --location westus --output none
+
+    # Choose a random location from the list of regions
+    random_location=${regions[$RANDOM % ${#regions[@]}]}
+
+    az group create --name $rg --location $random_location --output none
 fi
 
 echo "Using the $rg resource group..."
