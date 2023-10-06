@@ -40,6 +40,8 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free) in which y
     bash setup.sh
     ```
 
+    > Ignore any warning messages about future changes and experimental features.
+
     Wait as the script runs and performs the following actions:
 
     1. Installs the Azure CLI extensions needed to create resources (*you can ignore any warnings about experimental extensions*)
@@ -58,7 +60,7 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free) in which y
 
     If all three of these resources are not listed, click the **&#8635; Refresh** button until they appear.
 
- 3. Select the **stream*xxxxxxxxxxxxx*** Stream Analytics job and view the information on its **Overview** page, noting the following details:
+3. Select the **stream*xxxxxxxxxxxxx*** Stream Analytics job and view the information on its **Overview** page, noting the following details:
     - The job has one *input* named **iotinput**, and one *output* named **bloboutput**. These reference the IoT Hub and Storage account created by the setup script.
     - The job has a *query*, which reads data from the **iotinput** input, and aggregates it by counting the number of messages processed every 10 seconds; writing the results to the **bloboutput** output.
 
