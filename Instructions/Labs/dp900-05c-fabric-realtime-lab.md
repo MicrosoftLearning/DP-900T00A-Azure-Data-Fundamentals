@@ -91,7 +91,7 @@ Your eventstream continuously populates a table in your KQL database, enabling y
     ```kql
     // This query returns the number of taxi pickups per hour
     ['taxi-data']
-    | summarize PickupCount = count() by bin(tpep_pickup_datetime, 1h)
+    | summarize PickupCount = count() by bin(todatetime(tpep_pickup_datetime), 1h)
     ```
 
 1. Use the **&#9655; Run** button to run the query and review the results, which show the number of taxi pickups for each hour.
