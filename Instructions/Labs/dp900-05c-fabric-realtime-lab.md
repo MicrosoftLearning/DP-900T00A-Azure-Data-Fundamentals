@@ -35,7 +35,9 @@ Now that you have a workspace, you can create a KQL database to store real-time 
 
 2. In the real time analytics home page, create a new **KQL Database** with a name of your choice.
 
-    After a minute or so, a new KQL database will be created:
+    ![Screenshot of the RTA Editor with Create KQL DB Highlighted.](./images/create-kql-db.png)
+
+   After a minute or so, a new KQL database will be created:
 
     ![Screenshot of a new KQL database.](./images/kql-database.png)
 
