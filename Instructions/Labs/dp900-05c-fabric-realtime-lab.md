@@ -27,16 +27,18 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
 Now that you have a workspace, you can create a KQL database to store real-time data.
 
-1. At the bottom left of the portal, switch to the **Real Time Analytics** experience.
+1. At the bottom left of the portal, switch to the **Real-Time Intelligence** experience.
 
     ![Screenshot of the experience switcher menu.](./images/fabric-real-time.png)
 
-    The real time analytics home page includes tiles to create commonly used assets for real-time data analyis
+    The Real-Time Intelligence home page includes tiles to create commonly used assets for real-time data analysis.
 
-2. In the real time analytics home page, create a new **KQL Database** with a name of your choice.
+2. In the Real-Time Intelligence home page, create a new **Eventhouse** with a name of your choice.
 
     ![Screenshot of the RTA Editor with Create KQL DB Highlighted.](./images/create-kql-db.png)
 
+    The Eventhouse is used to group and manage your databases across projects. An empty KQL database is automatically created with the eventhouse's name and we will add data to it later in this exercise.
+   
    You will see a dashboard screen and then select the KQL Database button at the top.
 
     ![Screenshot of a new KQL database.](./images/kql-database.png)
@@ -56,7 +58,7 @@ Now that you have a workspace, you can create a KQL database to store real-time 
 
 Eventstreams provide a scalable and flexible way to ingest real-time data from a streaming source.
 
-1. In the menu bar on the left, select the **Home** page for the real-time analytics experience.
+1. In the menu bar on the left, select the **Home** page for the Real-Time Intelligence experience.
 1. On the home page, select the tile to create a new **Eventstream** with a name of your choice.
 
     After a short time, the visual designer for your eventstream is displayed.
