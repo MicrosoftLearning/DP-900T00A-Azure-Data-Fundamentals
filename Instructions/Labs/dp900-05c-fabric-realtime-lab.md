@@ -38,21 +38,6 @@ Now that you have a workspace, you can create a KQL database to store real-time 
     ![Screenshot of the RTA Editor with Create KQL DB Highlighted.](./images/create-kql-db.png)
 
     The Eventhouse is used to group and manage your databases across projects. An empty KQL database is automatically created with the eventhouse's name and we will add data to it later in this exercise.
-   
-   You will see a dashboard screen and then select the KQL Database button at the top.
-
-    ![Screenshot of a new KQL database.](./images/kql-database.png)
-
-    Once selected you will be given a ***New KQL Database*** dialog box where you will give your KQL Database a name.
-
-    ![Screenshot of a new KQL database name dialog.](./images/name-kql-db.png)
-
-   - name the database, in this scenario, it is: `my_kql_db`
-   - click, ***Create***
-  
-    After a minute or so, a new KQL database will be created:
-
-    Currently, there are no tables in the database.
 
 ## Create an eventstream
 
