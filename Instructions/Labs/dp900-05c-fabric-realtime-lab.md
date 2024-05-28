@@ -57,11 +57,7 @@ Eventstreams provide a scalable and flexible way to ingest real-time data from a
 
     ![Screenshot of the Eventstream data preview.](./images/eventstream-preview.png)
 
-1. On the designer canvas, in the **New destination** list for your destination, select **KQL database**. Then in the **KQL database** pane, specify the destination name **taxi-data** and select your workspace and KQL database. Then select **Create and configure**.
-1. In the **Ingest data** wizard, on the **Destination** page, select **New table** and enter the table name **taxi-data**. Then select **Next: Source**.
-1. On the **Source** page, review the default data connection name, and then select **Next: Schema**.
-1. On the **Schema** page, change the **Data format** from TXT to **JSON**, and view the preview to verify that this format results in multiple columns of data. Then select **Next: Summary**.
-1. On the **Summary** page, wait for continuous ingestion to be established, and then select **Close**.
+1. On the designer canvas, in the **New destination** list for your destination, select **KQL database**. Then in the **KQL database** pane, specify the destination name **taxi-data** and select your workspace and KQL database. Select **Create new** under Destination table and enter the table name **taxi-data**. Then select **Add**.
 1. Verify that your completed eventstream looks like this:
 
     ![Screenshot of a completed Eventstream.](./images/complete-eventstream.png)
