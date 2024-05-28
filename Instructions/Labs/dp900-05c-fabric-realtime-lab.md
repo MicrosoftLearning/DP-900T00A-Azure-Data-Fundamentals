@@ -27,36 +27,23 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
 Now that you have a workspace, you can create a KQL database to store real-time data.
 
-1. At the bottom left of the portal, switch to the **Real Time Analytics** experience.
+1. At the bottom left of the portal, switch to the **Real-Time Intelligence** experience.
 
     ![Screenshot of the experience switcher menu.](./images/fabric-real-time.png)
 
-    The real time analytics home page includes tiles to create commonly used assets for real-time data analyis
+    The Real-Time Intelligence home page includes tiles to create commonly used assets for real-time data analysis.
 
-2. In the real time analytics home page, create a new **KQL Database** with a name of your choice.
+2. In the Real-Time Intelligence home page, create a new **Eventhouse** with a name of your choice.
 
     ![Screenshot of the RTA Editor with Create KQL DB Highlighted.](./images/create-kql-db.png)
 
-   You will see a dashboard screen and then select the KQL Database button at the top.
-
-    ![Screenshot of a new KQL database.](./images/kql-database.png)
-
-    Once selected you will be given a ***New KQL Database*** dialog box where you will give your KQL Database a name.
-
-    ![Screenshot of a new KQL database name dialog.](./images/name-kql-db.png)
-
-   - name the database, in this scenario, it is: `my_kql_db`
-   - click, ***Create***
-  
-    After a minute or so, a new KQL database will be created:
-
-    Currently, there are no tables in the database.
+    The Eventhouse is used to group and manage your databases across projects. An empty KQL database is automatically created with the eventhouse's name and we will add data to it later in this exercise.
 
 ## Create an eventstream
 
 Eventstreams provide a scalable and flexible way to ingest real-time data from a streaming source.
 
-1. In the menu bar on the left, select the **Home** page for the real-time analytics experience.
+1. In the menu bar on the left, select the **Home** page for the Real-Time Intelligence experience.
 1. On the home page, select the tile to create a new **Eventstream** with a name of your choice.
 
     After a short time, the visual designer for your eventstream is displayed.
@@ -70,11 +57,7 @@ Eventstreams provide a scalable and flexible way to ingest real-time data from a
 
     ![Screenshot of the Eventstream data preview.](./images/eventstream-preview.png)
 
-1. On the designer canvas, in the **New destination** list for your destination, select **KQL database**. Then in the **KQL database** pane, specify the destination name **taxi-data** and select your workspace and KQL database. Then select **Create and configure**.
-1. In the **Ingest data** wizard, on the **Destination** page, select **New table** and enter the table name **taxi-data**. Then select **Next: Source**.
-1. On the **Source** page, review the default data connection name, and then select **Next: Schema**.
-1. On the **Schema** page, change the **Data format** from TXT to **JSON**, and view the preview to verify that this format results in multiple columns of data. Then select **Next: Summary**.
-1. On the **Summary** page, wait for continuous ingestion to be established, and then select **Close**.
+1. On the designer canvas, in the **New destination** list for your destination, select **KQL database**. Then in the **KQL database** pane, specify the destination name **taxi-data** and select your workspace and KQL database. Select **Create new** under Destination table and enter the table name **taxi-data**. Then select **Add**.
 1. Verify that your completed eventstream looks like this:
 
     ![Screenshot of a completed Eventstream.](./images/complete-eventstream.png)
