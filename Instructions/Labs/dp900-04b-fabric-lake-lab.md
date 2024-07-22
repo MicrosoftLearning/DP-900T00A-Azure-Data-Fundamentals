@@ -19,7 +19,7 @@ This lab will take approximately **25** minutes to complete.
 Before working with data in Fabric, create a workspace with the Fabric trial enabled.
 
 1. Sign into [Microsoft Fabric](https://app.fabric.microsoft.com) at `https://app.fabric.microsoft.com`.
-1. In the menu bar, at the bottom left,switch to the **Data Engineering** experience.
+1. In the menu bar, at the bottom left, switch to the **Data Engineering** experience.
 
     ![Screenshot of the experience switcher menu.](./images/fabric-switcher.png)
 
@@ -114,7 +114,7 @@ Microsoft Fabric lakehouses organize all tables in a semantic data model, which 
 
 1. On the **File** menu, select **Save** to save the report as **Taxi Rides Report** in your Fabric workspace.
 
-    You can now close the browser tab contaning the report to return to your lakehouse. You can find the report in the page for your workspace in the Microsoft Fabric portal.
+    You can find the report in the page for your workspace in the Microsoft Fabric portal.
 
 ## Clean up resources
 
