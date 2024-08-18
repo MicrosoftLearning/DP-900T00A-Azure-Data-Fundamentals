@@ -19,7 +19,7 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free) in which y
 If Microsoft Power BI Desktop is not already installed on your Windows computer, you can download and install it for free.
 
 1. Download the Power BI Desktop installer from [https://aka.ms/power-bi-desktop](https://aka.ms/power-bi-desktop?azure-portal=true).
-1. When the file has downloaded, open it, and use the setup wizard to install Power BI Desktop on your computer. This insatllation may take a few minutes.
+1. When the file has downloaded, open it, and use the setup wizard to install Power BI Desktop on your computer. This installation may take a few minutes.
 
 ## Import data
 
