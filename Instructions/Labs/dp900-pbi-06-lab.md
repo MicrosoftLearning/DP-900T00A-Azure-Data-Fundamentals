@@ -10,11 +10,7 @@ In this exercise you'll use Microsoft Power BI Desktop to create a data model an
 
 This lab will take approximately **20** minutes to complete.
 
-## Before you start
-
-You'll need an [Azure subscription](https://azure.microsoft.com/free) in which you have administrative-level access.
-
-### Install Power BI Desktop
+## Install Power BI Desktop
 
 If Microsoft Power BI Desktop is not already installed on your Windows computer, you can download and install it for free.
 
