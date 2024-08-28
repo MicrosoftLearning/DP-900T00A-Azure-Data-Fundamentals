@@ -82,7 +82,7 @@ The three tables of data you've imported have been loaded into a data model, whi
 
     ![Screenshot showing how to rename the hierarchy in Power BI.](images/rename-hierarchy.png)
 
-1. On the left-side edge, select the **Data view** tab, and then in the **Data** pane, select the **customers** table.
+1. On the left-side edge, select the **Table view** tab, and then in the **Data** pane, select the **customers** table.
 1. Select the **City** column header, and then set its **Data Category** property to **City**:
 
     ![Screenshot showing how to set a data category in Power BI.](images/data-category.png)
