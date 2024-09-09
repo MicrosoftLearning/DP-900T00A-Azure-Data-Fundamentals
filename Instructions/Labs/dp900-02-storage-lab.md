@@ -42,7 +42,7 @@ Now that you have an Azure Storage account, you can create a container for blob 
     *If the JSON file is displayed in your browser, save the page as **product1.json**.*
 
 1. In the Azure portal page for your storage container, on the left side, in the **Data storage** section, select **Containers**.
-1. In the **Containers** page, select **&#65291; Container** and add a new container named **data** with a public access level of **Private (no anonymous access)**.
+1. In the **Containers** page, select **&#65291; Container** and add a new container named **data** with an anonymous access level of **Private (no anonymous access)**.
 1. When the **data** container has been created, verify that it's listed in the **Containers** page.
 1. In the pane on the left side, in the top section, select **Storage browser**. This page provides a browser-based interface that you can use to work with the data in your storage account.
 1. In the storage browser page, select **Blob containers** and verify that your **data** container is listed.
@@ -66,7 +66,7 @@ Now that you have an Azure Storage account, you can create a container for blob 
 
 Azure Data Lake Store Gen2 support enables you to use hierarchical folders to organize and manage access to blobs. It also enables you to use Azure blob storage to host distributed file systems for common big data analytics platforms.
 
-1. Download the [product2.json](https://aka.ms/product2.json?azure-portal=true) JSON file from `https://aka.ms/product2.json` and save it on your computer in the same folder where you downloaded **product1.json** previously - you'll upload it to blob storage later).
+1. Download the [product2.json](https://aka.ms/product2.json?azure-portal=true) JSON file from `https://aka.ms/product2.json` and save it on your computer in the same folder where you downloaded **product1.json** previously - you'll upload it to blob storage later.
 1. In the Azure portal page for your storage account, on the left side, scroll down to the **Settings** section, and select **Data Lake Gen2 upgrade**.
 1. In the **Data Lake Gen2 upgrade** page, expand and complete each step to upgrade your storage account to enable hierarchical namespace and support Azure Data Lake Storage Gen 2. This may take some time.
 1. When the upgrade is complete, in the pane on the left side, in the top section, select **Storage browser** and navigate back to the root of your **data** blob container, which still contains the **product_data** folder.
@@ -85,6 +85,7 @@ Azure Files provides a way to create cloud-based file shares.
 
 1. In the Azure portal page for your storage container, on the left side, in the **Data storage** section, select **File shares**.
 1. In the File shares page, select **&#65291; File share** and add a new file share named **files** using the **Transaction optimized** tier.
+2. Select **Next: Backup >** and disable backup. Then select **Review + create**.
 1. In the **File shares**, open your new **files** share.
 1. At the top of the page, select **Connect**. Then in the **Connect** pane, note that there are tabs for common operating systems (Windows, Linux, and macOS) that contain scripts you can run to connect to the shared folder from a client computer.
 1. Close the **Connect** pane and then close the **files** page to return to the **File shares** page for your Azure storage account.
