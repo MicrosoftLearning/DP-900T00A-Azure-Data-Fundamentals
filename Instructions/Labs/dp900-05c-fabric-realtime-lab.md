@@ -21,7 +21,7 @@ Before working with data in Fabric, you need to create a workspace with the Fabr
 1. Create a new workspace with a name of your choice, selecting a licensing mode that includes Fabric capacity (*Trial*, *Premium*, or *Fabric*).
 1. When your new workspace opens, it should be empty.
 
-    ![Screenshot of an empty workspace in Fabric.](./Images/new-workspace.png)
+    ![Screenshot of an empty workspace in Fabric.](./images/new-workspace.png)
 
 ## Create an eventstream
 
@@ -33,16 +33,16 @@ Now you're ready to find and ingest real-time data from a streaming source. To d
 
     The real-time hub provides an easy way to find and manage sources of streaming data.
 
-    ![Screenshot of the real-time hub in Fabric.](./Images/real-time-hub.png)
+    ![Screenshot of the real-time hub in Fabric.](./images/real-time-hub.png)
 
 1. In the real-time hub, in the **Connect to** section, select **Data sources**.
 1. Find the **Yellow taxi** sample data source and select **Connect**. Then in the **Connect** wizard, name the source `taxi` and edit the default eventstream name to change it to `taxi-data`. The default stream associated with this data will automatically be named *taxi-data-stream*:
 
-    ![Screenshot of a new eventstream.](./Images/name-eventstream.png)
+    ![Screenshot of a new eventstream.](./images/name-eventstream.png)
 
 1. Select **Next** and wait for the source and eventstream to be created, then select **Open eventstream**. The eventstream will show the **taxi** source and the **taxi-data-stream** on the design canvas:
 
-   ![Screenshot of the eventstream canvas.](./Images/new-taxi-stream.png)
+   ![Screenshot of the eventstream canvas.](./images/new-taxi-stream.png)
 
 ## Create an eventhouse
 
@@ -54,7 +54,7 @@ The eventstream ingests the real-time stock data, but doesn't currently do anyth
 
     Close any tips or prompts that are displayed until you see your new empty eventhouse.
 
-    ![Screenshot of a new eventhouse](./Images/create-eventhouse.png)
+    ![Screenshot of a new eventhouse](./images/create-eventhouse.png)
 
 1. In the pane on the left, note that your eventhouse contains a KQL database with the same name as the eventhouse. You can create tables for your real-time data in this database, or create additional databases as necessary.
 1. Select the database, and note that there is an associated *queryset*. This file contains some sample KQL queries that you can use to get started querying the tables in your database.
@@ -65,11 +65,11 @@ The eventstream ingests the real-time stock data, but doesn't currently do anyth
 1. For the data source, select **Eventstream** > **Existing eventstream**.
 1. In the **Select or create a destination table** pane, create a new table named `taxi`. Then in the **Configure the data source** pane, select your workspace and the **taxi-data** eventstream and name the connection `taxi-table`.
 
-   ![Screenshot of configuration for loading a table from an eventstream.](./Images/configure-destination.png)
+   ![Screenshot of configuration for loading a table from an eventstream.](./images/configure-destination.png)
 
 1. Use the **Next** button to complete the steps to inspect the data and then finish the configuration. Then close the configuration window to see your eventhouse with the stock table.
 
-   ![Screenshot of and eventhouse with a table.](./Images/eventhouse-with-table.png)
+   ![Screenshot of and eventhouse with a table.](./images/eventhouse-with-table.png)
 
     The connection between the stream and the table has been created. Let's verify that in the eventstream.
 
@@ -77,7 +77,7 @@ The eventstream ingests the real-time stock data, but doesn't currently do anyth
 
     The eventstream now shows a destination for the stream:
 
-   ![Screenshot an eventstream with a destination.](./Images/eventstream-destination.png)
+   ![Screenshot an eventstream with a destination.](./images/eventstream-destination.png)
 
     > **Tip**: Select the destination on the design canvas, and if no data preview is shown beneath it, select **Refresh**.
 
@@ -100,7 +100,7 @@ The eventstream captures real-time taxi fare data and loads it into a table in y
 
 1. Select the query code and run it to see 100 rows of data from the table.
 
-    ![Screenshot of a KQL query.](./Images/kql-stock-query.png)
+    ![Screenshot of a KQL query.](./images/kql-stock-query.png)
 
 1. Review the results, then modify the query to show the number of taxi pickups for each hour:
 
