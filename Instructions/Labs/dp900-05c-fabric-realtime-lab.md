@@ -105,7 +105,7 @@ The eventstream captures real-time taxi fare data and loads it into a table in y
 1. Review the results, then modify the query to show the number of taxi pickups for each hour:
 
     ```kql
-    taxi-data
+    taxi
     | summarize PickupCount = count() by bin(todatetime(tpep_pickup_datetime), 1h)
     ```
 
