@@ -23,7 +23,7 @@ To use Azure Synapse Analytics, you must provision an Azure Synapse Analytics Wo
     > **Tip**:  Ensure you are working in the directory containing your subscription - indicated at the top right under your user ID. If not, select the user icon and switch directory.
 
 2. In the Azure portal, on the **Home** page, use the **&#65291; Create a resource** icon to create a new resource.
-3. Search for *Azure Synapse Analytics*, and create a new **Azure Synapse Analytics** resource with the following settings:
+3. Search for `Azure Synapse Analytics`, and create a new **Azure Synapse Analytics** resource with the following settings:
     - **Subscription**: *Your Azure subscription*
         - **Resource group**: *Create a new resource group with a suitable name, like "synapse-rg"*
         - **Managed resource group**: *Enter an appropriate name, for example "synapse-managed-rg"*.
@@ -62,8 +62,8 @@ One of the key tasks you can perform with Azure Synapse Analytics is to define *
 3. On the **Source** step, in the **Dataset** substep, select the following settings:
     - **Source type**: All
     - **Connection**: *Create a new connection, and in the **New connection** pane that appears, on the **Generic protocol** tab, select **HTTP**. Then continue and create a connection to a data file using the following settings:*
-        - **Name**: AdventureWorks Products
-        - **Description**: Product list via HTTP
+        - **Name**: `AdventureWorks Products`
+        - **Description**: `Product list via HTTP`
         - **Connect via integration runtime**: AutoResolveIntegrationRuntime
         - **Base URL**: `https://raw.githubusercontent.com/MicrosoftLearning/DP-900T00A-Azure-Data-Fundamentals/master/Azure-Synapse/products.csv`
         - **Server Certificate Validation**: Enable
@@ -120,15 +120,15 @@ Now that you've ingested some data into your workspace, you can use Synapse Anal
 2. In the **SQL Script 1** pane that opens, review the SQL code that has been generated, which should be similar to this:
 
     ```SQL
-    -- This is auto-generated code
-    SELECT
-        TOP 100 *
-    FROM
-        OPENROWSET(
-            BULK 'https://datalakexx.dfs.core.windows.net/fsxx/products.csv',
-            FORMAT = 'CSV',
-            PARSER_VERSION='2.0'
-        ) AS [result]
+   -- This is auto-generated code
+   SELECT
+       TOP 100 *
+   FROM
+       OPENROWSET(
+           BULK 'https://datalakexx.dfs.core.windows.net/fsxx/products.csv',
+           FORMAT = 'CSV',
+           PARSER_VERSION='2.0'
+       ) AS [result]
     ```
 
     This code  opens a rowset from the text file you imported and retrieves the first 100 rows of data.
@@ -146,15 +146,15 @@ Now that you've ingested some data into your workspace, you can use Synapse Anal
 5. Note the results consist of four columns named C1, C2, C3, and C4; and that the first row in the results contains the names of the data fields. To fix this problem, add a HEADER_ROW = TRUE parameters to the OPENROWSET function as shown here (replacing *datalakexx* and *fsxx* with the names of your data lake storage account and file system), and then rerun the query:
 
     ```SQL
-    SELECT
-        TOP 100 *
-    FROM
-        OPENROWSET(
-            BULK 'https://datalakexx.dfs.core.windows.net/fsxx/products.csv',
-            FORMAT = 'CSV',
-            PARSER_VERSION='2.0',
-            HEADER_ROW = TRUE
-        ) AS [result]
+   SELECT
+       TOP 100 *
+   FROM
+       OPENROWSET(
+           BULK 'https://datalakexx.dfs.core.windows.net/fsxx/products.csv',
+           FORMAT = 'CSV',
+           PARSER_VERSION='2.0',
+           HEADER_ROW = TRUE
+       ) AS [result]
     ```
 
     Now the results look like this:
@@ -168,16 +168,16 @@ Now that you've ingested some data into your workspace, you can use Synapse Anal
 6. Modify the query as follows (replacing *datalakexx* and *fsxx* with the names of your data lake storage account and file system):
 
     ```SQL
-    SELECT
-        Category, COUNT(*) AS ProductCount
-    FROM
-        OPENROWSET(
-            BULK 'https://datalakexx.dfs.core.windows.net/fsxx/products.csv',
-            FORMAT = 'CSV',
-            PARSER_VERSION='2.0',
-            HEADER_ROW = TRUE
-        ) AS [result]
-    GROUP BY Category;
+   SELECT
+       Category, COUNT(*) AS ProductCount
+   FROM
+       OPENROWSET(
+           BULK 'https://datalakexx.dfs.core.windows.net/fsxx/products.csv',
+           FORMAT = 'CSV',
+           PARSER_VERSION='2.0',
+           HEADER_ROW = TRUE
+       ) AS [result]
+   GROUP BY Category;
     ```
 
 7. Run the modified query, which should return a resultset that contains the number products in each category, like this:
@@ -188,7 +188,7 @@ Now that you've ingested some data into your workspace, you can use Synapse Anal
     | Bike Racks | 1 |
     | ... | ... |
 
-8. In the **Properties** pane for **SQL Script 1**, change the **Name** to **Count Products by Category**. Then in the toolbar, select **Publish** to save the script.
+8. In the **Properties** pane for **SQL Script 1**, change the **Name** to `Count Products by Category`. Then in the toolbar, select **Publish** to save the script.
 
 9. Close the **Count Products by Category** script pane.
 
@@ -227,15 +227,15 @@ While SQL is a common language for querying structured datasets, many data analy
 6. Review the code in the first (and only) cell in the notebook, which should look like this:
 
     ```Python
-    %%pyspark
-    df = spark.read.load('abfss://fsxx@datalakexx.dfs.core.windows.net/products.csv', format='csv'
-    ## If header exists uncomment line below
-    ##, header=True
-    )
-    display(df.limit(10))
+   %%pyspark
+   df = spark.read.load('abfss://fsxx@datalakexx.dfs.core.windows.net/products.csv', format='csv'
+   ## If header exists uncomment line below
+   ##, header=True
+   )
+   display(df.limit(10))
     ```
 
-7.  Select **&#9655; Run** to the left of the code cell to run it, and wait for the results. The first time you run a cell in a notebook, the Spark pool is started - so it may take a minute or so to return any results.
+7. Select **&#9655; Run** to the left of the code cell to run it, and wait for the results. The first time you run a cell in a notebook, the Spark pool is started - so it may take a minute or so to return any results.
 
     > **Note**: If an error occurs because the Python Kernel isn't available yet, run the cell again.
 
@@ -251,12 +251,12 @@ While SQL is a common language for querying structured datasets, many data analy
 9. Uncomment the *,header=True* line (because the products.csv file has the column headers in the first line), so your code looks like this:
 
     ```Python
-    %%pyspark
-    df = spark.read.load('abfss://fsxx@datalakexx.dfs.core.windows.net/products.csv', format='csv'
-    ## If header exists uncomment line below
-    , header=True
-    )
-    display(df.limit(10))
+   %%pyspark
+   df = spark.read.load('abfss://fsxx@datalakexx.dfs.core.windows.net/products.csv', format='csv'
+   ## If header exists uncomment line below
+   , header=True
+   )
+   display(df.limit(10))
     ```
 
 10. Rerun the cell and verify that the results look like this:
