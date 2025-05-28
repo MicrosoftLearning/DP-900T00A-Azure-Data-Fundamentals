@@ -19,7 +19,7 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free) in which y
 The first step in using Azure Storage is to provision an Azure Storage account in your Azure subscription.
 
 1. If you haven't already done so, sign into the [Azure portal](https://portal.azure.com?azure-portal=true).
-1. On the Azure portal home page, select **&#65291; Create a resource** from the upper left-hand corner and search for *Storage account*. Then in the resulting **Storage account** page, select **Create**.
+1. On the Azure portal home page, select **&#65291; Create a resource** from the upper left-hand corner and search for `Storage account`. Then in the resulting **Storage account** page, select **Create**.
 1. Enter the following values on the **Create a storage account** page:
     - **Subscription**: Select your Azure subscription.
     - **Resource group**:  Create a new resource group with a name of your choice.
@@ -42,19 +42,19 @@ Now that you have an Azure Storage account, you can create a container for blob 
     *If the JSON file is displayed in your browser, save the page as **product1.json**.*
 
 1. In the Azure portal page for your storage container, on the left side, in the **Data storage** section, select **Containers**.
-1. In the **Containers** page, select **&#65291; Container** and add a new container named **data** with an anonymous access level of **Private (no anonymous access)**.
+1. In the **Containers** page, select **&#65291; Container** and add a new container named `data` with an anonymous access level of **Private (no anonymous access)**.
 1. When the **data** container has been created, verify that it's listed in the **Containers** page.
 1. In the pane on the left side, in the top section, select **Storage browser**. This page provides a browser-based interface that you can use to work with the data in your storage account.
 1. In the storage browser page, select **Blob containers** and verify that your **data** container is listed.
 1. Select the **data** container, and note that it's empty.
-1. Select **&#65291; Add Directory** and read the information about folders before creating a new directory named **products**.
+1. Select **&#65291; Add Directory** and read the information about folders before creating a new directory named `products`.
 1. In storage browser, verify that the current view shows the contents of the **products** folder you just created - observe that the "breadcrumbs" at the top of the page reflect the path **Blob containers > data > products**.
 1. In the breadcrumbs, select **data** to switch to the **data** container, and note that it does <u>not</u> contain a folder named **products**.
 
     Folders in blob storage are virtual, and only exist as part of the path of a blob. Since the **products** folder contained no blobs, it isn't really there!
 
 1. Use the **&#10514; Upload** button to open the **Upload blob** panel.
-1. In the **Upload blob** panel, select the **product1.json** file you saved on your local computer previously. Then in the **Advanced** section, in the **Upload to folder** box, enter **product_data** and select the **Upload** button.
+1. In the **Upload blob** panel, select the **product1.json** file you saved on your local computer previously. Then in the **Advanced** section, in the **Upload to folder** box, enter `product_data` and select the **Upload** button.
 1. Close the **Upload blob** panel if it's still open, and verify that a **product_data** virtual folder has been created in the **data** container.
 1. Select the **product_data** folder and verify that it contains the **product1.json** blob you uploaded.
 1. On the left side, in the **Data storage** section, select **Containers**.
@@ -84,7 +84,7 @@ Azure Data Lake Store Gen2 support enables you to use hierarchical folders to or
 Azure Files provides a way to create cloud-based file shares.
 
 1. In the Azure portal page for your storage container, on the left side, in the **Data storage** section, select **File shares**.
-1. In the File shares page, select **&#65291; File share** and add a new file share named **files** using the **Transaction optimized** tier.
+1. In the File shares page, select **&#65291; File share** and add a new file share named `files` using the **Transaction optimized** tier.
 2. Select **Next: Backup >** and disable backup. Then select **Review + create**.
 1. In the **File shares**, open your new **files** share.
 1. At the top of the page, select **Connect**. Then in the **Connect** pane, note that there are tabs for common operating systems (Windows, Linux, and macOS) that contain scripts you can run to connect to the shared folder from a client computer.
@@ -95,7 +95,7 @@ Azure Files provides a way to create cloud-based file shares.
 Azure Tables provide a key/value store for applications that need to store data values, but don't need the full functionality and structure of a relational database.
 
 1. In the Azure portal page for your storage container, on the left side, in the **Data storage** section, select **Tables**.
-1. On the **Tables** page, select **&#65291; Table** and create a new table named **products**.
+1. On the **Tables** page, select **&#65291; Table** and create a new table named `products`.
 1. After the **products** table has been created, in the pane on the left side, in the top section, select **Storage browser**.
 1. In storage explorer, select **Tables** and verify that the **products** table is listed.
 1. Select the **products** table.
