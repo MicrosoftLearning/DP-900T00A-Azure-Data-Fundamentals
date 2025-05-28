@@ -18,7 +18,7 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free) in which y
 
 In this exercise, you'll provision an Azure Database for PostgreSQL resource.
 
-1. In the Azure portal, select **&#65291; Create a resource** from the upper left-hand corner and search for *Azure Database for PostgreSQL*. Then in the resulting **Azure Database for PostgreSQL** page, select **Create**.
+1. In the Azure portal, select **&#65291; Create a resource** from the upper left-hand corner and search for `Azure Database for PostgreSQL`. Then in the resulting **Azure Database for PostgreSQL** page, select **Create**.
 
 1. Review the Azure Database for PostgreSQL options that are available, and then in the **Azure Database for PostgreSQL** tile, select **Flexible server (Recommended)**, then **Create**.
 
