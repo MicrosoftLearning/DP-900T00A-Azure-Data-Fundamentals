@@ -98,24 +98,6 @@ Now that you have ingested data into a table in the lakehouse, you can use SQL t
 
     ![Screenshot of a SQL query.](./images/sql-query.png)
 
-## Visualize data in a lakehouse
-
-Microsoft Fabric lakehouses organize all tables in a semantic data model, which you can use to create visualizations and reports.
-
-1. At the bottom left of the page, under the **Explorer** pane, select the **Model** tab to see the data model for the tables in the lakehouse (this includes system tables as well as the **taxi_rides** table).
-1. In the toolbar, select **New report** to create a new report based on the **taxi_rides**.
-1. In the report designer:
-    1. In the **Data** pane, expand the **taxi_rides** table and select the **lpepPickupDatetime** and **passengerCount** fields.
-    1. In the **Visualizations** pane, select the **Line chart** visualization. Then ensure that the **X-axis** contains the **lpepPickupDatetime** field and the **Y** axis contains **Sum of passengerCount**.
-
-        ![Screenshot of a Power BI report.](./images/fabric-report.png)
-
-    > **Tip**: You can use the **>>** icons to hide the report designer panes in order to see the report more clearly.
-
-1. On the **File** menu, select **Save** to save the report as **Taxi Rides Report** in your Fabric workspace.
-
-    You can find the report in the page for your workspace in the Microsoft Fabric portal.
-
 ## Clean up resources
 
 If you've finished exploring Microsoft Fabric, you can delete the workspace you created for this exercise.
