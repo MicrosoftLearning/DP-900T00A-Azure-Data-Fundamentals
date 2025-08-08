@@ -18,29 +18,27 @@ This lab will take approximately **25** minutes to complete.
 
 Before working with data in Fabric, create a workspace with the Fabric trial enabled.
 
-1. Sign into [Microsoft Fabric](https://app.fabric.microsoft.com) at `https://app.fabric.microsoft.com`.
-1. In the menu bar, at the bottom left, switch to the **Data Engineering** experience.
-
-    ![Screenshot of the experience switcher menu.](./images/fabric-switcher.png)
-
+1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) at `https://app.fabric.microsoft.com/home?experience=fabric` in a browser, and sign in with your Fabric credentials.
 1. In the menu bar on the left, select **Workspaces** (the icon looks similar to &#128455;).
 1. Create a new workspace with a name of your choice, selecting a licensing mode in the **Advanced** section that includes Fabric capacity (*Trial*, *Premium*, or *Fabric*).
 1. When your new workspace opens, it should be empty.
 
-    ![Screenshot of an empty workspace in Power BI.](./images/new-workspace.png)
+    ![Screenshot of an empty workspace in Fabric.](./images/new-workspace.png)
 
 ## Create a lakehouse
 
 Now that you have a workspace, it's time to create a data lakehouse for your data files.
 
-1. In the home page for the workspace, create a new **Lakehouse** with a name of your choice.
+1. On the menu bar on the left, select **Create**. In the *New* page, under the *Data Engineering* section, select **Lakehouse**. Give it a unique name of your choice.
+
+    >**Note**: If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (**...**) option first.
 
     After a minute or so, a new lakehouse will be created:
 
     ![Screenshot of a new lakehouse.](./images/new-lakehouse.png)
 
 1. View the new lakehouse, and note that the **Lakehouse explorer** pane on the left enables you to browse tables and files in the lakehouse:
-    - The **Tables** folder contains tables that you can query using SQL. Tables in a Microsoft Fabric lakehouse are based on the open source *Delta Lake* file format, commonly used in Apache Spark.
+    - The **Tables** folder contains tables that you can query using SQL semantics. Tables in a Microsoft Fabric lakehouse are based on the open source *Delta Lake* file format, commonly used in Apache Spark.
     - The **Files** folder contains data files in the OneLake storage for the lakehouse that aren't associated with managed delta tables. You can also create *shortcuts* in this folder to reference data that is stored externally.
 
     Currently, there are no tables or files in the lakehouse.
@@ -54,9 +52,8 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
     ![Screenshot of the Choose data source page.](./images/choose-data-source.png)
 
-1. On the **Connect to data source** page, view the tables in the data source. There should be one table that contains details of taxi trips in New York City. Then select **Next** to progress to the **Choose data destination** page.
-1. On the **Choose data destination** page, select your existing lakehouse. Then select **Next**.
-1. Set the following data destination options, and then select **Next**:
+1. On the **Connect to data source** page, view the tables in the data source. There should be one table that contains details of taxi trips in New York City. Then select **Next** to progress to the **Connect to data destination** page.
+1. On the **Connect to data destination** page, set the following data destination options, and then select **Next**:
     - **Root folder**: Tables
     - **Load settings**: Load to new table
     - **Destination table name**: taxi_rides *(You may need to wait for the column mappings preview to be displayed before you can change this)*
@@ -77,7 +74,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
 1. Select the **taxi_rides** table to view its contents.
 
-    ![Screenshot of the taxi_rides table.](./images/dimProduct.png)
+    ![Screenshot of the taxi_rides table.](./images/taxi-rides-table.png)
 
 ## Query data in a lakehouse
 
@@ -103,5 +100,5 @@ Now that you have ingested data into a table in the lakehouse, you can use SQL t
 If you've finished exploring Microsoft Fabric, you can delete the workspace you created for this exercise.
 
 1. In the bar on the left, select the icon for your workspace to view all of the items it contains.
-2. In the **...** menu on the toolbar, select **Workspace settings**.
-3. In the **Other** section, select **Remove this workspace**.
+2. In the toolbar, select **Workspace settings**.
+3. In the **General** section, select **Remove this workspace**.
