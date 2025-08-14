@@ -6,7 +6,7 @@ lab:
 
 # Explore Azure SQL Database
 
-In this exercise you'll provision an Azure SQL Database resource in your Azure subscription, and then use SQL to query the tables in a relational database.
+In this lab, you'll learn how to provision an Azure SQL Database and interact with it using SQL queries. You'll use the Microsoft AdventureWorks sample database, which provides pre-populated tables and data, so you can focus on exploring and querying relational data without needing to create your own schema or insert sample records. This approach keeps things straightforward and lets you concentrate on understanding core database concepts and SQL syntax.
 
 This lab will take approximately **15** minutes to complete.
 

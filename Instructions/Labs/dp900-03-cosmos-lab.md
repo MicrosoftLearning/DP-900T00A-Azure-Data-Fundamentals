@@ -5,7 +5,7 @@ lab:
 ---
 # Explore Azure Cosmos DB
 
-In this exercise you'll provision an Azure Cosmos DB database in your Azure subscription, and explore the various ways you can use it to store non-relational data.
+By completing this lab, you'll learn how to provision an Azure Cosmos DB account, create a sample database and container, add and view JSON items, and run SQL-like queries to retrieve data. You'll gain hands-on experience with the Azure portal and understand how Cosmos DB supports flexible, non-relational data storage and querying.
 
 This lab will take approximately **15** minutes to complete.
 

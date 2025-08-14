@@ -6,7 +6,7 @@ lab:
 
 # Explore Azure Storage
 
-In this exercise you'll provision an Azure Storage account in your Azure subscription, and explore the various ways you can use it to store data.
+In this excercise, you'll learn how to provision and configure an Azure Storage account, and explore its core services: Blob storage, Data Lake Storage Gen2, Azure Files, and Azure Tables. You'll gain hands-on experience with creating containers, uploading data, enabling hierarchical namespaces, setting up file shares, and managing table entities. These skills will help you understand how to store, organize, and secure non-relational data in Azure for various analytics and application scenarios.
 
 This lab will take approximately **15** minutes to complete.
 

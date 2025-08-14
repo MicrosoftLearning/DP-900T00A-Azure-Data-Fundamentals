@@ -8,6 +8,17 @@ lab:
 
 In this exercise you'll explore data ingestion and analytics in a Microsoft Fabric Lakehouse.
 
+By completing this lab, you will:
+
+- **Understand Microsoft Fabric Lakehouse concepts**: Learn how to create workspaces and lakehouses, which are central to organizing and managing data assets in Fabric.
+- **Ingest data using pipelines**: Use a guided pipeline to bring external data into the lakehouse, making it query-ready without manual coding.
+- **Explore and query data with SQL**: Analyze ingested data using familiar SQL queries, gaining insights directly within Fabric.
+- **Manage resources**: Learn best practices for cleaning up resources to avoid unnecessary charges.
+
+## Background on the NYC Taxi Dataset:
+
+The "NYC Taxi - Green" dataset contains detailed records of taxi trips in New York City, including pickup and drop-off times, locations, trip distances, fares, and passenger counts. It is widely used in data analytics and machine learning for exploring urban mobility, demand forecasting, and anomaly detection. In this lab, you’ll use this real-world dataset to practice data ingestion and analysis in Microsoft Fabric.
+
 This lab will take approximately **25** minutes to complete.
 
 > **Note**: You'll need a Microsoft Fabric license to complete this exercise. See [Getting started with Fabric](https://learn.microsoft.com/fabric/get-started/fabric-trial) for details of how to enable a free Fabric trial license. You will need a Microsoft *school* or *work* account to do this. If you don't have one, you can [sign up for a trial of Microsoft Office 365 E3 or higher](https://www.microsoft.com/microsoft-365/business/compare-more-office-365-for-business-plans).
@@ -23,6 +34,8 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) at `https://app.fabric.microsoft.com/home?experience=fabric` in a browser, and sign in with your Fabric credentials.
 
 1. In the menu bar on the left, select **Workspaces** (the icon looks similar to &#128455;).
+
+    ![Screenshot of the Fabric workspaces](./images/fabric-workspace-new.png)
 
 1. Create a new workspace with a name of your choice, selecting a licensing mode in the **Advanced** section that includes Fabric capacity (*Trial*, *Premium*, or *Fabric*).
 
@@ -41,6 +54,8 @@ Now that you have a workspace, it's time to create a lakehouse for your data fil
 1. On the menu bar on the left, select **Create**. In the *New* page, under the *Data Engineering* section, select **Lakehouse**. Give it a unique name of your choice.
 
     >**Note**: If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (**...**) option first.
+
+    ![Screenshot of Fabric create option in the menu bar.](./images/fabric-workspace-create.png)
 
     After a minute or so, a new lakehouse will be created:
 
@@ -63,7 +78,11 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
 1. On the **Home** page for your lakehouse, in the **Get data** menu, select **New data pipeline**, and create a new data pipeline named **Ingest Data**.
 
+    ![Screenshot of a lakehouse with the new data pipeline option seledcted.](./images/fabric-lakehouse-new-pipeline.png)
+
 1. In the **Copy Data** wizard, on the **Choose a data source** page, select **Sample data** and then select the **NYC Taxi - Green** sample dataset.
+
+    ![Screenshot of the copy data pipeline wizard with sample data option highlighted](./fabric-pipeline-sampledata.png)
 
     ![Screenshot of the Choose data source page.](./images/choose-data-source.png)
 
@@ -75,6 +94,8 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
     - **Destination table name**: taxi_rides *(You may need to wait for the column mappings preview to be displayed before you can change this)*
     - **Column mappings**: *Leave the default mappings as-is*
     - **Enable partition**: *Unselected*
+
+    ![Screenshot of a pipeline destination options](./images/fabric-pipeline-destination.png)
 
     > _**Why these choices?**_
     > 
@@ -88,11 +109,15 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
     ![Screenshot of a pipeline with a Copy Data activity.](./images/copy-data-pipeline.png)
 
-    When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the **&#8635;** (*Refresh*) icon to refresh the status, and wait until it has succeeded (which may take 10 minutes or more).
+    When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the **&#8635;** (*Refresh*) icon to refresh the status, and wait until it has succeeded (which may take 10 minutes or more). This particular dataset contains more than 75 million rows, storing about 2.5 Gb of data. 
 
 1. In the hub menu bar on the left, select your lakehouse.
 
+    ![Screenshot of the Fabric lakehouse in the menubar](./images/fabric-menubar-lakehouse.png)
+
 1. On the **Home** page, in the **Lakehouse explorer** pane, in the **...** menu for the **Tables** node, select **Refresh** and then expand **Tables** to verify that the **taxi_rides** table has been created.
+
+    ![Screenshot of the Fabric lakehouse tables refresh option](./images/fabric-lakehouse-tables-refresh.png)
 
     > **Note**: If the new table is listed as *unidentified*, use its **Refresh** menu option to refresh the view.
 
@@ -110,6 +135,8 @@ Now that you have ingested data into a table in the lakehouse, you can use SQL t
 
 1. At the top right of the Lakehouse page, switch from **Lakehouse** view to the **SQL analytics endpoint** for your lakehouse.
 
+    ![Screenshot of the Fabric lakehouse sql endpoint menu option](./images/fabric-lakehouse-sqlendpoint.png)
+
     > _**Tip**: The SQL analytics endpoint is optimized for running SQL queries over your lakehouse tables and integrates with familiar query tools._
 
 1. In the toolbar, select **New SQL query**. Then enter the following SQL code into the query editor:
@@ -117,7 +144,7 @@ Now that you have ingested data into a table in the lakehouse, you can use SQL t
     ```sql
     SELECT  DATENAME(dw,lpepPickupDatetime) AS Day,
             AVG(tripDistance) As AvgDistance
-    FROM taxi_rides
+    FROM taxi_rides 
     GROUP BY DATENAME(dw,lpepPickupDatetime)
     ```
 
