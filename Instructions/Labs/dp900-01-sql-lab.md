@@ -24,7 +24,7 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free) in which y
 
     ![Screenshot of the Azure portal showing the Azure SQL page.](images/azure-sql-portal.png)
 
-    > _**Why**: Single database is the simplest and fastest to set up for this lab. The other options add settings you don't need yet._
+    > _**Tip**: Single database is the simplest and fastest to set up for this lab. The other options add settings you don't need yet._
 
 1. Enter the following values on the **Create SQL Database** page, and leave all other properties with their default setting:
     - **Subscription**: Select your Azure subscription.
@@ -36,21 +36,21 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free) in which y
     - **Compute + storage**: Leave unchanged
     - **Backup storage redundancy**: *Locally-redundant backup storage*
 
-    > _**Why**: SQL authentication is quick to setup for the last (no extra Microsoft Entra ID steps). Development defaults are cheaper and fast. Local backup is the low‑cost choice and fine for a temporary practice database._
+    > _**Tip**: SQL authentication is quick to setup for the last (no extra Microsoft Entra ID steps). Development defaults are cheaper and fast. Local backup is the low‑cost choice and fine for a temporary practice database._
 
 1. On the **Create SQL Database** page, select **Next :Networking >**, and on the **Networking** page, in the **Network connectivity** section, select **Public endpoint**. Then select **Yes** for both options in the **Firewall rules** section to allow access to your database server from Azure services and your current client IP address.
 
     ![Screenshot of the Azure Portal showing the network settings for the SQL database](images/sql-database-network.png)
 
-    > _**Why**: Public endpoint + allowing your IP lets you connect right away. Good for a short lab. In real projects you normally lock access down more._
+    > _**Tip**: Public endpoint + allowing your IP lets you connect right away. Good for a short lab. In real projects you normally lock access down more._
 
 1. Select **Next: Security >** and set the **Enable Microsoft Defender for SQL** option to **Not now**.
 
-    > _**Why**: Defender is a paid security add‑on. We skip it here to keep things simple and avoid cost in a short exercise._
+    > _**Tip**: Defender is a paid security add‑on. We skip it here to keep things simple and avoid cost in a short exercise._
 
 1. Select **Next: Additional Settings >** and on the **Additional settings** tab, set the **Use existing data** option to **Sample** (this will create a sample database that you can explore later).
 
-    > _**Why**: Sample data gives you ready‑made tables and rows so you can start querying straight away._
+    > _**Tip**: Sample data gives you ready‑made tables and rows so you can start querying straight away._
 
 1. Select **Review + Create**, and then select **Create** to create your Azure SQL database.
 
@@ -74,7 +74,7 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free) in which y
    SELECT * FROM SalesLT.Product;
     ```
 
-    > _**Why**: SELECT * quickly shows every column and some values. (In real apps you usually avoid it and pick only the columns you need.)_
+    > _**Tip**: SELECT * quickly shows every column and some values. (In real apps you usually avoid it and pick only the columns you need.)_
 
 1. Select **&#9655; Run** above the query to run it and view the results, which should include all columns for all rows in the **SalesLT.Product** table as shown here:
 
@@ -87,7 +87,7 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free) in which y
    FROM SalesLT.Product;
     ```
 
-    > _**Why**: Listing only the columns you need keeps results smaller and can run faster._
+    > _**Tip**: Listing only the columns you need keeps results smaller and can run faster._
 
 1. Now try the following query, which uses a JOIN to get the category name from the **SalesLT.ProductCategory** table:
 
@@ -101,10 +101,8 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free) in which y
        ON SalesLT.Product.ProductCategoryID = SalesLT.ProductCategory.ProductCategoryID;
     ```
 
-    > _**Why**: The JOIN shows how to pull related data (the category name) from another table using a matching ID._
+    > _**Tip**: The JOIN shows how to pull related data (the category name) from another table using a matching ID._
 
 1. Close the query editor pane, discarding your edits.
 
-> **Tip**: If you've finished exploring Azure SQL Database, you can delete the resource group that you created in this exercise.
-
-> _**Why**: Deleting the resource group removes all the resources in one step. It also minimizes cost._
+> **Tip**: If you've finished exploring Azure SQL Database, you can delete the resource group that you created in this exercise. Deleting the resource group removes all the resources in one step. It also minimizes cost._
