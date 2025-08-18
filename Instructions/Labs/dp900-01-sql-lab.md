@@ -92,17 +92,18 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free) in which y
 1. Now try the following query, which uses a JOIN to get the category name from the **SalesLT.ProductCategory** table:
 
     ```sql
-    SELECT SalesLT.Product.ProductID,
-        SalesLT.Product.Name AS ProductName,
-        SalesLT.ProductCategory.Name AS Category,
-        SalesLT.Product.ListPrice
-    FROM SalesLT.Product
-    JOIN SalesLT.ProductCategory
-       ON SalesLT.Product.ProductCategoryID = SalesLT.ProductCategory.ProductCategoryID;
+    SELECT 
+        p.ProductID, 
+        p.Name AS ProductName,
+        c.Name AS Category, 
+        p.ListPrice
+    FROM SalesLT.Product AS p
+    INNER JOIN SalesLT.ProductCategory AS c 
+        ON p.ProductCategoryID = c.ProductCategoryID;
     ```
 
     > _**Tip**: The JOIN shows how to pull related data (the category name) from another table using a matching ID._
 
 1. Close the query editor pane, discarding your edits.
 
-> **Tip**: If you've finished exploring Azure SQL Database, you can delete the resource group that you created in this exercise. Deleting the resource group removes all the resources in one step. It also minimizes cost._
+> _**Tip**: If you've finished exploring Azure SQL Database, you can delete the resource group that you created in this exercise. Deleting the resource group removes all the resources in one step. It also minimizes cost._

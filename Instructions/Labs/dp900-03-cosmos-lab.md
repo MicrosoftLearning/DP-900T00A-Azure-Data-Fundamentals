@@ -19,7 +19,11 @@ To use Cosmos DB, you must provision a Cosmos DB account in your Azure subscript
 
 1. In the Azure portal, select **+ Create a resource** at the top left, and search for `Azure Cosmos DB`.  In the results, select **Azure Cosmos DB** and select  **Create**.
 
+    ![Screenshot of the Azure Portal showing cosmos db in the marketplace](images/cosmosdb-marketplace.png)
+
 1. In the **Azure Cosmos DB for NoSQL** tile, select **Create**.
+
+    ![Screenshot of the Azure Portal showing cosmos db create option](images/cosmosdb-nosql-create.png)
    
     > _**Tip**: The account is the top level for your Cosmos DB resources. Choosing Azure Cosmos DB for NoSQL lets you store and query JSON data with a simple, SQL-like query language._
 
@@ -29,6 +33,7 @@ To use Cosmos DB, you must provision a Cosmos DB account in your Azure subscript
     - **Subscription**: If you're using a sandbox, select *Concierge Subscription*. Otherwise, select your Azure subscription.
     - **Resource group**:  If you're using a sandbox, select the existing resource group (which will have a name like *learn-xxxx...*). Otherwise, create a new resource group with a name of your choice.
     - **Account Name**: Enter a unique name
+    - **Availability Zones**: Disable
     - **Location**: Choose any recommended location
     - **Capacity mode**: Provisioned throughput
     - **Apply Free-Tier Discount**: Select Apply if available
@@ -40,6 +45,8 @@ To use Cosmos DB, you must provision a Cosmos DB account in your Azure subscript
 
 1. When the configuration has been validated, select **Create**.
 
+    > _**Tip**: Azure Portal will estimate how long it will take to provision this instance of CosmosDB. The estimated creation time is calculated based on the location you have selected._
+
 1. Wait for deployment to complete. Then go to the deployed resource.
 
 ## Create a sample database
@@ -47,6 +54,8 @@ To use Cosmos DB, you must provision a Cosmos DB account in your Azure subscript
 *Throughout this procedure, close any tips that are displayed in the portal*.
 
 1. On the page for your new Cosmos DB account, in the pane on the left, select **Data Explorer**.
+
+    ![Screenshot of the Azure Portal Comsos DB Data Explorer menu](images/cosmosdb-data-explorer.png)
 
 1. In the **Data Explorer** page, select **Launch quick start**.
 
@@ -59,6 +68,8 @@ To use Cosmos DB, you must provision a Cosmos DB account in your Azure subscript
 ## View and create items
 
 1. In the Data Explorer page, expand the **SampleDB** database and the **SampleContainer** container, and select **Items** to see a list of items in the container. The items represent product data, each with a unique id and other properties.
+
+    ![Screenshot of the Azure Portal Comsos DB Data Explorer items](images/cosmosdb-items.png)
 
 1. Select any of the items in the list to see a JSON representation of the item data.
 
@@ -77,6 +88,8 @@ To use Cosmos DB, you must provision a Cosmos DB account in your Azure subscript
    }
     ```
 
+    ![Screenshot of the Azure Portal Comsos DB Data Explorer new item](images/cosmosdb-new-item.png)
+
 1. After saving the new item, notice that additional metadata properties are added automatically.
 
     > _**Tip**: Cosmos DB stores items as JSON (JavaScript Object Notation), so you can add fields that fit your scenario without a rigid schema. The `id` must be unique within the container. After you save, Cosmos DB adds system properties (like timestamps and internal identifiers) to help manage and optimize your data:_
@@ -89,6 +102,8 @@ To use Cosmos DB, you must provision a Cosmos DB account in your Azure subscript
 ## Query the database
 
 1. In the **Data Explorer** page, select the **New SQL Query** icon.
+
+    ![Screenshot of the Azure Portal Comsos DB Data Explorer new sql query](images/cosmosdb-new-sqlquery.png)
 
 1. In the SQL Query editor, review the default query (`SELECT * FROM c`) and use the **Execute Query** button to run it.
 
@@ -105,6 +120,8 @@ To use Cosmos DB, you must provision a Cosmos DB account in your Azure subscript
     > _**Tip**: The NoSQL API uses familiar, SQL-like queries to search JSON documents. `SELECT * FROM c` lists all items, and `CONTAINS` filters by text inside a property—useful for quick searches without extra setup._
 
 1. Use the **Execute Query** button to run the revised query and review the results, which includes JSON entities for any items with a **name** field containing the text "Helmet".
+
+    ![Screenshot of the Azure Portal Comsos DB Data Explorer sql query executed](images/cosmosdb-query.png)
 
 1. Close the SQL Query editor, discarding your changes.
 

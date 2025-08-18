@@ -123,7 +123,8 @@ Now that you have an Azure Storage account, you can create a container for blob 
 
 Azure Data Lake Store Gen2 support enables you to use hierarchical folders to organize and manage access to blobs. It also enables you to use Azure blob storage to host distributed file systems for common big data analytics platforms.
 
-> _**Tip**: Enabling hierarchical namespace converts virtual paths into real directories, adds atomic directory operations, and unlocks POSIX-like ACLs — vital for large analytics (Spark/Hadoop) and governed data lakes._
+> _**Tip**: Turning on hierarchical namespace makes folders behave like real directories.
+It also lets you do folder actions safely (all at once, without errors) and gives you file-permission controls similar to those in Linux. This is especially helpful when working with big data tools like Spark or Hadoop, or when managing large, organized data lakes._
 
 1. Download the [product2.json](https://aka.ms/product2.json?azure-portal=true) JSON file from `https://aka.ms/product2.json` and save it on your computer in the same folder where you downloaded **product1.json** previously - you'll upload it to blob storage later.
 
@@ -149,7 +150,7 @@ Azure Data Lake Store Gen2 support enables you to use hierarchical folders to or
 
     ![Screenshot of the Azure Portal showing the blob uploaded](images/storage-blob-uploaded.png)
 
-    > _**Tip**: Adding a second file post-upgrade confirms seamless continuity: existing blobs still work, and new ones gain hierarchical benefits such as directory ACLs._
+    > _**Tip**: Adding a second file post-upgrade confirms seamless continuity: existing blobs still work, and new ones gain hierarchical benefits such as directory ACLs (Access Control Lists)._
 
 1. On the left side, in the **Data storage** section, select **Containers**.
 
@@ -195,7 +196,7 @@ Azure Files provides a way to create cloud-based file shares.
 
 Azure Tables provide a key/value store for applications that need to store data values, but don't need the full functionality and structure of a relational database.
 
-> _**Tip**: Table storage trades rich querying & joins for ultra-low cost, schemaless flexibility, and horizontal scale — ideal for logs, IoT states, or user profiles._
+> _**Tip**: Table storage trades rich querying & joins for ultra-low cost, schemaless flexibility, and horizontal scale — ideal for logs, IoT data, or user profiles._
 
 1. In the Azure portal page for your storage container, on the left side, in the **Data storage** section, select **Tables**.
 
@@ -217,19 +218,14 @@ Azure Tables provide a key/value store for applications that need to store data 
 
     > _**Tip**: PartitionKey groups related entities to distribute load; RowKey uniquely identifies within the partition. Together they form a fast composite primary key for lookups._
 
-1. Select **Add property**, and create a new property with the following values:
+1. Select **Add property**, and create two new propertues with the following values:
 
     |Property name | Type | Value |
     | ------------ | ---- | ----- |
     | Name | String | Widget |
+    | Price | Double | 2.99 |
 
     ![Screenshot of the Azure Portal showing the table insert](images/storage-table-insert.png)
-
-1. Add a second property with the following values:
-
-    |Property name | Type | Value |
-    | ------------ | ---- | ----- |
-    | Price | Double | 2.99 |
 
 1. Select **Insert** to insert a row for the new entity into the table.
 
@@ -251,4 +247,4 @@ Azure Tables provide a key/value store for applications that need to store data 
 
     You have manually entered data into the table using the storage browser interface. In a real scenario, application developers can use the Azure Storage Table API to build applications that read and write values to tables, making it a cost effective and scalable solution for NoSQL storage.
 
-> **Tip**: If you've finished exploring Azure Storage, you can delete the resource group that you created in this exercise. Deleting the resource group is the quickest way to avoid ongoing charges by removing every resource you created in one action._
+> _**Tip**: If you've finished exploring Azure Storage, you can delete the resource group that you created in this exercise. Deleting the resource group is the quickest way to avoid ongoing charges by removing every resource you created in one action._

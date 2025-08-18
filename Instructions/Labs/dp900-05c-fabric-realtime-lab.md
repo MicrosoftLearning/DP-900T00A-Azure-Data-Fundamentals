@@ -58,13 +58,15 @@ Now you're ready to find and ingest real-time data from a streaming source. To d
 
 ## Create an eventhouse
 
-The eventstream ingests the real-time stock data, but doesn't currently do anything with it. Let's create an eventhouse where we can store the captured data in a table.
+The eventstream ingests the real-time taxi data, but doesn't currently do anything with it. Let's create an eventhouse where we can store the captured data in a table.
 
 > _**Tip**: An eventhouse gives you durable storage and a KQL database so you can persist the stream and query it later—even as new events arrive. KQL (Kusto Query Language) is a read-only, SQL-like language used to quickly explore, filter, and analyze large datasets_
 
 1. On the menu bar on the left, select **Create**. In the *New* page, under the *Real-Time Intelligence* section, select **Eventhouse**. Give it a unique name of your choice.
 
     >**Note**: If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (**...**) option first.
+
+    ![Screenshot of a create option in sidebar](./images/fabric-create.png)
 
     Close any tips or prompts that are displayed until you see your new empty eventhouse.
 
@@ -80,13 +82,15 @@ The eventstream ingests the real-time stock data, but doesn't currently do anyth
 
 1. In the main page of your KQL database, select **Get data**.
 
+    ![Screenshot of an empty eventhouse](./images/fabric-empty-eventhouse.png)
+
 1. For the data source, select **Eventstream** > **Existing eventstream**.
 
 1. In the **Select or create a destination table** pane, create a new table named `taxi`. Then in the **Configure the data source** pane, select your workspace and the **taxi-data** eventstream and name the connection `taxi-table`.
 
    ![Screenshot of configuration for loading a table from an eventstream.](./images/configure-destination.png)
 
-1. Use the **Next** button to complete the steps to inspect the data and then finish the configuration. Then close the configuration window to see your eventhouse with the stock table.
+1. Use the **Next** button to complete the steps to inspect the data and then **finish** the configuration. Then close the configuration window to see your eventhouse with the taxi table.
 
    ![Screenshot of and eventhouse with a table.](./images/eventhouse-with-table.png)
 
