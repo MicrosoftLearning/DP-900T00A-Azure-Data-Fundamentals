@@ -6,7 +6,7 @@ lab:
 
 # Explore fundamentals of data visualization with Power BI
 
-In this exercise you'll use Microsoft Power BI Desktop to create a data model and a report containing interactive data visualizations.
+By completing this lab, you'll learn how to import and model data from multiple sources in Power BI Desktop, create relationships and hierarchies for deeper analysis, and format and categorize data to enhance visualization. You'll build interactive reports using tables, charts, and maps, and explore data insights through drill-down and cross-highlighting features. These skills will enable you to transform raw data into compelling visual stories and actionable business intelligence.
 
 This lab will take approximately **20** minutes to complete.
 
@@ -28,7 +28,7 @@ If Microsoft Power BI Desktop is not already installed on your Windows computer,
 
     Now you're ready to import the data for your report.
 
-1. On the Power BI Desktop welcome screen, select **Get data**, and then in the list of data sources, select **Web** and then select **Connect**.
+1. On the Power BI Desktop welcome screen, select **Get data from other sources**, and then in the list of data sources, select **Web** and then select **Connect**.
 
     ![Screenshot showing how to select the web data source in Power BI.](images/web-source.png)
 
@@ -90,6 +90,8 @@ The three tables of data you've imported have been loaded into a data model, whi
 
 1. In the products table, right-click the **ProductName** field (or open its **&vellip;** menu) and select **Add to hierarchy** > **Category Hierarchy**. This adds the **ProductName** field to the hierarchy you created previously.
 
+    ![Screenshot showing how to add the prodcutname to Category Hierarchy in Power BI.](images/add-category-hierarchy.png)
+
 1. In the **Fields** pane, right-click **Category Hierarchy** (or open its **...** menu) and select **Rename**. Then rename the hierarchy to **Categorized Product**.
 
     ![Screenshot showing how to rename the hierarchy in Power BI.](images/rename-hierarchy.png)
@@ -146,7 +148,7 @@ Now you're almost ready to create a report. First you need to check some setting
 
     > _**Tip**: A column chart makes it easy to compare categories side by side._
 
-1. Above the selected column chart, select the **&#8595;** icon to turn on drill-down. Then in the chart, select the second column to drill down and see the revenue for the individual products in this category. This capability is possible because you defined a hierarchy of categories and products.
+1. Above the selected column chart, select the **&#8595;** icon to turn on drill-down. Then in the chart, select any column to drill down and see the revenue for the individual products in this category. This capability is possible because you defined a hierarchy of categories and products.
 
     ![Screenshot showing a column chart drilled down to see products within a category.](images/drill-down.png)
 
