@@ -82,7 +82,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
 1. In the **Copy Data** wizard, on the **Choose a data source** page, select **Sample data** and then select the **NYC Taxi - Green** sample dataset.
 
-    ![Screenshot of the copy data pipeline wizard with sample data option highlighted](./fabric-pipeline-sampledata.png)
+    ![Screenshot of the copy data pipeline wizard with sample data option highlighted](./images/fabric-pipeline-sampledata.png)
 
     ![Screenshot of the Choose data source page.](./images/choose-data-source.png)
 
