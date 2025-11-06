@@ -41,7 +41,7 @@ The first step in using Azure Storage is to provision an Azure Storage account i
 
     > _**Tip**: A new resource group makes cleanup easy. Standard + LRS is the lowest-cost baseline, good for learning. LRS keeps three synchronous copies in one region, adequate for non-critical demo data without paying for geo-replication._
 
-1. Select **Next: Advanced >** and view the advanced configuration options. In particular, note that this is where you can enable hierarchical namespace to support Azure Data Lake Storage Gen2. Leave this option **<u>unselected</u>** (you'll enable it later), and then select **Next: Networking >** to view the networking options for your storage account.
+1. Select **Next: Advanced >** and view the advanced configuration options. In particular, note that this is where you can enable hierarchical namespace to support Azure Data Lake Storage Gen2. Leave this option **<u>cleared</u>** (you'll enable it later), and then select **Next: Networking >** to view the networking options for your storage account.
    
    ![Screenshot of the Azure Portal showing the second page for creating a storage account](images/storage-page2.png)
 
