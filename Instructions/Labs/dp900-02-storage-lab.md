@@ -61,63 +61,63 @@ Now that you have an Azure Storage account, you can create a container for blob 
 
 1. Download the [product1.json](https://aka.ms/product1.json?azure-portal=true) JSON file from `https://aka.ms/product1.json` and save it on your computer (you can save it in any folder - you'll upload it to blob storage later).
 
-    *If the JSON file is displayed in your browser, save the page as **product1.json**.*
+    *If the JSON file is displayed in your browser, right click the page, and select **Save As**. Name the file  **product1.json** and store it in your downloads folder.* 
 
-1. In the Azure portal page for your storage container, on the left side, in the **Data storage** section, select **Containers**.
+2. In the Azure portal page for your storage container, on the left side, in the **Data storage** section, select **Containers**.
    
     ![Screenshot of the Azure Portal showing the menu options for a storage account](images/storage-menu-containers.png)
 
-1. In the **Containers** page, select **&#65291; Add container** and add a new container named `data` with an anonymous access level of **Private (no anonymous access)**.
+3. In the **Containers** page, select **&#65291; Add container** and add a new container named `data` with an anonymous access level of **Private (no anonymous access)**.
 
     ![Screenshot of the Azure Portal showing a new container for a storage account](images/storage-new-container.png)
 
     > _**Tip**: Private keeps your sample data secure. Public access is rarely needed except for static website or open data scenarios. Naming it `data` keeps this example simple and readable._
 
-1. When the **data** container has been created, verify that it's listed in the **Containers** page.
+4. When the **data** container has been created, verify that it's listed in the **Containers** page.
 
-1. In the pane on the left side, in the top section, select **Storage browser**. This page provides a browser-based interface that you can use to work with the data in your storage account.
+5. In the pane on the left side, in the top section, select **Storage browser**. This page provides a browser-based interface that you can use to work with the data in your storage account.
 
-1. In the storage browser page, select **Blob containers** and verify that your **data** container is listed.
+6. In the storage browser page, select **Blob containers** and verify that your **data** container is listed.
 
-1. Select the **data** container, and note that it's empty.
+7. Select the **data** container, and note that it's empty.
 
     ![Screenshot of the Azure Portal showing the storage browser](images/storage-browser-empty.png)
 
-1. Select **&#65291; Add Directory** and read the information about folders before creating a new directory named `products`.
+8. Select **&#65291; Add Directory** and read the information about folders before creating a new directory named `products`.
 
-1. In storage browser, verify that the current view shows the contents of the **products** folder you just created - observe that the "breadcrumbs" at the top of the page reflect the path **Blob containers > data > products**.
+9. In storage browser, verify that the current view shows the contents of the **products** folder you just created - observe that the "breadcrumbs" at the top of the page reflect the path **Blob containers > data > products**.
 
     ![Screenshot of the Azure Portal showing the storage browser breadcrumb](images/storage-breadcrumb.png)
 
-1. In the breadcrumbs, select **data** to switch to the **data** container, and note that it does <u>not</u> contain a folder named **products**.
+10. In the breadcrumbs, select **data** to switch to the **data** container, and note that it does <u>not</u> contain a folder named **products**.
 
     Folders in blob storage are virtual, and only exist as part of the path of a blob. Since the **products** folder contained no blobs, it isn't really there!
 
     > _**Tip**: Flat namespace means directories are just name prefixes (products/file.json). This design enables massive scale because the service indexes blob names instead of maintaining a true tree structure._
 
-1. Use the **&#10514; Upload** button to open the **Upload blob** panel.
+11. Use the **&#10514; Upload** button to open the **Upload blob** panel.
 
-1. In the **Upload blob** panel, select the **product1.json** file you saved on your local computer previously. Then in the **Advanced** section, in the **Upload to folder** box, enter `product_data` and select the **Upload** button.
+12. In the **Upload blob** panel, select the **product1.json** file you saved on your local computer previously. Then in the **Advanced** section, in the **Upload to folder** box, enter `product_data` and select the **Upload** button.
 
     ![Screenshot of the Azure Portal showing the upload blob option](images/storage-upload-blob.png)
 
     > _**Tip**: Supplying a folder name while uploading auto-creates the virtual path, illustrating that presence of a blob makes the "folder" appear._
 
-1. Close the **Upload blob** panel if it's still open, and verify that a **product_data** virtual folder has been created in the **data** container.
+13. Close the **Upload blob** panel if it's still open, and verify that a **product_data** virtual folder has been created in the **data** container.
 
-1. Select the **product_data** folder and verify that it contains the **product1.json** blob you uploaded.
+14. Select the **product_data** folder and verify that it contains the **product1.json** blob you uploaded.
 
-1. On the left side, in the **Data storage** section, select **Containers**.
+15. On the left side, in the **Data storage** section, select **Containers**.
 
-1. Open the **data** container, and verify that the **product_data** folder you created is listed.
+16. Open the **data** container, and verify that the **product_data** folder you created is listed.
 
-1. Select the **&#x2027;&#x2027;&#x2027;** icon at the right-end of the folder, and note that the menu doesn't display any options. Folders in a flat namespace blob container are virtual, and can't be managed.
+17. Select the **&#x2027;&#x2027;&#x2027;** icon at the right-end of the folder, and note that the menu doesn't display any options. Folders in a flat namespace blob container are virtual, and can't be managed.
 
     ![Screenshot of the Azure Portal showing the options for the virtual folder](images/storage-virtual-folder.png)
 
     > _**Tip**: No real directory object exists, so there are no rename/permission operations — those require hierarchical namespace._
 
-1. Use the **X** icon at the top right in the **data** page to close the page and return to the **Containers** page.
+18. Use the **X** icon at the top right in the **data** page to close the page and return to the **Containers** page.
 
 ## Explore Azure Data Lake Storage Gen2
 
