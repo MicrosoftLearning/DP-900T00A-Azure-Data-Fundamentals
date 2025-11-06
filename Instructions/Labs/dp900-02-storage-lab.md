@@ -111,7 +111,7 @@ Now that you have an Azure Storage account, you can create a container for blob 
 
 1. Open the **data** container, and verify that the **product_data** folder you created is listed.
 
-1. Select the **&#x2027;&#x2027;&#x2027;** icon at the right-end of the folder, and note that it doesn't display any options. Folders in a flat namespace blob container are virtual, and can't be managed.
+1. Select the **&#x2027;&#x2027;&#x2027;** icon at the right-end of the folder, and note that the menu doesn't display any options. Folders in a flat namespace blob container are virtual, and can't be managed.
 
     ![Screenshot of the Azure Portal showing the options for the virtual folder](images/storage-virtual-folder.png)
 
