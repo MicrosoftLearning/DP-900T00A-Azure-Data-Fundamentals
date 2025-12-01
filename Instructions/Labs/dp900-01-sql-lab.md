@@ -20,6 +20,8 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free) in which y
 
     ![Screenshot of the Azure Portal showing Azure SQL in the marketplace](images/azure-sql-marketplace.png)
 
+1. Select **Compare options**.
+ 
 1. Review the Azure SQL options that are available, and then in the **SQL databases** tile, ensure **Single database** is selected and select **Create**.
 
     ![Screenshot of the Azure portal showing the Azure SQL page.](images/azure-sql-portal.png)
