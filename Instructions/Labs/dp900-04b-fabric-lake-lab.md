@@ -111,7 +111,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
     When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the **&#8635;** (*Refresh*) icon to refresh the status, and wait until it has succeeded (which may take 10 minutes or more). This particular dataset contains more than 75 million rows, storing about 2.5 Gb of data. 
 
-1. In the hub menu bar on the left, select your lakehouse.
+1. In the menu bar at the top, select your lakehouse. You can also find it from your workspace. 
 
     ![Screenshot of the Fabric lakehouse in the menubar](./images/fabric-menubar-lakehouse.png)
 
