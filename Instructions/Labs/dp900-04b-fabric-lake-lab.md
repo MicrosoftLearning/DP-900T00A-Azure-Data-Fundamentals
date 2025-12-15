@@ -78,7 +78,7 @@ A simple way to ingest data is to use a **Copy Data** activity in a pipeline to 
 
 1. On the **Home** page for your lakehouse, in the **Get data** menu, select **New data pipeline**, and create a new data pipeline named **Ingest Data**.
 
-    ![Screenshot of a lakehouse with the new data pipeline option seledcted.](./images/fabric-lakehouse-new-pipeline.png)
+    ![Screenshot of a lakehouse with the new data pipeline option selected.](./images/fabric-lakehouse-new-pipeline.png)
 
 1. In the **Copy Data** wizard, on the **Choose a data source** page, select **Sample data** and then select the **NYC Taxi - Green** sample dataset.
 
