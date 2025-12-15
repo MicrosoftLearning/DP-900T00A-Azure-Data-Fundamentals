@@ -6,7 +6,7 @@ lab:
 
 # Explore Azure Storage
 
-In this excercise, you'll learn how to provision and configure an Azure Storage account, and explore its core services: Blob storage, Data Lake Storage Gen2, Azure Files, and Azure Tables. You'll gain hands-on experience with creating containers, uploading data, enabling hierarchical namespaces, setting up file shares, and managing table entities. These skills will help you understand how to store, organize, and secure non-relational data in Azure for various analytics and application scenarios.
+In this exercise, you'll learn how to provision and configure an Azure Storage account, and explore its core services: Blob storage, Data Lake Storage Gen2, Azure Files, and Azure Tables. You'll gain hands-on experience with creating containers, uploading data, enabling hierarchical namespaces, setting up file shares, and managing table entities. These skills will help you understand how to store, organize, and secure non-relational data in Azure for various analytics and application scenarios.
 
 This lab will take approximately **15** minutes to complete.
 
@@ -218,7 +218,7 @@ Azure Tables provide a key/value store for applications that need to store data 
 
     > _**Tip**: PartitionKey groups related entities to distribute load; RowKey uniquely identifies within the partition. Together they form a fast composite primary key for lookups._
 
-1. Select **Add property**, and create two new propertues with the following values:
+1. Select **Add property**, and create two new properties with the following values:
 
     |Property name | Type | Value |
     | ------------ | ---- | ----- |
