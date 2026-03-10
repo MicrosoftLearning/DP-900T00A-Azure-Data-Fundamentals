@@ -1,8 +1,21 @@
 ---
 lab:
-    title: 'Explore Azure Cosmos DB'
-    module: 'Explore fundamentals of Azure Cosmos DB'
+  title: Explore Azure Cosmos DB
+  module: Explore fundamentals of Azure Cosmos DB
+  description: By completing this lab, you'll learn how to provision an Azure Cosmos
+    DB account, create a sample database and container, add and view JSON items, and
+    run SQL-like queries to retrieve data. You'll gain hands-on experience with the
+    Azure portal and understand how Cosmos DB supports flexible, non-relational data
+    storage and querying.
+  duration: 60 minutes
+  level: 300
+  islab: true
+  primarytopics:
+  - Azure
+  - Azure Cosmos DB
+  - Azure Portal
 ---
+
 # Explore Azure Cosmos DB
 
 By completing this lab, you'll learn how to provision an Azure Cosmos DB account, create a sample database and container, add and view JSON items, and run SQL-like queries to retrieve data. You'll gain hands-on experience with the Azure portal and understand how Cosmos DB supports flexible, non-relational data storage and querying.
