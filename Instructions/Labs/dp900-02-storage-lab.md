@@ -1,7 +1,21 @@
 ---
 lab:
-    title: 'Explore Azure Storage'
-    module: 'Explore Azure Storage for non-relational data'
+  title: Explore Azure Storage
+  module: Explore Azure Storage for non-relational data
+  description: 'In this exercise, you''ll learn how to provision and configure an
+    Azure Storage account, and explore its core services: Blob storage, Data Lake
+    Storage Gen2, Azure Files, and Azure Tables. You''ll gain hands-on experience
+    with creating containers, uploading data, enabling hierarchical namespaces, setting
+    up file shares, and managing table entities. These skills will help you understand
+    how to store, organize, and secure non-relational data in Azure for various analytics
+    and application scenarios.'
+  duration: 132 minutes
+  level: 300
+  islab: true
+  primarytopics:
+  - Azure
+  - Azure Files
+  - Azure Storage
 ---
 
 # Explore Azure Storage
