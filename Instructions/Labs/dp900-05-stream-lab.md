@@ -1,7 +1,15 @@
 ---
 lab:
-    title: 'Explore Azure Stream Analytics'
-    module: 'Explore fundamentals of real-time analytics'
+  title: Explore Azure Stream Analytics
+  module: Explore fundamentals of real-time analytics
+  description: In this exercise you'll provision an Azure Stream Analytics job in
+    your Azure subscription, and use it to process a stream of realtime data.
+  duration: 5 minutes
+  level: 200
+  islab: true
+  primarytopics:
+  - Azure
+  - Azure Stream Analytics
 ---
 
 # Explore Azure Stream Analytics
