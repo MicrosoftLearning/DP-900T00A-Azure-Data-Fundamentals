@@ -1,3 +1,14 @@
+---
+lab:
+  title: DP-900 trainer lab mapping
+  description: 'This course, DP-900: Microsoft Azure Data Fundamentals, has a set of labs designated for instructor-led training.'
+  duration: 12 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Azure
+---
+
 # DP-900 trainer lab mapping
 
 This course, DP-900: Microsoft Azure Data Fundamentals, has a set of labs designated for instructor-led training. 
