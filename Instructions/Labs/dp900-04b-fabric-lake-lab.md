@@ -1,7 +1,13 @@
 ---
 lab:
-    title: 'Explore data analytics in Microsoft Fabric'
-    module: 'Explore fundamentals of large-scale data analytics'
+  title: Explore data analytics in Microsoft Fabric
+  module: Explore fundamentals of large-scale data analytics
+  description: In this exercise you'll explore data ingestion and analytics in a Microsoft Fabric Lakehouse.
+  duration: 10 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Microsoft Fabric
 ---
 
 # Explore data analytics in Microsoft Fabric
