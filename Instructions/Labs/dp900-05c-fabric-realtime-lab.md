@@ -2,9 +2,9 @@
 lab:
   title: Explore real-time analytics in Microsoft Fabric
   module: Explore real-time analytics in Microsoft Fabric
-  description: Microsoft Fabric provides Real-Time Intelligence, enabling you to create analytical solutions for real-time data streams. In this exercise, you'll use the Real-Time Intelligence capabilities in Microsoft Fabric to ingest, analyze, and visualize a real-time stream of data from a taxi company.
+  description: In this lab, you'll use Microsoft Fabric's Real-Time Intelligence capabilities to ingest, query, and visualize a live data stream from a taxi company. You'll gain hands-on experience with eventstreams, eventhouse KQL queries, and real-time dashboards to understand how Fabric handles streaming analytics end to end.
   duration: 30 minutes
-  level: 100
+  level: 300
   islab: true
   primarytopics:
     - Microsoft Fabric

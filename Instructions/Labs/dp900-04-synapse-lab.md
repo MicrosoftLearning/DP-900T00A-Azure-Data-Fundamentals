@@ -3,7 +3,7 @@ lab:
   title: Explore data analytics in Azure with Azure Synapse Analytics
   module: Explore fundamentals of large-scale data warehousing
   description: In this exercise you'll provision an Azure Synapse Analytics workspace in your Azure subscription, and use it to ingest and query data.
-  duration: 134 minutes
+  duration: 30 minutes
   level: 300
   islab: true
   primarytopics:

@@ -3,12 +3,13 @@ lab:
   title: Explore Azure SQL Database
   module: Explore relational data in Azure
   description: In this lab, you'll learn how to provision an Azure SQL Database and interact with it using SQL queries. You'll use the Microsoft AdventureWorks sample database, which provides pre-populated tables and data, so you can focus on exploring and querying relational data without needing to create your own schema or insert sample records. This approach keeps things straightforward and lets you concentrate on understanding core database concepts and SQL syntax.
-  duration: 46 minutes
+  duration: 15 minutes
   level: 300
   islab: true
   primarytopics:
-    - Azure
     - Azure SQL Database
+    - Azure
+    - Azure Portal
 ---
 
 # Explore Azure SQL Database

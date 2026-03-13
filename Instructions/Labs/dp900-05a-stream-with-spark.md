@@ -3,7 +3,7 @@ lab:
   title: Explore Spark Streaming in Azure Synapse Analytics
   module: Explore fundamentals of real-time analytics
   description: In this exercise, you'll use Spark Structured Streaming and delta tables in Azure Synapse Analytics to process streaming data.
-  duration: 60 minutes
+  duration: 30 minutes
   level: 200
   islab: true
   primarytopics:
@@ -15,7 +15,7 @@ lab:
 
 In this exercise, you'll use *Spark Structured Streaming* and *delta tables* in Azure Synapse Analytics to process streaming data.
 
-This lab will take approximately **15** minutes to complete.
+This lab will take approximately **30** minutes to complete.
 
 ## Before you start
 

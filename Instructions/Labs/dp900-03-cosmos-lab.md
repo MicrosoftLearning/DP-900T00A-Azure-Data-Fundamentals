@@ -2,8 +2,8 @@
 lab:
   title: Explore Azure Cosmos DB
   module: Explore fundamentals of Azure Cosmos DB
-  description: You've seen how to create and query JSON entities in a Cosmos DB database by using the data explorer interface in the Azure portal. In a real scenario, an application developer would use one of the many programming language specific software development kits (SDKs) to call the NoSQL API and work with data in the database.
-  duration: 60 minutes
+  description: In this lab, you'll provision an Azure Cosmos DB account, create a database and container, and add and query JSON items using the Azure portal's data explorer. You'll gain hands-on experience with NoSQL data storage and learn how to retrieve data using Cosmos DB's SQL-like query language.
+  duration: 30 minutes
   level: 300
   islab: true
   primarytopics:
@@ -16,7 +16,7 @@ lab:
 
 By completing this lab, you'll learn how to provision an Azure Cosmos DB account, create a sample database and container, add and view JSON items, and run SQL-like queries to retrieve data. You'll gain hands-on experience with the Azure portal and understand how Cosmos DB supports flexible, non-relational data storage and querying.
 
-This lab will take approximately **15** minutes to complete.
+This lab will take approximately **30** minutes to complete.
 
 ## Before you start
 
