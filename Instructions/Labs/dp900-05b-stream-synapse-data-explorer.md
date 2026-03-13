@@ -1,7 +1,14 @@
 ---
 lab:
-    title: 'Explore Azure Synapse Data Explorer'
-    module: 'Explore fundamentals of real-time analytics'
+  title: Explore Azure Synapse Data Explorer
+  module: Explore fundamentals of real-time analytics
+  description: In this exercise, you'll use Azure Synapse Data Explorer to analyze time-series data.
+  duration: 30 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Azure Synapse Analytics
+    - Azure Portal
 ---
 
 # Explore Azure Synapse Data Explorer
@@ -10,7 +17,7 @@ lab:
 
 In this exercise, you'll use Azure Synapse Data Explorer to analyze time-series data.
 
-This lab will take approximately **25** minutes to complete.
+This lab will take approximately **30** minutes to complete.
 
 ## Before you start
 

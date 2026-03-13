@@ -1,7 +1,13 @@
 ---
 lab:
-    title: 'Explore data analytics in Microsoft Fabric'
-    module: 'Explore fundamentals of large-scale data analytics'
+  title: Explore data analytics in Microsoft Fabric
+  module: Explore fundamentals of large-scale data analytics
+  description: In this lab, you'll create a Microsoft Fabric Lakehouse, ingest real-world NYC taxi data using a pipeline, and query it with SQL. You'll come away understanding how Fabric unifies data ingestion and analytics in a single, scalable platform.
+  duration: 30 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Microsoft Fabric
 ---
 
 # Explore data analytics in Microsoft Fabric
@@ -19,7 +25,7 @@ By completing this lab, you will:
 
 The "NYC Taxi - Green" dataset contains detailed records of taxi trips in New York City, including pickup and drop-off times, locations, trip distances, fares, and passenger counts. It is widely used in data analytics and machine learning for exploring urban mobility, demand forecasting, and anomaly detection. In this lab, you’ll use this real-world dataset to practice data ingestion and analysis in Microsoft Fabric.
 
-This lab will take approximately **25** minutes to complete.
+This lab will take approximately **30** minutes to complete.
 
 > **Note**: You'll need a Microsoft Fabric license to complete this exercise. See [Getting started with Fabric](https://learn.microsoft.com/fabric/get-started/fabric-trial) for details of how to enable a free Fabric trial license. You will need a Microsoft *school* or *work* account to do this. If you don't have one, you can [sign up for a trial of Microsoft Office 365 E3 or higher](https://www.microsoft.com/microsoft-365/business/compare-more-office-365-for-business-plans).
 

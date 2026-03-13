@@ -1,14 +1,20 @@
 ---
 lab:
-    title: 'Explore fundamentals of data visualization with Power BI'
-    module: 'Explore fundamentals of data visualization'
+  title: Explore fundamentals of data visualization with Power BI
+  module: Explore fundamentals of data visualization
+  description: In this lab, you'll import data from multiple sources into Power BI Desktop, build a data model with relationships and hierarchies, and create interactive reports with charts, maps, and drill-down features. You'll leave with a solid foundation in turning raw data into visual, actionable business insights.
+  duration: 30 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Power BI
 ---
 
 # Explore fundamentals of data visualization with Power BI
 
 By completing this lab, you'll learn how to import and model data from multiple sources in Power BI Desktop, create relationships and hierarchies for deeper analysis, and format and categorize data to enhance visualization. You'll build interactive reports using tables, charts, and maps, and explore data insights through drill-down and cross-highlighting features. These skills will enable you to transform raw data into compelling visual stories and actionable business intelligence.
 
-This lab will take approximately **20** minutes to complete.
+This lab will take approximately **30** minutes to complete.
 
 ## Install Power BI Desktop
 

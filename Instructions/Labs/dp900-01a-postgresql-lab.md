@@ -1,14 +1,22 @@
 ---
 lab:
-    title: 'Explore Azure Database for PostgreSQL'
-    module: 'Explore relational data in Azure'
+  title: Explore Azure Database for PostgreSQL
+  module: Explore relational data in Azure
+  description: In this exercise, you'll provision an Azure Database for PostgreSQL resource.
+  duration: 10 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Azure Database for PostgreSQL
+    - Azure Portal
+    - Azure
 ---
 
 # Explore Azure Database for PostgreSQL
 
 In this exercise you'll provision an Azure Database for PostgreSQL resource in your Azure subscription.
 
-This lab will take approximately **5** minutes to complete.
+This lab will take approximately **10** minutes to complete.
 
 ## Before you start
 

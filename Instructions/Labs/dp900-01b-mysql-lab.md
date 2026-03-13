@@ -1,14 +1,22 @@
 ---
 lab:
-    title: 'Explore Azure Database for MySQL'
-    module: 'Explore relational data in Azure'
+  title: Explore Azure Database for MySQL
+  module: Explore relational data in Azure
+  description: In this exercise, you'll provision an Azure Database for MySQL resource.
+  duration: 20 minutes
+  level: 300
+  islab: true
+  primarytopics:
+    - Azure Database for MySQL
+    - Azure Portal
+    - Azure
 ---
 
 # Explore Azure Database for MySQL
 
 In this exercise you'll provision an Azure Database for MySQL resource in your Azure subscription.
 
-This lab will take approximately **5** minutes to complete.
+This lab will take approximately **20** minutes to complete.
 
 ## Before you start
 
