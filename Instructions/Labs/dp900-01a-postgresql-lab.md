@@ -47,17 +47,24 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free) in which y
     - **Server name**: Enter a globally unique name, such as `postgres-server-<your-initials-and-numbers>` (the name must not already be in use by anyone else).
     - **Region**: Choose any available location near you.
     - **PostgreSQL version**: Leave unchanged.
-    - **Workload type**: Select **Development**.
+    - **Workload type**: Select **Dev/Test**.
 
-        > _**Tip:** The **Development** workload type chooses smaller, lower-cost settings that are ideal for learning and testing rather than running a busy production app._
+        > _**Tip:** The **Dev/Test** workload type chooses smaller, lower-cost settings that are ideal for learning and testing rather than running a busy production app._
 
     - **Compute + storage**: Leave unchanged.
     - **Availability zone**: Leave unchanged.
-    - **Enable high availability**: Leave unchanged.
+    - **High availability**: Leave unchanged.
+
+    ![Screenshot of the Basics tab of the Create flexible server page, showing the Project details and Server details sections filled in with the resource group, server name, region, and Dev/Test workload type.](images/dp900-01a-postgresql-lab-basics.png)
+
+1. Further down the same **Basics** tab, in the **Authentication** section, configure these values:
+    - **Authentication method**: Select **PostgreSQL authentication only**.
     - **Admin username**: Enter a username of your choice, such as `pgadmin`.
     - **Password** and **Confirm password**: Enter a strong password and **write it down**, you'd need it to sign in to the database later.
 
         > _**Tip:** The admin username and password are the "keys" to your database. In a real project you'd store them securely, never share them, and use a strong password._
+
+    ![Screenshot of the Authentication section showing PostgreSQL authentication only selected, with the admin username and password fields completed.](images/dp900-01a-postgresql-lab-authentication.png)
 
 1. Select **Next: Networking >**.
 
@@ -65,13 +72,25 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free) in which y
 
     > _**What does this do?** A firewall blocks unwanted connections to your database. This setting adds an exception so that *your* computer is allowed to connect during the lab. In a real project, you'd open access only to the specific computers and services that genuinely need it._
 
+    ![Screenshot of the Networking tab showing the connectivity method set to public access and the firewall rules section.](images/dp900-01a-postgresql-lab-networking.png)
+
 1. Still under **Firewall rules**, select the **Allow public access from any Azure service within Azure to this server** checkbox.
 
     > _**Why?** Later in this lab you'll connect to your database using **Azure Cloud Shell**, a command-line tool that runs inside Azure. This checkbox lets that Azure-based tool reach your server. You'd be more selective about this in a real project._
 
+    ![Screenshot of the Networking tab firewall rules section, showing the Allow public access checkbox selected and a firewall rule added for the current client IP address.](images/dp900-01a-postgresql-lab-firewall.png)
+
 1. Select **Review + create**, review the settings, and then select **Create** to start creating your Azure Database for PostgreSQL.
 
-1. Wait a few minutes for the deployment to complete. When it's finished, select **Go to resource**. Your database page should look similar to this:
+    ![Screenshot of the Review + create tab showing Validation passed and a summary of the server configuration.](images/dp900-01a-postgresql-lab-review-create.png)
+
+1. Wait a few minutes for the deployment to complete. When it's finished, select **Go to resource**.
+
+    ![Screenshot of the deployment page showing the message Your deployment is complete with a Go to resource button.](images/dp900-01a-postgresql-lab-deployment-complete.png)
+
+1. Your database **Overview** page should look similar to this, showing a **Status** of **Ready**:
+
+    ![Screenshot of the Azure Database for PostgreSQL flexible server Overview page showing the server status as Ready along with the server name and admin login.](images/dp900-01a-postgresql-lab-overview.png)
 
 ## Connect to your database
 
@@ -83,9 +102,9 @@ Your server is running, but you need a way to type SQL commands into it. You'll 
 
     > _**Tip:** This full address is sometimes labeled **Server name** or **Host name**. It always ends in `.postgres.database.azure.com`._
 
-1. At the top right of the Azure portal, select the **Cloud Shell** icon (**>_**). If this is your first time using Cloud Shell, accept the prompts to set it up, and choose **Bash** if you're asked to pick a shell type. Cloud Shell opens in a panel at the bottom of the screen.
+1. At the top right of the Azure portal, select the **Cloud Shell** icon (**>_**). If this is your first time using Cloud Shell, accept the prompts to set it up. When prompted, choose **Bash** as the shell type, and select **No storage account required** (no storage account is needed for this lab), then choose your subscription and select **Apply**.
 
-    > _**Can't see the icon?** Depending on your screen size or browser zoom, the top toolbar icons may be hidden. If you don't see the **>_** icon, try any of these:_
+    > _**Can't see the icon?** Depending on your screen size or browser zoom, the top toolbar icons may be hidden. If you don't see the >_ _icon, try any of these:_
     > - _Select the **&#8230;** (more) menu near the top-right of the portal and look for **Cloud Shell** there._
     > - _Reduce your browser zoom (press **Ctrl** and **-**, or **Cmd** and **-** on a Mac) so more icons fit, then look again._
     > - _Or simply open a new browser tab and go to [https://shell.azure.com](https://shell.azure.com?azure-portal=true), which opens the same Cloud Shell directly._
@@ -116,6 +135,8 @@ Your server is running, but you need a way to type SQL commands into it. You'll 
     > _**The screen looks frozen, is it broken?** No. For security, the password is invisible as you type, you won't see dots or stars, and the cursor won't move. This is normal. Just type it carefully and press Enter._
 
 1. When you connect successfully, the prompt changes to `postgres=>`. You're now ready to run SQL commands against your database.
+
+    ![Screenshot of Cloud Shell connected to PostgreSQL, showing the postgres prompt after a successful connection.](images/dp900-01a-postgresql-lab-cloud-shell-connected.png)
 
     > _**Got an error instead?** Don't panic. The most common causes are easy to fix:_
     > - _A typo in the server address or username, or a leftover `<` or `>` bracket. Check the command and try again._
@@ -151,7 +172,11 @@ In a relational database, data is stored in **tables**, which are like spreadshe
 
     > _**What does this do?** Each `CREATE TABLE` statement defines a table and its columns. The **PRIMARY KEY** uniquely identifies each row (no two manufacturers can share an ID). The `REFERENCES` keyword creates a **foreign key** that links each vehicle to a manufacturer, so the two tables are related, that's what makes this a "relational" database._
 
-1. PostgreSQL responds with `CREATE TABLE` after each statement. Your two tables now exist, but they're empty. Paste the following SQL to add some manufacturers and vehicles, then press Enter:
+    PostgreSQL responds with `CREATE TABLE` after each statement. You can confirm both tables exist by pasting `\dt` and pressing Enter:
+
+    ![Screenshot of Cloud Shell showing the output of the backslash dt command, listing the manufacturer and vehicle tables.](images/dp900-01a-postgresql-lab-create-tables.png)
+
+1. Your two tables now exist, but they're empty. Paste the following SQL to add some manufacturers and vehicles, then press Enter:
 
     ```sql
     INSERT INTO Manufacturer (ManufacturerID, ManufacturerName, Country) VALUES
@@ -173,6 +198,10 @@ In a relational database, data is stored in **tables**, which are like spreadshe
 
     > _**What does this do?** Each `INSERT` statement adds rows of data to a table. You've now added 4 manufacturers and 8 vehicles. Notice that each vehicle's **ManufacturerID** matches an ID in the Manufacturer table._
 
+    PostgreSQL responds with `INSERT 0 4` and `INSERT 0 8` to confirm the rows were added.
+
+    ![Screenshot of Cloud Shell showing the INSERT statements and the INSERT 0 4 and INSERT 0 8 confirmation messages.](images/dp900-01a-postgresql-lab-insert-data.png)
+
 ## Query the data
 
 Now that your database has data in it, you can use SQL **SELECT** statements to retrieve and explore it.
@@ -185,6 +214,8 @@ Now that your database has data in it, you can use SQL **SELECT** statements to 
 
     > _**Tip:** `SELECT *` means "select all columns". It's handy for a quick look, but in real applications you usually list only the columns you actually need._
 
+    ![Screenshot of Cloud Shell showing the result of SELECT star FROM Vehicle, listing all eight vehicle rows.](images/dp900-01a-postgresql-lab-select-all.png)
+
 1. Now try filtering the data. The **WHERE** clause returns only the vehicles that cost less than $30,000, and **ORDER BY** sorts them from cheapest to most expensive.
 
     ```sql
@@ -196,6 +227,8 @@ Now that your database has data in it, you can use SQL **SELECT** statements to 
 
     > _**Tip:** **WHERE** filters which rows you get back, and **ORDER BY** controls the order they appear in. These are two of the most useful tools in SQL._
 
+    ![Screenshot of Cloud Shell showing the filtered query result with four vehicles priced under 30000, sorted by list price.](images/dp900-01a-postgresql-lab-filter-query.png)
+
 1. Finally, try a query that combines data from both tables.
 
     ```sql
@@ -206,6 +239,8 @@ Now that your database has data in it, you can use SQL **SELECT** statements to 
     ```
 
     > _**What does this do?** A **JOIN** combines rows from two tables based on a matching value, here, the **ManufacturerID** that both tables share. This lets you see each vehicle alongside the company that makes it, even though that information lives in a separate table._
+
+    ![Screenshot of Cloud Shell showing the JOIN query result, listing each vehicle alongside its manufacturer name and country.](images/dp900-01a-postgresql-lab-join-query.png)
 
 ## Try a PostgreSQL signature feature: JSON data
 
@@ -224,6 +259,10 @@ One reason PostgreSQL is so popular is that it can store flexible **JSON** data 
     UPDATE Vehicle SET Features = '{"color": "Blue", "sunroof": false, "seats": 7}' WHERE VehicleID = 106;
     ```
 
+    PostgreSQL responds with `ALTER TABLE` and `UPDATE 1` for each statement.
+
+    ![Screenshot of Cloud Shell showing the ALTER TABLE and UPDATE statements that add and populate the JSONB Features column.](images/dp900-01a-postgresql-lab-json-update.png)
+
 1. Now query *inside* the JSON to pull out a single property, the color, as if it were a normal column:
 
     ```sql
@@ -233,6 +272,8 @@ One reason PostgreSQL is so popular is that it can store flexible **JSON** data 
     ```
 
     > _**What does this do?** The `->>` operator reaches into the JSON and returns the value of a named property as text. This shows how PostgreSQL blends the structure of a relational database with the flexibility of free-form JSON, something not every database can do as easily._
+
+    ![Screenshot of Cloud Shell showing the JSON query result with the color and seats values extracted from the Features column for two vehicles.](images/dp900-01a-postgresql-lab-json-query.png)
 
 1. Take a moment to experiment. Try changing the price in the **WHERE** clause, or sorting by a different column, then run the query again to see how the results change.
 
@@ -244,7 +285,11 @@ When you've finished exploring, you should delete the resources you created so y
 
 1. In the Azure portal, navigate to the **resource group** you created at the start of the lab (for example, `dp900-lab-rg`).
 
+    ![Screenshot of the resource group Overview page showing the Azure Database for PostgreSQL flexible server and the Delete resource group command.](images/dp900-01a-postgresql-lab-resource-group.png)
+
 1. Select **Delete resource group**, confirm the deletion by entering the resource group name, and select **Delete**.
+
+    ![Screenshot of the Delete a resource group pane showing the resource group name entered in the confirmation box and the Delete button.](images/dp900-01a-postgresql-lab-delete-confirm.png)
 
     > _**Tip:** Deleting the resource group removes the database server and everything else inside it in a single step. This is the easiest way to make sure nothing is left running and costing money._
 
