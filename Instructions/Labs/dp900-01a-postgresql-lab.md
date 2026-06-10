@@ -36,8 +36,6 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free) in which y
 
 1. Review the deployment options that are available, and then in the **Azure Database for PostgreSQL** tile, select **Flexible server (Recommended)**, and then select **Create**.
 
-    ![Screenshot of Azure Database for PostgreSQL deployment options](images/postgresql-options.png)
-
     > _**Tip:** "Flexible server" is the recommended option for most new projects. It gives you good control over cost and configuration while keeping setup simple, which is perfect for learning._
 
 1. Enter the following values on the **Create** page, and leave all other properties with their default setting:
@@ -74,8 +72,6 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free) in which y
 1. Select **Review + create**, review the settings, and then select **Create** to start creating your Azure Database for PostgreSQL.
 
 1. Wait a few minutes for the deployment to complete. When it's finished, select **Go to resource**. Your database page should look similar to this:
-
-    ![Screenshot of the Azure portal showing the Azure Database for PostgreSQL page.](images/postgresql-portal.png)
 
 ## Connect to your database
 
