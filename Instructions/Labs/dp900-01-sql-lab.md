@@ -34,15 +34,11 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free) in which y
 
 1. At the top left of the page, select **&#65291; Create a resource**, and in the search box type `Azure SQL`. In the search results, select **Azure SQL**.
 
-    ![Screenshot of the Azure Portal showing Azure SQL in the marketplace.](images/azure-sql-marketplace.png)
+1. On the **Azure SQL** page, in the left menu expand **Azure SQL Database** and select **SQL databases**. Then select **&#65291; Create** and, in the menu that appears, select **SQL database**.
 
-1. On the **Azure SQL** page, select **&#65291; Create**. If you're prompted to choose a deployment option, in the left menu expand **Azure SQL Database** and select **SQL databases**, then select **&#65291; Create**.
-
-    > _**Tip:** A single SQL database is the simplest option to set up and is perfect for learning. The other options add features you don't need yet._
+    > _**Tip:** A single SQL database is the simplest option to set up and is perfect for learning. The other options (such as the Free offer, Hyperscale, elastic pools, or managed instances) add features you don't need yet._
 
 1. Enter the following values on the **Create SQL Database** page, and leave all other properties with their default setting:
-
-    ![Screenshot of the Azure portal showing the Create SQL Database page.](images/azure-sql-portal.png)
 
     - **Subscription**: Select your Azure subscription.
     - **Resource group**: Select **Create new** and enter a name of your choice, such as `dp900-lab-rg`.
@@ -67,8 +63,6 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free) in which y
 
 1. Select **Next: Networking >**. On the **Networking** page, in the **Network connectivity** section, select **Public endpoint**. Then, in the **Firewall rules** section, select **Yes** for both options to allow access from Azure services and from your own computer's current IP address.
 
-    ![Screenshot of the Azure Portal showing the network settings for the SQL database.](images/sql-database-network.png)
-
     > _**Tip:** A firewall blocks unwanted connections. These settings open just enough access so that *you* can connect to the database during the lab. In a real project, you'd lock this down much more tightly._
 
 1. Select **Next: Security >** and set the **Enable Microsoft Defender for SQL** option to **Not now**.
@@ -81,9 +75,7 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free) in which y
 
 1. Select **Review + create**, review the settings, and then select **Create**.
 
-1. Wait a few minutes for the deployment to complete. When it's finished, select **Go to resource**. Your database page should look similar to this:
-
-    ![Screenshot of the Azure portal showing the SQL Database page.](images/sql-database-portal.png)
+1. Wait a few minutes for the deployment to complete. When it's finished, select **Go to resource**.
 
 ## Create the database tables and add sample data
 
@@ -93,9 +85,7 @@ Your database is created, but it's empty. In a relational database, data is stor
 
     > _**Note:** If you see an error saying your client IP address isn't allowed, select the **Allowlist IP ...** link in the message to grant access, then try connecting again._
 
-    The query editor is where you'll type and run SQL commands. Select **&#65291; New query** to open a blank query tab. It looks like this:
-
-    ![Screenshot of the Azure portal showing the query editor.](images/query-editor.png)
+    The query editor is where you'll type and run SQL commands. Select **&#65291; New query** to open a blank query tab.
 
 1. In the query tab, paste the following SQL code. This creates a **Manufacturer** table (the companies that build vehicles) and a **Vehicle** table (the cars the dealership sells).
 
