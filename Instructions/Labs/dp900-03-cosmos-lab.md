@@ -2,9 +2,9 @@
 lab:
   title: Explore Azure Cosmos DB
   module: Explore fundamentals of Azure Cosmos DB
-  description: In this lab, you'll provision an Azure Cosmos DB account, create a database and container, and add and query JSON items using the Azure portal's data explorer. You'll gain hands-on experience with NoSQL data storage and learn how to retrieve data using Cosmos DB's SQL-like query language.
+  description: In this lab, you'll create an Azure Cosmos DB account, add a sample database and container, and add and query JSON items using the Azure portal. The lab is written for absolute beginners with no prior Azure or NoSQL experience, so every step is explained in plain language.
   duration: 30 minutes
-  level: 300
+  level: 100
   islab: true
   primarytopics:
     - Azure
@@ -14,17 +14,21 @@ lab:
 
 # Explore Azure Cosmos DB
 
-By completing this lab, you'll learn how to provision an Azure Cosmos DB account, create a sample database and container, add and view JSON items, and run SQL-like queries to retrieve data. You'll gain hands-on experience with the Azure portal and understand how Cosmos DB supports flexible, non-relational data storage and querying.
+In this lab, you'll create your first **NoSQL** database using **Azure Cosmos DB**. "NoSQL" databases store data in a flexible way, rather than in the strict rows-and-columns tables of a relational database. Cosmos DB stores each piece of data as a **JSON item** (a simple text format that lists properties and their values, like `"price": 48.74`).
+
+You'll create ("provision") a Cosmos DB account, add some sample data, view it as JSON, and then run simple SQL-like queries to find what you're looking for. Don't worry if these terms are new, every step is explained as you go.
 
 This lab will take approximately **30** minutes to complete.
 
 ## Before you start
 
-You'll need an [Azure subscription](https://azure.microsoft.com/free) in which you have administrative-level access.
+You'll need an [Azure subscription](https://azure.microsoft.com/free) in which you have administrative-level access. If you don't have one, you can sign up for a free account using the link above.
+
+> _**What is Azure?** Azure is Microsoft's cloud platform. Instead of buying and running your own server computer, you rent computing resources (like a database) from Microsoft and use them over the internet. The **Azure portal** is the website you use to create and manage those resources._
 
 ## Create a Cosmos DB account
 
-To use Cosmos DB, you must provision a Cosmos DB account in your Azure subscription. In this exercise, you'll provision a Cosmos DB account that uses Azure Cosmos DB for NoSQL.
+"Provisioning" just means creating and setting up a new resource. To use Cosmos DB, you first create a Cosmos DB account. In this lab, you'll create an account that uses **Azure Cosmos DB for NoSQL**, the option designed for storing and querying JSON data.
 
 1. In the Azure portal, select **+ Create a resource** at the top left, and search for `Azure Cosmos DB`.  In the results, select **Azure Cosmos DB** and select  **Create**.
 
@@ -136,4 +140,14 @@ To use Cosmos DB, you must provision a Cosmos DB account in your Azure subscript
 
     You've seen how to create and query JSON entities in a Cosmos DB database by using the data explorer interface in the Azure portal. In a real scenario, an application developer would use one of the many programming language specific software development kits (SDKs) to call the NoSQL API and work with data in the database.
 
-> _**Tip**: If you've finished exploring Azure Cosmos DB, you can delete the resource group that you created in this exercise._
+## Clean up
+
+When you've finished exploring Azure Cosmos DB, you should delete the resources you created so you don't incur any further costs.
+
+1. In the Azure portal, navigate to the **resource group** that contains your Cosmos DB account.
+
+1. Select **Delete resource group**, confirm the deletion by entering the resource group name, and select **Delete**.
+
+    > _**Tip:** Deleting the resource group removes the Cosmos DB account and everything inside it in a single step. This is the quickest way to make sure nothing is left running and costing money._
+
+In this lab, you created an Azure Cosmos DB account, added JSON items, and queried them using a SQL-like language. You've taken your first steps with NoSQL data in the cloud!

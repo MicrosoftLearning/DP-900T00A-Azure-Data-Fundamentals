@@ -2,9 +2,9 @@
 lab:
   title: Explore real-time analytics in Microsoft Fabric
   module: Explore real-time analytics in Microsoft Fabric
-  description: In this lab, you'll use Microsoft Fabric's Real-Time Intelligence capabilities to ingest, query, and visualize a live data stream from a taxi company. You'll gain hands-on experience with eventstreams, eventhouse KQL queries, and real-time dashboards to understand how Fabric handles streaming analytics end to end.
+  description: In this lab, you'll use Microsoft Fabric's Real-Time Intelligence to capture, store, and query a live stream of taxi data. The lab is written for absolute beginners, so every step is explained in plain language.
   duration: 30 minutes
-  level: 300
+  level: 100
   islab: true
   primarytopics:
     - Microsoft Fabric
@@ -12,7 +12,9 @@ lab:
 
 # Explore real-time analytics in Microsoft Fabric
 
-Microsoft Fabric provides Real-Time Intelligence, enabling you to create analytical solutions for real-time data streams. In this exercise, you'll use the Real-Time Intelligence capabilities in Microsoft Fabric to ingest, analyze, and visualize a real-time stream of data from a taxi company.
+Most data analysis works on data that was collected earlier. **Real-time analytics** is different: it works on data *as it arrives*, moment by moment. Think of a live feed of taxi trips, where new trips keep streaming in continuously.
+
+In this lab, you'll use the **Real-Time Intelligence** features in **Microsoft Fabric** to capture a live stream of taxi data, store it, and then query it to answer questions, watching the answers change as fresh data keeps flowing in. Don't worry if these terms are new, every step is explained as you go.
 
 This lab takes approximately **30** minutes to complete.
 
@@ -22,7 +24,7 @@ This lab takes approximately **30** minutes to complete.
 
 Before working with data in Fabric, you need to create a workspace with the Fabric capacity enabled.
 
-> _**Tip**: A workspace is the container for everything you create (eventstreams, eventhouses, dashboards). Fabric capacity lets these items run._
+> _**What is a workspace?** Think of it as a project folder that holds everything you create in Fabric (eventstreams, eventhouses, dashboards, and more). Enabling Fabric capacity gives the workspace the computing power needed to run those items._
 
 1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) at `https://app.fabric.microsoft.com/home?experience=fabric` in a browser, and sign in with your Fabric credentials.
 
@@ -38,9 +40,9 @@ Before working with data in Fabric, you need to create a workspace with the Fabr
 
 ## Create an eventstream
 
-Now you're ready to find and ingest real-time data from a streaming source. To do this, you'll start in the Fabric Real-Time Hub.
+Now you're ready to find and capture real-time data from a streaming source. To do this, you'll start in the Fabric Real-Time Hub.
 
-> _**Tip**: The Real-Time Hub centralizes streaming sources and makes it easy to connect them. An eventstream stitches sources to destinations and can add transformations in between._
+> _**What is an eventstream?** A stream is a continuous flow of data arriving in real time. An **eventstream** is the Fabric feature that connects to a streaming source and carries that flow to a destination where you can store and analyze it. The **Real-Time Hub** is the central place to find and connect to available streaming sources._
 
 > **Tip**: The first time you use the Real-Time Hub, some *getting started* tips may be displayed. You can close these.
 
@@ -64,9 +66,9 @@ Now you're ready to find and ingest real-time data from a streaming source. To d
 
 ## Create an eventhouse
 
-The eventstream ingests the real-time taxi data, but doesn't currently do anything with it. Let's create an eventhouse where we can store the captured data in a table.
+The eventstream captures the real-time taxi data, but it doesn't currently store it anywhere. Let's create an eventhouse, where the captured data is saved in a table so you can query it.
 
-> _**Tip**: An eventhouse gives you durable storage and a KQL database so you can persist the stream and query it later—even as new events arrive. KQL (Kusto Query Language) is a read-only, SQL-like language used to quickly explore, filter, and analyze large datasets_
+> _**What is an eventhouse?** It's durable storage built for real-time data. It contains a **KQL database**, where your streaming data is saved into tables. **KQL** (Kusto Query Language) is a read-only, SQL-like language designed to quickly explore, filter, and analyze large amounts of data, including data that keeps arriving._
 
 1. On the menu bar on the left, select **Create**. In the *New* page, under the *Real-Time Intelligence* section, select **Eventhouse**. Give it a unique name of your choice.
 
@@ -112,7 +114,7 @@ The eventstream ingests the real-time taxi data, but doesn't currently do anythi
 
     > _**Tip**: Verifying in the eventstream confirms events are flowing to the destination. The preview may cache — refresh pulls the latest sample._
 
-    In this exercise, you've created a very simple eventstream that captures real-time data and loads it into a table. In a real solution, you'd typically add transformations to aggregate the data over temporal windows (for example, to capture the average price of each stock over five-minute periods).
+    In this exercise, you've created a very simple eventstream that captures real-time data and loads it into a table. In a real solution, you'd typically add transformations to aggregate the data over temporal windows (for example, to capture the average number of taxi pickups over five-minute periods).
 
     Now let's explore how you can query and analyze the captured data.
 
@@ -156,7 +158,7 @@ The eventstream captures real-time taxi fare data and loads it into a table in y
 
 ## Clean up resources
 
-In this exercise, you have create an eventhouse, ingested real-time data using an eventstream, queried the ingested data in a KQL database table, created a real-time dashboard to visualize the real-time data, and configured an alert using Activator.
+In this exercise, you created an eventhouse, captured real-time data using an eventstream, and queried the captured data in a KQL database table.
 
 If you've finished exploring Real-Time Intelligence in Fabric, you can delete the workspace you created for this exercise.
 

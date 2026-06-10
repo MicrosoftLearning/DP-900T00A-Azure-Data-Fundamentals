@@ -2,9 +2,9 @@
 lab:
   title: Explore data analytics in Microsoft Fabric
   module: Explore fundamentals of large-scale data analytics
-  description: In this lab, you'll create a Microsoft Fabric Lakehouse, ingest real-world NYC taxi data using a pipeline, and query it with SQL. You'll come away understanding how Fabric unifies data ingestion and analytics in a single, scalable platform.
+  description: In this lab, you'll create a Microsoft Fabric lakehouse, bring in real-world NYC taxi data using a pipeline, and query it with SQL. The lab is written for absolute beginners, so every step is explained in plain language.
   duration: 30 minutes
-  level: 300
+  level: 100
   islab: true
   primarytopics:
     - Microsoft Fabric
@@ -12,18 +12,22 @@ lab:
 
 # Explore data analytics in Microsoft Fabric
 
-In this exercise you'll explore data ingestion and analytics in a Microsoft Fabric Lakehouse.
+In this lab, you'll explore how to bring in and analyze data using **Microsoft Fabric**, an all-in-one analytics platform that handles everything from storing data to building reports in one place.
+
+You'll work with a **lakehouse**, which is a single place that can store both raw data files *and* organized tables you can query with SQL. You'll then use a **pipeline** (an automated, guided way to copy data from one place to another) to bring in a real-world set of New York City taxi trips, and finish by running SQL queries to answer questions about the data.
 
 By completing this lab, you will:
 
-- **Understand Microsoft Fabric Lakehouse concepts**: Learn how to create workspaces and lakehouses, which are central to organizing and managing data assets in Fabric.
-- **Ingest data using pipelines**: Use a guided pipeline to bring external data into the lakehouse, making it query-ready without manual coding.
-- **Explore and query data with SQL**: Analyze ingested data using familiar SQL queries, gaining insights directly within Fabric.
-- **Manage resources**: Learn best practices for cleaning up resources to avoid unnecessary charges.
+- **Understand Microsoft Fabric lakehouse concepts**: Learn how to create workspaces and lakehouses, which are central to organizing and managing data in Fabric.
+- **Bring in data using a pipeline**: Use a guided pipeline to load external data into the lakehouse, making it ready to query without writing any code.
+- **Explore and query data with SQL**: Analyze the loaded data using familiar SQL queries, gaining insights directly within Fabric.
+- **Manage resources**: Learn good habits for cleaning up resources to avoid unnecessary charges.
 
-## Background on the NYC Taxi Dataset:
+Don't worry if these terms are new, every step is explained as you go.
 
-The "NYC Taxi - Green" dataset contains detailed records of taxi trips in New York City, including pickup and drop-off times, locations, trip distances, fares, and passenger counts. It is widely used in data analytics and machine learning for exploring urban mobility, demand forecasting, and anomaly detection. In this lab, you’ll use this real-world dataset to practice data ingestion and analysis in Microsoft Fabric.
+## Background on the NYC Taxi dataset
+
+The "NYC Taxi - Green" dataset contains detailed records of taxi trips in New York City, including pickup and drop-off times, locations, trip distances, fares, and passenger counts. It's widely used in data analytics for exploring how people move around a city, forecasting demand, and spotting unusual patterns. In this lab, you'll use this real-world dataset to practice bringing in and analyzing data in Microsoft Fabric.
 
 This lab will take approximately **30** minutes to complete.
 
@@ -35,7 +39,7 @@ This lab will take approximately **30** minutes to complete.
 
 Before working with data in Fabric, create a workspace with the Fabric trial enabled.
 
-> _**Tip**: A workspace is your container for all assets (lakehouses, pipelines, notebooks, reports). Enabling Fabric capacity lets these items run._
+> _**What is a workspace?** Think of it as a project folder that holds everything you create in Fabric (lakehouses, pipelines, reports, and more). Enabling Fabric capacity gives the workspace the computing power needed to run those items._
 
 1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) at `https://app.fabric.microsoft.com/home?experience=fabric` in a browser, and sign in with your Fabric credentials.
 
@@ -55,7 +59,7 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
 Now that you have a workspace, it's time to create a lakehouse for your data files.
 
-> _**Tip**: A lakehouse brings files and tables together on OneLake. You can store raw files and also create managed Delta tables you can query with SQL._
+> _**What is a lakehouse?** It's a single storage area that holds both raw data files *and* organized tables. The tables can be queried with SQL, just like in a regular database, while the files area can hold data in any format. This combination is why it's called a "lake" (flexible file storage) plus a "house" (structured tables)._
 
 1. On the menu bar on the left, select **Create**. In the *New* page, under the *Data Engineering* section, select **Lakehouse**. Give it a unique name of your choice.
 
@@ -78,9 +82,9 @@ Now that you have a workspace, it's time to create a lakehouse for your data fil
 
 ## Ingest data
 
-A simple way to ingest data is to use a **Copy Data** activity in a pipeline to extract the data from a source and copy it to a file in the lakehouse.
+A simple way to bring data into the lakehouse is to use a **Copy Data** activity in a pipeline. This copies the data from a source (in this case, a sample dataset) into a table in your lakehouse.
 
-> _**Tip**: Pipelines provide a guided, repeatable way to bring data into the lakehouse. They’re easier than coding from scratch and can be scheduled later if needed._
+> _**What is a pipeline?** It's an automated set of steps that moves data from one place to another. Pipelines give you a guided, repeatable way to bring data into the lakehouse, which is much easier than writing code by hand, and they can be scheduled to run automatically later if needed._
 
 1. On the **Home** page for your lakehouse, in the **Get data** menu, select **New data pipeline**, and create a new data pipeline named **Ingest Data**.
 

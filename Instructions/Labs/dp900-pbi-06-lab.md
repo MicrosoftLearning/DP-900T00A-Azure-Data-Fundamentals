@@ -2,9 +2,9 @@
 lab:
   title: Explore fundamentals of data visualization with Power BI
   module: Explore fundamentals of data visualization
-  description: In this lab, you'll import data from multiple sources into Power BI Desktop, build a data model with relationships and hierarchies, and create interactive reports with charts, maps, and drill-down features. You'll leave with a solid foundation in turning raw data into visual, actionable business insights.
+  description: In this lab, you'll import data from multiple sources into Power BI Desktop, build a simple data model, and create an interactive report with charts and a map. The lab is written for absolute beginners, so every step is explained in plain language.
   duration: 30 minutes
-  level: 300
+  level: 100
   islab: true
   primarytopics:
     - Power BI
@@ -12,15 +12,19 @@ lab:
 
 # Explore fundamentals of data visualization with Power BI
 
-By completing this lab, you'll learn how to import and model data from multiple sources in Power BI Desktop, create relationships and hierarchies for deeper analysis, and format and categorize data to enhance visualization. You'll build interactive reports using tables, charts, and maps, and explore data insights through drill-down and cross-highlighting features. These skills will enable you to transform raw data into compelling visual stories and actionable business intelligence.
+**Power BI** is a Microsoft tool for turning raw data into charts, maps, and interactive reports, so you can see patterns and tell a story with your data instead of staring at rows of numbers.
+
+In this lab, you'll use the free **Power BI Desktop** app to bring in some sample sales data (customers, products, and orders), connect those tables together into a simple **data model**, and then build a report with a table, charts, and a map that you can click to explore. Don't worry if you've never used Power BI before, every step is explained as you go.
 
 This lab will take approximately **30** minutes to complete.
+
+> **Note**: To complete this lab you'll need a Windows computer, as Power BI Desktop only runs on Windows.
 
 ## Install Power BI Desktop
 
 If Microsoft Power BI Desktop is not already installed on your Windows computer, you can download and install it for free.
 
-> _**Tip**: Power BI Desktop is the authoring tool where you build models and reports locally before sharing them. It's free to install for learning and prototyping._
+> _**What is Power BI Desktop?** It's the free app where you build your data models and reports on your own computer. Once a report is ready, you can optionally publish it to the Power BI service to share it with others._
 
 1. Download the Power BI Desktop installer from [https://aka.ms/power-bi-desktop](https://aka.ms/power-bi-desktop?azure-portal=true).
 
@@ -78,6 +82,7 @@ If Microsoft Power BI Desktop is not already installed on your Windows computer,
 
 The three tables of data you've imported have been loaded into a data model, which you'll now explore and refine.
 
+> _**What is a data model?** It's the set of tables you bring into Power BI plus the connections between them. By linking the **customers**, **products**, and **orders** tables, Power BI can answer questions that span all three, such as "how much revenue did each product category earn in each city?"_
 1. In Power BI Desktop, on the left-side edge, select the **Model** tab, and then arrange the tables in the model so you can see them. You can hide the panes on the right side by using the **>>** icons:
 
     ![Screenshot showing the Model tab in Power BI.](images/model-tab.png)
@@ -189,3 +194,9 @@ Now you're almost ready to create a report. First you need to check some setting
 If you've a [Power BI service](https://www.powerbi.com/?azure-portal=true) subscription, you can sign into your account and publish the report to a Power BI workspace. 
 
 > **Tip**: Publishing to the Power BI service lets you share the report, schedule refresh, and collaborate with others in your workspace.
+
+## Clean up
+
+Unlike the other labs in this course, this exercise didn't create any paid Azure resources, so there's nothing to delete or switch off. The report you built is saved as a `.pbix` file on your own computer.
+
+In this lab, you imported data from multiple sources into Power BI Desktop, connected it into a simple data model, and built an interactive report with a table, charts, and a map. You've taken your first steps with turning raw data into visual insights!

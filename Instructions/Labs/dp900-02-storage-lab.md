@@ -2,9 +2,9 @@
 lab:
   title: Explore Azure Storage
   module: Explore Azure Storage for non-relational data
-  description: 'In this exercise, you''ll learn how to provision and configure an Azure Storage account, and explore its core services: Blob storage, Data Lake Storage Gen2, Azure Files, and Azure Tables. You''ll gain hands-on experience with creating containers, uploading data, enabling hierarchical namespaces, setting up file shares, and managing table entities. These skills will help you understand how to store, organize, and secure non-relational data in Azure for various analytics and application scenarios.'
+  description: 'In this lab, you''ll create an Azure Storage account and explore its core services: Blob storage, Data Lake Storage Gen2, Azure Files, and Azure Tables. The lab is written for absolute beginners with no prior Azure experience, so every step is explained in plain language.'
   duration: 30 minutes
-  level: 300
+  level: 100
   islab: true
   primarytopics:
     - Azure
@@ -14,21 +14,30 @@ lab:
 
 # Explore Azure Storage
 
-In this exercise, you'll learn how to provision and configure an Azure Storage account, and explore its core services: Blob storage, Data Lake Storage Gen2, Azure Files, and Azure Tables. You'll gain hands-on experience with creating containers, uploading data, enabling hierarchical namespaces, setting up file shares, and managing table entities. These skills will help you understand how to store, organize, and secure non-relational data in Azure for various analytics and application scenarios.
+In this lab, you'll create an **Azure Storage account**, which is a secure place in the cloud to keep different kinds of data. You'll then explore its four core services and see what each one is for:
+
+- **Blob storage**, for storing files such as images, documents, and data files.
+- **Data Lake Storage Gen2**, blob storage with real folders, used for big-data analytics.
+- **Azure Files**, cloud file shares that behave like a shared network drive.
+- **Azure Tables**, a simple, low-cost place to store rows of data without a full relational database.
+
+This kind of storage is called *non-relational* because, unlike a relational database, the data doesn't have to be organized into related tables with a fixed structure. Don't worry if these terms are new, every step is explained as you go.
 
 This lab will take approximately **30** minutes to complete.
 
-> _**Tip**: Understanding the purpose of each action helps you later design storage solutions that balance cost, performance, security, and analytics goals. These brief Why notes tie each step to a real-world reason._
+> _**Tip**: Throughout the lab you'll see short notes that explain *why* you're doing each step. Understanding the reason behind each action helps you later design storage solutions that balance cost, performance, security, and analytics goals._
 
 ## Before you start
 
-You'll need an [Azure subscription](https://azure.microsoft.com/free) in which you have administrative-level access.
+You'll need an [Azure subscription](https://azure.microsoft.com/free) in which you have administrative-level access. If you don't have one, you can sign up for a free account using the link above.
+
+> _**What is Azure?** Azure is Microsoft's cloud platform. Instead of buying and running your own server computer, you rent computing resources (like storage) from Microsoft and use them over the internet. The **Azure portal** is the website you use to create and manage those resources._
 
 ## Provision an Azure Storage account
 
-The first step in using Azure Storage is to provision an Azure Storage account in your Azure subscription.
+"Provisioning" just means creating and setting up a new resource. The first step in using Azure Storage is to create a storage account, which acts as a container for everything you store.
 
-> _**Tip**: A storage account is the secure, billable boundary for all Azure Storage services (blobs, files, queues, tables). Policies, redundancy, encryption, networking, and access control apply from here downward._
+> _**What is a storage account?** It's the top-level "home" for all your Azure Storage services (blobs, files, queues, and tables). Settings like cost, how many copies of your data are kept, encryption, and who can access it are all controlled from here._
 
 1. If you haven't already done so, sign into the [Azure portal](https://portal.azure.com?azure-portal=true).
 
@@ -39,9 +48,12 @@ The first step in using Azure Storage is to provision an Azure Storage account i
 1. Enter the following values on the **Create a storage account** page:
    
     - **Subscription**: Select your Azure subscription.
-    - **Resource group**:  Create a new resource group with a name of your choice.
-    - **Storage account name**: Enter a unique name for your storage account using lower-case letters and numbers.
-    - **Region**:  Select any available location.
+    - **Resource group**:  Select **Create new** and enter a name of your choice, such as `dp900-lab-rg`.
+
+        > _**What is a resource group?** It's just a folder that holds related Azure resources together. When you're finished, you can delete the folder to remove everything in one click._
+
+    - **Storage account name**: Enter a unique name for your storage account using lower-case letters and numbers only (this name must not already be in use by anyone else).
+    - **Region**:  Select any available location near you.
     - **Performance**: *Standard*
     - **Redundancy**: *Locally-redundant storage (LRS)*
 
@@ -255,4 +267,14 @@ Azure Tables provide a key/value store for applications that need to store data 
 
     You have manually entered data into the table using the storage browser interface. In a real scenario, application developers can use the Azure Storage Table API to build applications that read and write values to tables, making it a cost effective and scalable solution for NoSQL storage.
 
-> _**Tip**: If you've finished exploring Azure Storage, you can delete the resource group that you created in this exercise. Deleting the resource group is the quickest way to avoid ongoing charges by removing every resource you created in one action._
+## Clean up
+
+When you've finished exploring Azure Storage, you should delete the resources you created so you don't incur any further costs.
+
+1. In the Azure portal, navigate to the **resource group** you created at the start of the lab (for example, `dp900-lab-rg`).
+
+1. Select **Delete resource group**, confirm the deletion by entering the resource group name, and select **Delete**.
+
+    > _**Tip:** Deleting the resource group removes the storage account and everything inside it in a single step. This is the quickest way to make sure nothing is left running and costing money._
+
+In this lab, you created an Azure Storage account and explored blob storage, Data Lake Storage Gen2, Azure Files, and Azure Tables. You've now seen the main ways Azure stores non-relational data!
