@@ -32,19 +32,17 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free) in which y
 
 1. Sign in to the [Azure portal](https://portal.azure.com?azure-portal=true) using your Azure account.
 
-1. At the top left of the page, select **&#65291; Create a resource**, and in the search box type `Azure SQL`. In the search results, select **Azure SQL**, and then on the **Azure SQL** page, select **Create**.
+1. At the top left of the page, select **&#65291; Create a resource**, and in the search box type `Azure SQL`. In the search results, select **Azure SQL**.
 
     ![Screenshot of the Azure Portal showing Azure SQL in the marketplace.](images/azure-sql-marketplace.png)
 
-1. Select **Compare options**.
+1. On the **Azure SQL** page, select **&#65291; Create**. If you're prompted to choose a deployment option, in the left menu expand **Azure SQL Database** and select **SQL databases**, then select **&#65291; Create**.
 
-1. Review the Azure SQL options that are available, and then in the **SQL databases** tile, ensure **Single database** is selected and select **Create**.
-
-    ![Screenshot of the Azure portal showing the Azure SQL page.](images/azure-sql-portal.png)
-
-    > _**Tip:** A "single database" is the simplest option to set up and is perfect for learning. The other options add features you don't need yet._
+    > _**Tip:** A single SQL database is the simplest option to set up and is perfect for learning. The other options add features you don't need yet._
 
 1. Enter the following values on the **Create SQL Database** page, and leave all other properties with their default setting:
+
+    ![Screenshot of the Azure portal showing the Create SQL Database page.](images/azure-sql-portal.png)
 
     - **Subscription**: Select your Azure subscription.
     - **Resource group**: Select **Create new** and enter a name of your choice, such as `dp900-lab-rg`.
@@ -91,15 +89,15 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free) in which y
 
 Your database is created, but it's empty. In a relational database, data is stored in **tables**, which are like spreadsheets made of rows and columns. You'll now create two tables and fill them with a small amount of sample data.
 
-1. In the menu on the left side of the database page, select **Query editor (preview)**. Sign in using the **server admin login** and **password** you created earlier.
+1. In the menu on the left side of the database page, select **Query editor (preview)**. On the sign-in pane, select the **SQL authentication** tab, enter the **server admin login** and **password** you created earlier, and then select **Connect**.
 
-    > _**Note:** If you see an error saying your client IP address isn't allowed, select the **Allowlist IP ...** link in the message to grant access, then try signing in again._
+    > _**Note:** If you see an error saying your client IP address isn't allowed, select the **Allowlist IP ...** link in the message to grant access, then try connecting again._
 
-    The query editor is where you'll type and run SQL commands. It looks like this:
+    The query editor is where you'll type and run SQL commands. Select **&#65291; New query** to open a blank query tab. It looks like this:
 
     ![Screenshot of the Azure portal showing the query editor.](images/query-editor.png)
 
-1. In the **Query 1** pane, paste the following SQL code. This creates a **Manufacturer** table (the companies that build vehicles) and a **Vehicle** table (the cars the dealership sells).
+1. In the query tab, paste the following SQL code. This creates a **Manufacturer** table (the companies that build vehicles) and a **Vehicle** table (the cars the dealership sells).
 
     ```sql
     CREATE TABLE Manufacturer
@@ -125,7 +123,7 @@ Your database is created, but it's empty. In a relational database, data is stor
 
 1. Select **&#9655; Run** above the query. You should see a message confirming the query succeeded. Your two tables now exist, but they're empty.
 
-1. Replace all the SQL in the **Query 1** pane with the following code, which adds sample manufacturers and vehicles. Then select **&#9655; Run**.
+1. Replace all the SQL in the query tab with the following code, which adds sample manufacturers and vehicles. Then select **&#9655; Run**.
 
     ```sql
     INSERT INTO Manufacturer (ManufacturerID, ManufacturerName, Country) VALUES
@@ -151,7 +149,7 @@ Your database is created, but it's empty. In a relational database, data is stor
 
 Now that your database has data in it, you can use SQL **SELECT** statements to retrieve and explore it.
 
-1. Replace all the SQL in the **Query 1** pane with the following code, and select **&#9655; Run**. This returns every column and every row from the **Vehicle** table.
+1. Replace all the SQL in the query tab with the following code, and select **&#9655; Run**. This returns every column and every row from the **Vehicle** table.
 
     ```sql
     SELECT * FROM Vehicle;
