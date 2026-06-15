@@ -2,7 +2,7 @@
 lab:
   title: Explore Azure Storage
   module: Explore Azure Storage for non-relational data
-  description: 'In this lab, you''ll create an Azure Storage account and explore its core services: Blob storage, Data Lake Storage Gen2, Azure Files, and Azure Tables. The lab is written for absolute beginners with no prior Azure experience, so every step is explained in plain language.'
+  description: 'In this lab, you''ll create an Azure Storage account and explore its core services: Blob storage, Data Lake Storage Gen2, and Azure Files. The lab is written for absolute beginners with no prior Azure experience, so every step is explained in plain language.'
   duration: 30 minutes
   level: 100
   islab: true
@@ -19,7 +19,6 @@ In this lab, you'll create an **Azure Storage account**, which is a secure place
 - **Blob storage**, for storing files such as images, documents, and data files.
 - **Data Lake Storage Gen2**, blob storage with real folders, used for big-data analytics.
 - **Azure Files**, cloud file shares that behave like a shared network drive.
-- **Azure Tables**, a simple, low-cost place to store rows of data without a full relational database.
 
 This kind of storage is called *non-relational* because, unlike a relational database, the data doesn't have to be organized into related tables with a fixed structure. Don't worry if these terms are new, every step is explained as you go.
 
@@ -43,9 +42,9 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free) in which y
 
 1. On the Azure portal home page, select **&#65291; Create a resource** from the upper left-hand corner and search for `Storage account`. Then in the resulting **Storage account** page, select **Create**.
 
-    ![Screenshot of the Azure Portal showing marketplace](images/storage-create.png)
+    ![Screenshot of the Azure portal home page with the Create a resource button highlighted in the upper left.](images/dp900-02-storage-lab-create-resource.png)
 
-1. Enter the following values on the **Create a storage account** page:
+1. Enter the following values on the **Basics** tab of the **Create a storage account** page:
    
     - **Subscription**: Select your Azure subscription.
     - **Resource group**:  Select **Create new** and enter a name of your choice, such as `dp900-lab-rg`.
@@ -57,21 +56,27 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free) in which y
     - **Performance**: *Standard*
     - **Redundancy**: *Locally-redundant storage (LRS)*
 
-    ![Screenshot of the Azure Portal showing the first page for creating a storage account](images/storage-page1.png)
+    > _**Note**: Depending on the region you choose, you might also see a **Preferred storage type** option set to *Azure Blob Storage or Azure Data Lake Storage Gen 2*. You can leave it at the default value._
+
+    ![Screenshot of the Basics tab of the Create a storage account page showing the subscription, new resource group, storage account name, region, Standard performance, and Locally-redundant storage redundancy.](images/dp900-02-storage-lab-basics.png)
 
     > _**Tip**: A new resource group makes cleanup easy. Standard + LRS is the lowest-cost baseline, good for learning. LRS keeps three synchronous copies in one region, adequate for non-critical demo data without paying for geo-replication._
 
-1. Select **Next: Advanced >** and view the advanced configuration options. In particular, note that this is where you can enable hierarchical namespace to support Azure Data Lake Storage Gen2. Leave this option **<u>cleared</u>** (you'll enable it later), and then select **Next: Networking >** to view the networking options for your storage account.
-   
-   ![Screenshot of the Azure Portal showing the second page for creating a storage account](images/storage-page2.png)
+1. Select **Next: Advanced >** and view the advanced configuration options. In particular, note that this is where you can enable hierarchical namespace to support Azure Data Lake Storage Gen2. Leave the **Enable hierarchical namespace** option **<u>cleared</u>** (you'll enable it later), and then select **Next: Networking >** to view the networking options for your storage account.
+
+    ![Screenshot of the Advanced tab with the Enable hierarchical namespace checkbox cleared.](images/dp900-02-storage-lab-advanced.png)
 
 1. Select **Next: Data protection >** and then in the **Recovery** section, <u>de</u>select all of the **Enable soft delete...** options. These options retain deleted files for subsequent recovery, but can cause issues later when you enable hierarchical namespace.
 
-    ![Screenshot of the Azure Portal showing the fourth page for creating a storage account](images/storage-page4.png)
+    ![Screenshot of the Data protection tab with all three Enable soft delete options cleared.](images/dp900-02-storage-lab-data-protection.png)
 
 1. Continue through the remaining **Next >** pages without changing any of the default settings, and then on the  **Review** page, wait for your selections to be validated and select **Create** to create your Azure Storage account.
 
-1. Wait for deployment to complete. Then go to the resource that was deployed.
+    ![Screenshot of the Review tab summarizing the storage account settings with the Create button.](images/dp900-02-storage-lab-review-create.png)
+
+1. Wait for deployment to complete. Then select **Go to resource** to open the storage account that was deployed.
+
+    ![Screenshot of the deployment complete page with the Go to resource button.](images/dp900-02-storage-lab-deployment-complete.png)
 
 ## Explore blob storage
 
@@ -83,61 +88,63 @@ Now that you have an Azure Storage account, you can create a container for blob 
 
     *If the JSON file is displayed in your browser, right click the page, and select **Save As**. Name the file  **product1.json** and store it in your downloads folder.* 
 
-2. In the Azure portal page for your storage container, on the left side, in the **Data storage** section, select **Containers**.
-   
-    ![Screenshot of the Azure Portal showing the menu options for a storage account](images/storage-menu-containers.png)
+1. In the Azure portal page for your storage container, on the left side, in the **Data storage** section, select **Containers**.
 
-3. In the **Containers** page, select **&#65291; Add container** and add a new container named `data` with an anonymous access level of **Private (no anonymous access)**.
+1. In the **Containers** page, select **&#65291; Add container**. In the **New container** pane, enter the name `data`.
 
-    ![Screenshot of the Azure Portal showing a new container for a storage account](images/storage-new-container.png)
+    Note that the **Anonymous access level** is automatically set to **Private (no anonymous access)** and can't be changed, because anonymous access is disabled by default on the storage account. Select **Create**.
+
+    ![Screenshot of the New container pane with the name data entered and the anonymous access level set to Private.](images/dp900-02-storage-lab-new-container.png)
 
     > _**Tip**: Private keeps your sample data secure. Public access is rarely needed except for static website or open data scenarios. Naming it `data` keeps this example simple and readable._
 
-4. When the **data** container has been created, verify that it's listed in the **Containers** page.
+1. When the **data** container has been created, verify that it's listed in the **Containers** page.
 
-5. In the pane on the left side, in the top section, select **Storage browser**. This page provides a browser-based interface that you can use to work with the data in your storage account.
+    ![Screenshot of the Containers page showing the data container with Private access level.](images/dp900-02-storage-lab-containers-list.png)
 
-6. In the storage browser page, select **Blob containers** and verify that your **data** container is listed.
+1. In the pane on the left side, in the top section, select **Storage browser**. This page provides a browser-based interface that you can use to work with the data in your storage account.
 
-7. Select the **data** container, and note that it's empty.
+1. In the storage browser page, select **Blob containers** and verify that your **data** container is listed.
 
-    ![Screenshot of the Azure Portal showing the storage browser](images/storage-browser-empty.png)
+1. Select the **data** container, and note that it's empty.
 
-8. Select **&#65291; Add Directory** and read the information about folders before creating a new directory named `products`.
+    ![Screenshot of the storage browser showing the empty data container with the Add Directory and Upload toolbar buttons.](images/dp900-02-storage-lab-storage-browser.png)
 
-9. In storage browser, verify that the current view shows the contents of the **products** folder you just created - observe that the "breadcrumbs" at the top of the page reflect the path **Blob containers > data > products**.
+1. Select **&#65291; Add Directory** and read the information about folders before creating a new directory named `products`.
 
-    ![Screenshot of the Azure Portal showing the storage browser breadcrumb](images/storage-breadcrumb.png)
+1. In storage browser, verify that the current view shows the contents of the **products** folder you just created - observe that the "breadcrumbs" at the top of the page reflect the path **Blob containers > data > products**.
 
-10. In the breadcrumbs, select **data** to switch to the **data** container, and note that it does <u>not</u> contain a folder named **products**.
+    ![Screenshot of the storage browser inside the products folder with the breadcrumb path Blob containers > data > products.](images/dp900-02-storage-lab-products-folder.png)
+
+1. In the breadcrumbs, select **data** to switch to the **data** container, and note that it does <u>not</u> contain a folder named **products**.
 
     Folders in blob storage are virtual, and only exist as part of the path of a blob. Since the **products** folder contained no blobs, it isn't really there!
 
     > _**Tip**: Flat namespace means directories are just name prefixes (products/file.json). This design enables massive scale because the service indexes blob names instead of maintaining a true tree structure._
 
-11. Use the **&#10514; Upload** button to open the **Upload blob** panel.
+1. Use the **&#10514; Upload** button to open the **Upload blob** panel.
 
-12. In the **Upload blob** panel, select the **product1.json** file you saved on your local computer previously. Then in the **Advanced** section, in the **Upload to folder** box, enter `product_data` and select the **Upload** button.
+1. In the **Upload blob** panel, select the **product1.json** file you saved on your local computer previously. Then in the **Advanced** section, in the **Upload to folder** box, enter `product_data` and select the **Upload** button.
 
-    ![Screenshot of the Azure Portal showing the upload blob option](images/storage-upload-blob.png)
+    ![Screenshot of the Upload blob panel with product1.json selected and product_data entered in the Upload to folder box.](images/dp900-02-storage-lab-upload-blob.png)
 
     > _**Tip**: Supplying a folder name while uploading auto-creates the virtual path, illustrating that presence of a blob makes the "folder" appear._
 
-13. Close the **Upload blob** panel if it's still open, and verify that a **product_data** virtual folder has been created in the **data** container.
+1. Close the **Upload blob** panel if it's still open, and verify that a **product_data** virtual folder has been created in the **data** container.
 
-14. Select the **product_data** folder and verify that it contains the **product1.json** blob you uploaded.
+    ![Screenshot of the data container showing the product_data virtual folder.](images/dp900-02-storage-lab-product-data-folder.png)
 
-15. On the left side, in the **Data storage** section, select **Containers**.
+1. Select the **product_data** folder and verify that it contains the **product1.json** blob you uploaded.
 
-16. Open the **data** container, and verify that the **product_data** folder you created is listed.
+1. On the left side, in the **Data storage** section, select **Containers**.
 
-17. Select the **&#x2027;&#x2027;&#x2027;** icon at the right-end of the folder, and note that the menu doesn't display any options. Folders in a flat namespace blob container are virtual, and can't be managed.
+1. Open the **data** container, and verify that the **product_data** folder you created is listed.
 
-    ![Screenshot of the Azure Portal showing the options for the virtual folder](images/storage-virtual-folder.png)
+1. Select the **&#x2027;&#x2027;&#x2027;** icon at the right-end of the folder, and note that the menu doesn't display any options. Folders in a flat namespace blob container are virtual, and can't be managed.
 
     > _**Tip**: No real directory object exists, so there are no rename/permission operations — those require hierarchical namespace._
 
-18. Use the **X** icon at the top right in the **data** page to close the page and return to the **Containers** page.
+1. Use the **X** icon at the top right in the **data** page to close the page and return to the **Containers** page.
 
 ## Explore Azure Data Lake Storage Gen2
 
@@ -150,11 +157,9 @@ It also lets you do folder actions safely (all at once, without errors) and give
 
 1. In the Azure portal page for your storage account, on the left side, scroll down to the **Settings** section, and select **Data Lake Gen2 upgrade**.
 
-    ![Screenshot of the Azure Portal showing the data lake gen2 upgrade](images/storage-upgrade-datalake.png)
-
 1. In the **Data Lake Gen2 upgrade** page, expand and complete each step to upgrade your storage account to enable hierarchical namespace and support Azure Data Lake Storage Gen. This may take some time.
 
-    ![Screenshot of the Azure Portal showing the data lake gen2 upgrade finished](images/storage-account-upgraded.png)
+    ![Screenshot of the Data Lake Gen2 upgrade page showing the three upgrade steps: review account changes, validate account, and upgrade account.](images/dp900-02-storage-lab-datalake-upgrade.png)
 
     > _**Tip**: The upgrade is an account-level capability switch — data remains, but directory semantics change to support advanced operations._
 
@@ -168,7 +173,7 @@ It also lets you do folder actions safely (all at once, without errors) and give
 
 1. Close the **Upload blob** panel if it's still open, and verify that a **product_data** folder now contains the **product2.json** file.
 
-    ![Screenshot of the Azure Portal showing the blob uploaded](images/storage-blob-uploaded.png)
+    ![Screenshot of the product_data folder containing both product1.json and product2.json.](images/dp900-02-storage-lab-both-products.png)
 
     > _**Tip**: Adding a second file post-upgrade confirms seamless continuity: existing blobs still work, and new ones gain hierarchical benefits such as directory ACLs (Access Control Lists)._
 
@@ -176,9 +181,9 @@ It also lets you do folder actions safely (all at once, without errors) and give
 
 1. Open the **data** container, and verify that the **product_data** folder you created is listed.
 
-1. Select the **&#x2027;&#x2027;&#x2027;** icon at the right-end of the folder, and note that with hierarchical namespace enabled, you can perform configuration tasks at the folder-level; including renaming folders and setting permissions.
+1. Select the **&#x2027;&#x2027;&#x2027;** icon at the right-end of the folder, and note that with hierarchical namespace enabled, you can perform configuration tasks at the folder-level; including renaming folders and setting permissions (**Manage ACL**).
 
-    ![Screenshot of the Azure Portal showing the data lake folder options](images/storage-folder-hierarchical.png)
+    ![Screenshot of the product_data folder context menu showing Properties, Rename, Copy URL, Generate SAS, Manage ACL, and Delete options.](images/dp900-02-storage-lab-folder-context-menu.png)
 
     > _**Tip**: Real folders let you apply least-privilege security at folder granularity, rename safely, and speed recursive listings versus scanning thousands of prefixed blob names._
 
@@ -190,82 +195,29 @@ Azure Files provides a way to create cloud-based file shares.
 
 > _**Tip**: Azure Files offers SMB/NFS endpoints for lift‑and‑shift scenarios where apps expect a traditional file system. It complements (not replaces) blob storage by supporting file locks and OS-native tooling._
 
-1. In the Azure portal page for your storage container, on the left side, in the **Data storage** section, select **File shares**.
+> _**Note**: Because you enabled hierarchical namespace (Azure Data Lake Storage Gen2) earlier, file shares for this account are managed under **Classic file shares**. On a storage account without hierarchical namespace, this menu item is simply named **File shares**, but the steps to create and connect to a share are the same._
 
-    ![Screenshot of the Azure Portal showing the file share menu](images/storage-fileshare-menu.png)
+1. In the Azure portal page for your storage account, on the left side, in the **Data storage** section, select **Classic file shares**.
 
-1. In the File shares page, select **&#65291; File share** and add a new file share named `files` using the **Transaction optimized** tier.
+1. In the **Classic file shares** page, select **&#65291; Classic file share**. On the **Basics** tab, enter the name `files` and leave the **Access tier** set to **Transaction optimized**.
 
-1. Select **Next: Backup >** and disable backup. Then select **Review + create**.
+    ![Screenshot of the New classic file share Basics tab with the name files and the Transaction optimized access tier.](images/dp900-02-storage-lab-new-file-share.png)
 
-    ![Screenshot of the Azure Portal showing the file share backup option](images/storage-fileshare-disable-backup.png)
+1. Select **Next: Backup >** and clear the **Enable backup** checkbox to disable backup. Then select **Review + create**, and on the **Review + create** tab, select **Create**.
+
+    ![Screenshot of the Backup tab with the Enable backup checkbox cleared.](images/dp900-02-storage-lab-file-share-backup.png)
 
     > _**Tip**:  Disabling backup keeps costs down for a short-lived lab environment — you would enable it for production resilience._
 
-1. In the **File shares**, open your new **files** share.
+1. When the **files** share has been created, return to the **Classic file shares** page and open your new **files** share.
 
 1. At the top of the page, select **Connect**. Then in the **Connect** pane, note that there are tabs for common operating systems (Windows, Linux, and macOS) that contain scripts you can run to connect to the shared folder from a client computer.
 
-    ![Screenshot of the Azure Portal showing the file share connect option](images/storage-fileshare-connect.png)
+    ![Screenshot of the Connect pane for the files share with Windows, Linux, and macOS tabs showing the connection script.](images/dp900-02-storage-lab-file-share-connect.png)
 
     > _**Tip**: The generated scripts show exactly how to mount the share using platform-native commands, illustrating hybrid access patterns from virtual machines, containers, or on-prem servers._
 
-1. Close the **Connect** pane and then close the **files** page to return to the **File shares** page for your Azure storage account.
-
-## Explore Azure Tables
-
-Azure Tables provide a key/value store for applications that need to store data values, but don't need the full functionality and structure of a relational database.
-
-> _**Tip**: Table storage trades rich querying & joins for ultra-low cost, schemaless flexibility, and horizontal scale — ideal for logs, IoT data, or user profiles._
-
-1. In the Azure portal page for your storage container, on the left side, in the **Data storage** section, select **Tables**.
-
-    ![Screenshot of the Azure Portal showing the table menu](images/storage-tables.png)
-
-1. On the **Tables** page, select **&#65291; Table** and create a new table named `products`.
-
-1. After the **products** table has been created, in the pane on the left side, in the top section, select **Storage browser**.
-
-1. In storage explorer, select **Tables** and verify that the **products** table is listed.
-
-1. Select the **products** table.
-
-1. In the **product** page, select **&#65291; Add entity**.
-
-1. In the **Add entity** panel, enter the following key values:
-    - **PartitionKey**: 1
-    - **RowKey**: 1
-
-    > _**Tip**: PartitionKey groups related entities to distribute load; RowKey uniquely identifies within the partition. Together they form a fast composite primary key for lookups._
-
-1. Select **Add property**, and create two new properties with the following values:
-
-    |Property name | Type | Value |
-    | ------------ | ---- | ----- |
-    | Name | String | Widget |
-    | Price | Double | 2.99 |
-
-    ![Screenshot of the Azure Portal showing the table insert](images/storage-table-insert.png)
-
-1. Select **Insert** to insert a row for the new entity into the table.
-
-1. In storage browser, verify that a row has been added to the **products** table, and that a **Timestamp** column has been created to indicate when the row was last modified.
-
-1. Add another entity to the **products** table with the following properties:
-
-    |Property name | Type | Value |
-    | ------------ | ---- | ----- |
-    | PartitionKey | String | 1 |
-    | RowKey | String | 2 |
-    | Name | String | Kniknak |
-    | Price | Double | 1.99 |
-    | Discontinued | Boolean | true |
-
-    > _**Tip**: Adding a second entity with different keys and an extra Boolean property demonstrates schema-on-write flexibility — new attributes don't require a migration._
-
-1. After inserting the new entity, verify that a row containing the discontinued product is shown in the table.
-
-    You have manually entered data into the table using the storage browser interface. In a real scenario, application developers can use the Azure Storage Table API to build applications that read and write values to tables, making it a cost effective and scalable solution for NoSQL storage.
+1. Close the **Connect** pane and then close the **files** page to return to the **Classic file shares** page for your Azure storage account.
 
 ## Clean up
 
@@ -275,6 +227,8 @@ When you've finished exploring Azure Storage, you should delete the resources yo
 
 1. Select **Delete resource group**, confirm the deletion by entering the resource group name, and select **Delete**.
 
+    ![Screenshot of the Delete a resource group pane listing the storage account, with the resource group name entered to confirm deletion.](images/dp900-02-storage-lab-delete-rg.png)
+
     > _**Tip:** Deleting the resource group removes the storage account and everything inside it in a single step. This is the quickest way to make sure nothing is left running and costing money._
 
-In this lab, you created an Azure Storage account and explored blob storage, Data Lake Storage Gen2, Azure Files, and Azure Tables. You've now seen the main ways Azure stores non-relational data!
+In this lab, you created an Azure Storage account and explored blob storage, Data Lake Storage Gen2, and Azure Files. You've now seen the main ways Azure stores non-relational data!
