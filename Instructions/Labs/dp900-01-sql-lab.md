@@ -43,7 +43,7 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free) in which y
 1. Enter the following values on the **Create SQL Database** page, and leave all other properties with their default setting:
 
     - **Subscription**: Select your Azure subscription.
-    - **Resource group**: Select **Create new** and enter a name of your choice, such as `dp900-lab-rg`.
+    - **Resource group**: Create a new resource group with a name of your choice.
 
         > _**What is a resource group?** It's just a folder that holds related Azure resources together. When you're finished, you can delete the folder to remove everything in one click._
 
@@ -51,12 +51,7 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free) in which y
 
     ![Screenshot of the Basics tab of the Create SQL Database page showing the resource group, database name, and server settings.](images/01-sql-lab-basics.png)
 
-    - **Server**: Select **Create new**. A server is the computer (in the cloud) that runs your database. Fill in the form that appears:
-        - **Server name**: Enter a globally unique name, such as `dealership-server-<your-initials-and-numbers>` (the name must not already be in use by anyone else).
-        - **Location**: Choose any available location near you.
-        - **Authentication method**: Select **Use SQL authentication**.
-        - **Server admin login**: Enter a username of your choice, such as `sqladmin`.
-        - **Password** / **Confirm password**: Enter a strong password and **write it down**, you'll need it again later in this lab.
+    - **Server**:  Select **Create new** and create a new server with a unique name in any available location. Use **SQL authentication** and specify your name as the server admin login and a suitably complex password (remember the password - you'll need it later!)
 
         Select **OK** to close the server form.
 
