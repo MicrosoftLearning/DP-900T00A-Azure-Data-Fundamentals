@@ -32,15 +32,15 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free) in which y
 
 1. In the Azure portal, select **+ Create a resource** at the top left, and search for `Azure Cosmos DB`.  In the results, select **Azure Cosmos DB** and select  **Create**.
 
-    ![Screenshot of the Azure Portal showing cosmos db in the marketplace](images/cosmosdb-marketplace.png)
+    ![Screenshot of the Azure Marketplace search results with the Azure Cosmos DB tile and its Create button highlighted.](images/dp900-03-cosmos-lab-marketplace.png)
 
 1. In the **Azure Cosmos DB for NoSQL** tile, select **Create**.
 
-    ![Screenshot of the Azure Portal showing cosmos db create option](images/cosmosdb-nosql-create.png)
-   
+    ![Screenshot of the API selection page with the Create button on the Azure Cosmos DB for NoSQL tile.](images/dp900-03-cosmos-lab-select-api.png)
+
     > _**Tip**: The account is the top level for your Cosmos DB resources. Choosing Azure Cosmos DB for NoSQL lets you store and query JSON data with a simple, SQL-like query language._
 
-1. Enter the following details, and then select **Review + Create**:
+1. Enter the following details, and then select **Review + create**:
    
     - **Workload Type**: Learning
     - **Subscription**: If you're using a sandbox, select *Concierge Subscription*. Otherwise, select your Azure subscription.
@@ -56,9 +56,13 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free) in which y
     >
     > _We’re setting the **workload type** to Learning because it comes with beginner-friendly defaults that make setup easier and keep costs low. Your **account name** needs to be unique across the whole service, since it becomes part of your service’s URL. We’re picking a **location** close to you so your tests run faster; which locations you see will depend on your subscription and whether certain availability zones are enabled. For **capacity mode**, we’re going with Provisioned throughput so performance stays predictable during this short lab—though Serverless can be fine if you only need it occasionally. If the **free tier** is available, we’ll use it so you can experiment without racking up charges. Finally, we’re keeping the “**limit total account throughput**” setting turned off so nothing gets slowed down unexpectedly while you work._
 
+    ![Screenshot of the Create Azure Cosmos DB Account Basics tab with the workload type, subscription, resource group, account name, and location filled in.](images/dp900-03-cosmos-lab-basics.png)
+
 1. When the configuration has been validated, select **Create**.
 
-    > _**Tip**: Azure Portal will estimate how long it will take to provision this instance of CosmosDB. The estimated creation time is calculated based on the location you have selected._
+    ![Screenshot of the Review + create tab showing Validation Success and the account settings summary with the Create button.](images/dp900-03-cosmos-lab-review-create.png)
+
+    > _**Tip**: Azure portal will estimate how long it will take to provision this instance of Azure Cosmos DB. The estimated creation time is calculated based on the location you have selected._
 
 1. Wait for deployment to complete. Then go to the deployed resource.
 
@@ -68,23 +72,27 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free) in which y
 
 1. On the page for your new Cosmos DB account, in the pane on the left, select **Data Explorer**.
 
-    ![Screenshot of the Azure Portal Comsos DB Data Explorer menu](images/cosmosdb-data-explorer.png)
+    ![Screenshot of the Azure Cosmos DB account page with Data Explorer selected in the left navigation pane.](images/dp900-03-cosmos-lab-overview.png)
 
 1. In the **Data Explorer** page, select **Launch quick start**.
 
+    ![Screenshot of the Data Explorer welcome page with the Launch quick start tile highlighted.](images/dp900-03-cosmos-lab-data-explorer.png)
+
     > _**Tip**: Quick start creates a working database, container, and sample data so you can practice adding and querying items without designing a schema first._
 
-1. In the **New container** tab, review the pre-populated settings for the sample database, and then select **OK**.
+1. In the **New Container** pane, review the pre-populated settings for the sample database (a database named **SampleDB**, a container named **SampleContainer**, and a partition key of **/categoryId**), and then select **OK**. A short guided tutorial may appear alongside the pane; you can step through it with **Next** or simply select **OK** to continue.
+
+    ![Screenshot of the New Container pane showing the pre-populated SampleDB database, SampleContainer container, and partition key settings.](images/dp900-03-cosmos-lab-quick-start.png)
+
+    > _**What is a partition key?** When you create a container, Azure Cosmos DB asks for a **partition key**, a property in your data (for example, `categoryId`) that it uses to group related items together. Cosmos DB spreads these groups across the storage and compute behind the scenes so your database stays fast as it grows. You don't need to choose one here because Quick Start picks a sensible partition key for you, but in a real project choosing a good partition key, one with many distinct values that your queries filter on, is one of the most important design decisions you'll make._
 
 1. Observe the status in the panel at the bottom of the screen until the **SampleDB** database and its **SampleContainer** container has been created (which may take a minute or so).
 
 ## View and create items
 
-1. In the Data Explorer page, expand the **SampleDB** database and the **SampleContainer** container, and select **Items** to see a list of items in the container. The items represent product data, each with a unique id and other properties.
+1. In the Data Explorer page, expand the **SampleDB** database and the **SampleContainer** container, and select **Items** to see a list of items in the container. The items represent product data, each with a unique id and other properties. Select any item to see a JSON representation of its data in the pane on the right.
 
-    ![Screenshot of the Azure Portal Comsos DB Data Explorer items](images/cosmosdb-items.png)
-
-1. Select any of the items in the list to see a JSON representation of the item data.
+    ![Screenshot of the Items view listing sample product items, with the JSON of the selected item shown on the right.](images/dp900-03-cosmos-lab-items.png)
 
 1. At the top of the page, select **New Item** to create a new blank item.
 
@@ -94,14 +102,14 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free) in which y
    {
        "name": "Road Helmet,45",
        "id": "123456789",
-       "categoryID": "123456789",
+       "categoryId": "123456789",
        "SKU": "AB-1234-56",
        "description": "The product called \"Road Helmet,45\" ",
        "price": 48.74
    }
     ```
 
-    ![Screenshot of the Azure Portal Comsos DB Data Explorer new item](images/cosmosdb-new-item.png)
+    ![Screenshot of the New Item editor in Data Explorer with the product JSON entered and the Save button in the toolbar.](images/dp900-03-cosmos-lab-new-item.png)
 
 1. After saving the new item, notice that additional metadata properties are added automatically.
 
@@ -116,7 +124,7 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free) in which y
 
 1. In the **Data Explorer** page, select the **New SQL Query** icon.
 
-    ![Screenshot of the Azure Portal Comsos DB Data Explorer new sql query](images/cosmosdb-new-sqlquery.png)
+    ![Screenshot of the Data Explorer with a new query tab open showing the default SELECT star FROM c query and the Execute Query button.](images/dp900-03-cosmos-lab-new-sqlquery.png)
 
 1. In the SQL Query editor, review the default query (`SELECT * FROM c`) and use the **Execute Query** button to run it.
 
@@ -134,7 +142,7 @@ You'll need an [Azure subscription](https://azure.microsoft.com/free) in which y
 
 1. Use the **Execute Query** button to run the revised query and review the results, which includes JSON entities for any items with a **name** field containing the text "Helmet".
 
-    ![Screenshot of the Azure Portal Comsos DB Data Explorer sql query executed](images/cosmosdb-query.png)
+    ![Screenshot of the query editor running the CONTAINS query with the matching helmet items shown in the Results pane.](images/dp900-03-cosmos-lab-query.png)
 
 1. Close the SQL Query editor, discarding your changes.
 
