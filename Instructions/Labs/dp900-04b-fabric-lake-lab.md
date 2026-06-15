@@ -45,7 +45,7 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
 1. In the menu bar on the left, select **Workspaces** (the icon looks similar to &#128455;).
 
-    ![Screenshot of the Fabric workspaces](./images/fabric-workspace-new.png)
+    ![Screenshot of the Fabric workspaces](./images/04b-fabric-lake-lab-workspaces.png)
 
 1. Create a new workspace with a name of your choice, selecting a licensing mode in the **Advanced** section that includes Fabric capacity (*Trial*, *Premium*, or *Fabric*).
 
@@ -53,7 +53,7 @@ Before working with data in Fabric, create a workspace with the Fabric trial ena
 
 1. When your new workspace opens, it should be empty.
 
-    ![Screenshot of an empty workspace in Fabric.](./images/new-workspace.png)
+    ![Screenshot of an empty workspace in Fabric.](./images/04b-fabric-lake-lab-empty-workspace.png)
 
 ## Create a lakehouse
 
@@ -65,11 +65,11 @@ Now that you have a workspace, it's time to create a lakehouse for your data fil
 
     >**Note**: If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (**...**) option first.
 
-    ![Screenshot of Fabric create option in the menu bar.](./images/fabric-workspace-create.png)
+    ![Screenshot of Fabric create option in the menu bar.](./images/04b-fabric-lake-lab-create.png)
 
     After a minute or so, a new lakehouse will be created:
 
-    ![Screenshot of a new lakehouse.](./images/new-lakehouse.png)
+    ![Screenshot of a new lakehouse.](./images/04b-fabric-lake-lab-new-lakehouse.png)
 
 1. View the new lakehouse, and note that the **Lakehouse explorer** pane on the left enables you to browse tables and files in the lakehouse:
    
@@ -88,13 +88,13 @@ A simple way to bring data into the lakehouse is to use a **Copy Data** activity
 
 1. On the **Home** page for your lakehouse, in the **Get data** menu, select **New data pipeline**, and create a new data pipeline named **Ingest Data**.
 
-    ![Screenshot of a lakehouse with the new data pipeline option selected.](./images/fabric-lakehouse-new-pipeline.png)
+    ![Screenshot of a lakehouse with the new data pipeline option selected.](./images/04b-fabric-lake-lab-new-pipeline.png)
 
 1. In the **Copy Data** wizard, on the **Choose a data source** page, select **Sample data** and then select the **NYC Taxi - Green** sample dataset.
 
-    ![Screenshot of the copy data pipeline wizard with sample data option highlighted](./images/fabric-pipeline-sampledata.png)
+    ![Screenshot of the copy data pipeline wizard with sample data option highlighted](./images/04b-fabric-lake-lab-sample-data.png)
 
-    ![Screenshot of the Choose data source page.](./images/choose-data-source.png)
+    ![Screenshot of the Choose data source page.](./images/04b-fabric-lake-lab-choose-data-source.png)
 
 1. On the **Connect to data source** page, view the tables in the data source. There should be one table that contains details of taxi trips in New York City. Then select **Next** to progress to the **Connect to data destination** page.
 
@@ -105,7 +105,7 @@ A simple way to bring data into the lakehouse is to use a **Copy Data** activity
     - **Column mappings**: *Leave the default mappings as-is*
     - **Enable partition**: *Unselected*
 
-    ![Screenshot of a pipeline destination options](./images/fabric-pipeline-destination.png)
+    ![Screenshot of a pipeline destination options](./images/04b-fabric-lake-lab-destination.png)
 
     > _**Why these choices?**_
     > 
@@ -117,17 +117,17 @@ A simple way to bring data into the lakehouse is to use a **Copy Data** activity
 
     A new pipeline containing a **Copy Data** activity is created, as shown here:
 
-    ![Screenshot of a pipeline with a Copy Data activity.](./images/copy-data-pipeline.png)
+    ![Screenshot of a pipeline with a Copy Data activity.](./images/04b-fabric-lake-lab-copy-data-pipeline.png)
 
     When the pipeline starts to run, you can monitor its status in the **Output** pane under the pipeline designer. Use the **&#8635;** (*Refresh*) icon to refresh the status, and wait until it has succeeded (which may take 10 minutes or more). This particular dataset contains more than 75 million rows, storing about 2.5 Gb of data. 
 
 1. In the menu bar at the top, select your lakehouse. You can also find it from your workspace. 
 
-    ![Screenshot of the Fabric lakehouse in the menubar](./images/fabric-menubar-lakehouse.png)
+    ![Screenshot of the Fabric lakehouse in the menubar](./images/04b-fabric-lake-lab-menubar-lakehouse.png)
 
 1. On the **Home** page, in the **Lakehouse explorer** pane, in the **...** menu for the **Tables** node, select **Refresh** and then expand **Tables** to verify that the **taxi_rides** table has been created.
 
-    ![Screenshot of the Fabric lakehouse tables refresh option](./images/fabric-lakehouse-tables-refresh.png)
+    ![Screenshot of the Fabric lakehouse tables refresh option](./images/04b-fabric-lake-lab-tables-refresh.png)
 
     > **Note**: If the new table is listed as *unidentified*, use its **Refresh** menu option to refresh the view.
 
@@ -135,7 +135,7 @@ A simple way to bring data into the lakehouse is to use a **Copy Data** activity
 
 1. Select the **taxi_rides** table to view its contents.
 
-    ![Screenshot of the taxi_rides table.](./images/taxi-rides-table.png)
+    ![Screenshot of the taxi_rides table.](./images/04b-fabric-lake-lab-taxi-rides-table.png)
 
 ## Query data in a lakehouse
 
@@ -145,7 +145,7 @@ Now that you have ingested data into a table in the lakehouse, you can use SQL t
 
 1. At the top right of the Lakehouse page, switch from **Lakehouse** view to the **SQL analytics endpoint** for your lakehouse.
 
-    ![Screenshot of the Fabric lakehouse sql endpoint menu option](./images/fabric-lakehouse-sqlendpoint.png)
+    ![Screenshot of the Fabric lakehouse sql endpoint menu option](./images/04b-fabric-lake-lab-sql-endpoint.png)
 
     > _**Tip**: The SQL analytics endpoint is optimized for running SQL queries over your lakehouse tables and integrates with familiar query tools._
 
@@ -162,7 +162,7 @@ Now that you have ingested data into a table in the lakehouse, you can use SQL t
 
     > _**Tip**: This query groups trips by day name and calculates the average distance, showing a simple example of aggregation you can build on._
 
-    ![Screenshot of a SQL query.](./images/sql-query.png)
+    ![Screenshot of a SQL query.](./images/04b-fabric-lake-lab-sql-query.png)
 
 ## Clean up resources
 
