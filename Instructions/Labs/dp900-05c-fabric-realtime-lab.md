@@ -28,15 +28,23 @@ Before working with data in Fabric, you need to create a workspace with the Fabr
 
 1. Navigate to the [Microsoft Fabric home page](https://app.fabric.microsoft.com/home?experience=fabric) at `https://app.fabric.microsoft.com/home?experience=fabric` in a browser, and sign in with your Fabric credentials.
 
+1. At the bottom of the menu bar on the left is an experience switcher. If it shows **Power BI**, select it and choose **Fabric** so that all of the real-time intelligence features used in this lab are available.
+
+    ![Screenshot of the experience switcher showing the Fabric and Power BI options.](./images/05c-fabric-realtime-lab-switch-experience.png)
+
 1. In the menu bar on the left, select **Workspaces** (the icon looks similar to &#128455;).
 
-1. Create a new workspace with a name of your choice, selecting a licensing mode that includes Fabric capacity (*Trial*, *Premium*, or *Fabric*).
+    ![Screenshot of the Workspaces flyout with the New workspace button.](./images/05c-fabric-realtime-lab-workspaces.png)
+
+1. Select **+ New workspace**, give your workspace a name (such as `dp900-realtime`), and in the **Advanced** section select a licensing mode that includes Fabric capacity (*Trial*, *Premium*, or *Fabric*). Then select **Apply**.
 
     > _**Tip**: Using a capacity that includes Fabric ensures the workspace has the engines needed for real-time ingestion and analytics. A separate workspace keeps lab resources isolated and easy to clean up._
 
+    ![Screenshot of the Create a workspace pane with a name and licensing mode.](./images/05c-fabric-realtime-lab-create-workspace.png)
+
 1. When your new workspace opens, it should be empty.
 
-    ![Screenshot of an empty workspace in Fabric.](./images/05c-fabric-realtime-lab-empty-workspace.png)
+    ![Screenshot of the newly created empty workspace.](./images/05c-fabric-realtime-lab-empty-workspace.png)
 
 ## Create an eventstream
 
@@ -50,109 +58,126 @@ Now you're ready to find and capture real-time data from a streaming source. To 
 
     The real-time hub provides an easy way to find and manage sources of streaming data.
 
-    ![Screenshot of the real-time hub in Fabric.](./images/05c-fabric-realtime-lab-real-time-hub.png)
+    ![Screenshot of the Real-Time hub home page in Microsoft Fabric.](./images/05c-fabric-realtime-lab-real-time-hub.png)
 
 1. In the real-time hub, in the **Connect to** section, select **Data sources**.
 
-1. Find the **Yellow taxi** sample data source and select **Connect**. Then in the **Connect** wizard, name the source `taxi` and edit the default eventstream name to change it to `taxi-data`. The default stream associated with this data will automatically be named *taxi-data-stream*:
+    A catalog of available streaming data sources is displayed.
 
-    > _**Tip**: The Yellow taxi sample is a safe, public stream—no credentials required—and it’s consistent for all learners. Clear names make it easier to find your source, eventstream, and stream later._
+    ![Screenshot of the data sources catalog with the Yellow taxi sample source.](./images/05c-fabric-realtime-lab-real-time-hub-choose-data-sources.png)
 
-    ![Screenshot of a new eventstream.](./images/05c-fabric-realtime-lab-name-eventstream.png)
+1. Find the **Yellow taxi** sample data source and select **Connect**. The **Connect data source** wizard opens on the **Configure connection settings** page.
 
-1. Select **Next** and wait for the source and eventstream to be created, then select **Open eventstream**. The eventstream will show the **taxi** source and the **taxi-data-stream** on the design canvas:
+    > _**Tip**: The Yellow taxi sample is a safe, public stream—no credentials required—and it’s consistent for all learners._
 
-   ![Screenshot of the eventstream canvas.](./images/05c-fabric-realtime-lab-eventstream-canvas.png)
+    ![Screenshot of the Configure connection settings page with the default My workspace and a free trial prompt.](./images/05c-fabric-realtime-lab-real-time-hub-yellow-taxi-switch-workspace.png)
 
-## Create an eventhouse
+1. In the **Stream details** pane on the right, select the **Workspace** drop-down and choose the workspace you created earlier (for example, `dp900-realtime`) instead of *My workspace*. If a *Try Microsoft Fabric for free* prompt appears, you can dismiss it.
 
-The eventstream captures the real-time taxi data, but it doesn't currently store it anywhere. Let's create an eventhouse, where the captured data is saved in a table so you can query it.
+    ![Screenshot of the Workspace drop-down with the dp900-realtime workspace selected.](./images/05c-fabric-realtime-lab-real-time-hub-yellow-taxi-switch-workspace-selected.png)
+
+1. Set the **Source name** to `taxi`, and edit the default **Eventstream name** to `taxi-data`. The **Stream name** is automatically set to *taxi-data-stream*.
+
+    ![Screenshot of the configured connection settings with the taxi source and taxi-data eventstream names.](./images/05c-fabric-realtime-lab-real-time-hub-yellow-taxi-names-updated.png)
+
+1. Select **Next**. On the **Review + connect** page, review the source and stream details, then select **Connect**.
+
+    ![Screenshot of the Review and connect page showing the source and stream summary.](./images/05c-fabric-realtime-lab-real-time-hub-yellow-taxi-review.png)
+
+1. Wait for the **Create Eventstream** and **Create Eventstream source** tasks to show a status of **Successful**, then select **Open Eventstream**.
+
+    ![Screenshot of the completed wizard with both tasks successful and the Open Eventstream button.](./images/05c-fabric-realtime-lab-real-time-hub-yellow-taxi-completed.png)
+
+    The eventstream opens on the design canvas, showing the **taxi** source and the **taxi-data-stream**.
+
+## Create an eventhouse and store the stream
+
+The eventstream captures the real-time taxi data, but it doesn't currently store it anywhere. To keep the data so you can query it, add an **eventhouse** as a *destination* of the eventstream.
 
 > _**What is an eventhouse?** It's durable storage built for real-time data. It contains a **KQL database**, where your streaming data is saved into tables. **KQL** (Kusto Query Language) is a read-only, SQL-like language designed to quickly explore, filter, and analyze large amounts of data, including data that keeps arriving._
 
-1. On the menu bar on the left, select **Create**. In the *New* page, under the *Real-Time Intelligence* section, select **Eventhouse**. Give it a unique name of your choice.
+1. With the **taxi-data** eventstream open on the design canvas in **Edit mode**, on the toolbar select **Add destination**, and then select **Eventhouse**.
 
-    >**Note**: If the **Create** option is not pinned to the sidebar, you need to select the ellipsis (**...**) option first.
+    ![Screenshot of the eventstream canvas in edit mode with the Add destination menu open and the Eventhouse option.](./images/05c-fabric-realtime-lab-event-stream-edit-mode.png)
 
-    ![Screenshot of a create option in sidebar](./images/05c-fabric-realtime-lab-create.png)
+1. In the **Eventhouse** pane that opens on the right, configure the destination:
 
-    Close any tips or prompts that are displayed until you see your new empty eventhouse.
+    - For **Data ingestion mode**, select **Event processing before ingestion**.
+    - Leave the default **Destination name** (`Eventhouse`).
+    - For **Workspace**, select the workspace you created earlier (for example, `dp900-realtime`).
+    - For **Eventhouse**, select **Create new**, name the eventhouse `taxi-eventhouse`, and select **Done**. The **KQL Database** is automatically set to the same name.
 
-    ![Screenshot of a new eventhouse](./images/05c-fabric-realtime-lab-create-eventhouse.png)
+    ![Screenshot of the Eventhouse destination pane with the Create new Eventhouse dialog and the name taxi-eventhouse.](./images/05c-fabric-realtime-lab-event-stream-create-new-event-house.png)
 
-1. In the pane on the left, note that your eventhouse contains a KQL database with the same name as the eventhouse. You can create tables for your real-time data in this database, or create additional databases as necessary.
+1. For **KQL Destination table**, select **Create new**, name the table `yellow-taxi`, and select **Done**. Make sure **Activate ingestion after adding the data source** is selected, and then select **Save**.
 
-1. Select the database, and note that there is an associated *queryset*. This file contains some sample KQL queries that you can use to get started querying the tables in your database.
+    ![Screenshot of the Eventhouse destination pane with the Create new table dialog and the name yellow-taxi.](./images/05c-fabric-realtime-lab-event-stream-create-new-event-house-destination-table.png)
 
-    > _**Tip**: The KQL database holds your tables. The queryset is a handy place to write and run queries without extra setup._
+1. On the canvas, an **Eventhouse** destination node is added. Make sure it's connected to the **taxi-data-stream** node. If the stream and the eventhouse aren't joined, drag a connection from the circle on the right edge of the stream node to the **Eventhouse** node.
 
-    However, currently there are no tables to query. Let's resolve that problem by getting data from the eventstream into a new table.
+    ![Screenshot of the eventstream canvas showing the taxi source, the taxi-data-stream, and the connected Eventhouse destination.](./images/05c-fabric-realtime-lab-event-stream-connect-event-house.png)
 
-1. In the main page of your KQL database, select **Get data**.
+1. On the toolbar, select **Publish** to make your changes live.
 
-    ![Screenshot of an empty eventhouse](./images/05c-fabric-realtime-lab-empty-eventhouse.png)
+    > _**Tip**: Changes you make on the canvas stay in **Edit mode** until you publish them. Publishing switches the eventstream to **Live** mode and starts moving events to the eventhouse._
 
-1. For the data source, select **Eventstream** > **Existing eventstream**.
+1. After the eventstream switches to **Live** mode, the **taxi** source, the **taxi-data-stream**, and the **Eventhouse** destination each show a status of **Active**. Select the **Eventhouse** node, and in the pane below the canvas select the **Data preview** tab. Wait a few minutes for ingestion to start, selecting **Refresh** until rows of taxi data appear.
 
-1. In the **Select or create a destination table** pane, create a new table named `taxi`. Then in the **Configure the data source** pane, select your workspace and the **taxi-data** eventstream and name the connection `taxi-table`.
+    ![Screenshot of the published Live eventstream with the Eventhouse node selected and taxi data shown in the Data preview.](./images/05c-fabric-realtime-lab-event-stream-publish-live.png)
 
-   ![Screenshot of configuration for loading a table from an eventstream.](./images/05c-fabric-realtime-lab-configure-destination.png)
-
-1. Use the **Next** button to complete the steps to inspect the data and then **finish** the configuration. Then close the configuration window to see your eventhouse with the taxi table.
-
-   ![Screenshot of and eventhouse with a table.](./images/05c-fabric-realtime-lab-eventhouse-with-table.png)
-
-    The connection between the stream and the table has been created. Let's verify that in the eventstream.
-
-1. In the menu bar on the left, select the **Real-Time** hub and then view the **My data streams** page. In the **...** menu for the **taxi-data-stream** stream, select **Open eventstream**.
-
-    The eventstream now shows a destination for the stream:
-
-   ![Screenshot an eventstream with a destination.](./images/05c-fabric-realtime-lab-eventstream-destination.png)
-
-    > _**Tip**: Select the destination on the design canvas, and if no data preview is shown beneath it, select **Refresh**._
-
-    > _**Tip**: Verifying in the eventstream confirms events are flowing to the destination. The preview may cache — refresh pulls the latest sample._
-
-    In this exercise, you've created a very simple eventstream that captures real-time data and loads it into a table. In a real solution, you'd typically add transformations to aggregate the data over temporal windows (for example, to capture the average number of taxi pickups over five-minute periods).
+    > _**Tip**: After publishing, it can take a few minutes before the first events are written to the table. If the preview is empty, wait and select **Refresh** again._
 
     Now let's explore how you can query and analyze the captured data.
 
 ## Query the captured data
 
-The eventstream captures real-time taxi fare data and loads it into a table in your KQL database. You can query this table to see the captured data.
+The eventstream loads the real-time taxi data into the **yellow-taxi** table in your KQL database. You can query that table to explore the captured data.
 
 > _**Tip**: KQL is designed for fast exploration of time-stamped, high-volume data. Querying lets you validate ingestion and start analysis immediately._
 
-1. In the menu bar on the left, select your eventhouse database.
+1. In the menu bar on the left, select **Workspaces**, open your workspace (for example, `dp900-realtime`), and then select the **taxi-eventhouse** KQL database.
 
-1. Select the *queryset* for your database.
+    ![Screenshot of the workspace flyout with the taxi-eventhouse database listed.](./images/05c-fabric-realtime-lab-query-select-taxi-eventhouse.png)
 
-1. In the query pane, modify the first example query as shown here:
+1. On the database page, note that the **taxi-eventhouse** database contains a **taxi-eventhouse_queryset** and the **yellow-taxi** table you created earlier.
+
+    ![Screenshot of the taxi-eventhouse database page showing the queryset and the yellow-taxi table.](./images/05c-fabric-realtime-lab-query-database.png)
+
+1. In the pane on the left, select the **taxi-eventhouse_queryset**. It opens with some sample KQL queries that you can use as a starting point.
+
+    ![Screenshot of the taxi-eventhouse queryset open with the default sample queries.](./images/05c-fabric-realtime-lab-query-queryset.png)
+
+1. Select all of the text in the query pane and delete it. Then enter the following query and select **Run** to see 100 rows of data from the table:
 
     ```kql
-    taxi
+    ['yellow-taxi']
     | take 100
     ```
 
+    ![Screenshot of the taxi-eventhouse queryset open with the new query and run button highlighted.](./images/05c-fabric-realtime-lab-query-yellow-taxi.png)
+
+    > _**Note**: The table name is wrapped in `['...']` because `yellow-taxi` contains a hyphen. KQL uses this syntax for names that include special characters._
+
     > _**Tip**: `take 100` is a quick health check—confirm rows are arriving and inspect a small sample without scanning everything._
 
-1. Select the query code and run it to see 100 rows of data from the table.
-
-    ![Screenshot of a KQL query.](./images/05c-fabric-realtime-lab-kql-query.png)
-
-1. Review the results, then modify the query to show the number of taxi pickups for each hour:
+1. Replace the query with the following code to show the number of taxi pickups for each hour, and then select **Run**:
 
     ```kql
-    taxi
+    ['yellow-taxi']
     | summarize PickupCount = count() by bin(todatetime(tpep_pickup_datetime), 1h)
     ```
 
-1. Highlight the modified query and run it to see the results.
+    The results appear in a table with a row for each hour and the count of pickups.
+
+    ![Screenshot of the hourly pickup query and its tabular results.](./images/05c-fabric-realtime-lab-query-yellow-taxi-hourly-trends.png)
 
     > _**Tip**: `bin(..., 1h)` groups events into hourly buckets, making it easy to spot trends over time._
 
-1. Wait a few seconds and run it again, noting that the number of pickups change as new data is added to the table from the real-time stream.
+1. To visualize the hourly trend, below the query results select the **Table 1** drop-down and add a visual. In the **Visual Formatting** pane on the right, set the **Visual type** to **Column chart**. The hourly pickup counts are displayed as a column chart.
+
+    ![Screenshot of the hourly pickup results shown as a column chart with the Visual Formatting pane.](./images/05c-fabric-realtime-lab-query-yellow-taxi-hourly-trends-visual.png)
+
+1. Wait a few seconds and select **Run** again, noting that the pickup counts change as new data is added to the table from the real-time stream.
 
     > _**Tip**: The stream keeps adding data, so results change over time. Re-running shows how aggregations update as fresh events arrive._
 
@@ -169,3 +194,5 @@ If you've finished exploring Real-Time Intelligence in Fabric, you can delete th
 1. In the toolbar, select **Workspace settings**.
 
 1. In the **General** section, select **Remove this workspace**.
+
+    ![Screenshot of the remove workspace button.](./images/05c-fabric-realtime-lab-remove-workspace.png)
